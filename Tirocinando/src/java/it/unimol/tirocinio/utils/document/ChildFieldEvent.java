@@ -1,7 +1,6 @@
-package tirocinando2;
+package it.unimol.tirocinio.utils.document;
 
 /**
- *
  * @author VittorioBarile
  */
 
