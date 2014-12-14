@@ -1,6 +1,7 @@
 package it.unimol.tirocinio.utils.auth;
 
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
+import it.unimol.tirocinio.utils.auth.Exception_auth;
 import it.unimol.tirocinio.utils.db.Adapter;
 import java.util.HashMap;
 import java.util.UUID;
@@ -38,12 +39,12 @@ public abstract class Abstract {
         return UUID.randomUUID();
     }
     
-    abstract public int get_uid();
+    abstract public String get_uid();
     
     abstract public void register_session();
     
     abstract public void logout();
     
-    abstract public void check();
+    abstract public HashMap<STATISTICS, UUID> check();
     
 }

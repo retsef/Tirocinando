@@ -51,7 +51,7 @@ public class CompilazionePDF {
         String[] v = {"Informatica","Barile","Vittorio"};
         FieldCollector contenuto = new FieldCollector(Config.documentType.STUDENTE, v);
         
-        subscribe.manipulatePdf(FORM, RESULT, fieldCache, contenuto.getaMap());
+        subscribe.manipulatePdf(FORM, RESULT, fieldCache, contenuto.getMap());
     }
     
 }

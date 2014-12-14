@@ -1,6 +1,9 @@
 package it.unimol.tirocinio.utils.auth.method;
 
 import it.unimol.tirocinio.utils.auth.Abstract;
+import it.unimol.tirocinio.utils.auth.Config;
+import java.util.HashMap;
+import java.util.UUID;
 
 /**
  * @author Roberto
@@ -15,7 +18,7 @@ public class Link extends Abstract {
     }
 
     @Override
-    public int get_uid() {
+    public String get_uid() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -40,7 +43,7 @@ public class Link extends Abstract {
     }
 
     @Override
-    public void check() {
+    public HashMap<Config.STATISTICS, UUID> check() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

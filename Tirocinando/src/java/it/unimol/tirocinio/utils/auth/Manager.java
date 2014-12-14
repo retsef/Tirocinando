@@ -13,14 +13,14 @@ public class Manager extends Abstract {
     
     private AUTH_METHOD method;
     
-    private Cookie cookie;
+    private Cookies cookie;
     private Link link;
     private Session session;
     
     public Manager(){
         super();
         
-        this.cookie = new Cookie();
+        this.cookie = new Cookies();
         this.link = new Link();
         this.session = new Session(Servlet_auth.getRequest().getSession());
         
@@ -56,7 +56,7 @@ public class Manager extends Abstract {
     }
 
     @Override
-    public int get_uid() {
+    public String get_uid() {
         switch(this.method){
             case AUTH_USE_COOKIE:
                 return this.cookie.get_uid();
@@ -64,8 +64,9 @@ public class Manager extends Abstract {
                 return this.link.get_uid();
             case AUTH_USE_SESSION:
                 return this.session.get_uid();
+            default:
+                return null;
         }
-        return 0;
     }
 
     @Override
@@ -122,7 +123,7 @@ public class Manager extends Abstract {
     }
 
     @Override
-    public void check() {
+    public HashMap<STATISTICS, UUID> check(){
         switch(this.method){
             case AUTH_USE_COOKIE:
                 this.cookie.check();
@@ -130,6 +131,8 @@ public class Manager extends Abstract {
                 this.link.check();
             case AUTH_USE_SESSION:
                 this.session.check();
+            default:
+                return null;
         }
     }
     
