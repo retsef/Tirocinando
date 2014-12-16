@@ -1,3 +1,9 @@
+<%-- 
+    Document   : navbartutor
+    Created on : 15-dic-2014, 15.30.00
+    Author     : ginfl_000
+--%>
+
 <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
 	<div class="container">
 	  <!-- Brand and toggle get grouped for better mobile display -->
@@ -14,22 +20,21 @@
 	  <!-- Collect the nav links, forms, and other content for toggling -->
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
-                    <li <%if(request.getRequestURL().toString().equals("http://localhost:8080/Tirocinando/index.jsp")) {%> class="active" <%}%>>
+                    <li>
                         <a href="/Tirocinando/index.jsp">Home</a>
                     </li>
-               
-                    
-                    <li <%if(request.getRequestURL().toString().equals("http://localhost:8080/Tirocinando/contatti.jsp")) {%> class="active" <%}%>>
-                        <a href="/Tirocinando/contatti.jsp">Contatti</a>
+                    <li>
+                        <a href="#">Tirocinandi</a>
                     </li>
+                  
+                    <li>
+                        <a href="#">Profilo</a>
+                    </li>
+                
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-                    <button class="btn btn-success btn-sm navbar-btn" style="margin-left:10px;" data-toggle="modal" data-target="#LoginModal">Accedi</button>
-                    <%if(!request.getRequestURL().toString().equals("http://localhost:8080/Tirocinando/registrazione.jsp")) {%>
-                    <a class="btn btn-danger btn-sm navbar-btn" href="registrazione.jsp">Registrati</a>
-                    <%}%>
+                    <a class="btn btn-danger btn-sm navbar-btn" href="#">Logout</a>
                 </ul>
-                <%@include file="popup_login.jsp" %>
             </div><!-- /.navbar-collapse --> 
 	</div>	
 </nav>
