@@ -13,7 +13,7 @@
         <title>Studente</title>
     </head>
     <body>
-           <jsp:include page="part/navbarstudente.jsp" />
+           <jsp:include page="part/navbar_studente.jsp" />
            <jsp:include page="part/guest/home_content.jsp"/>
            <jsp:include page="part/footer.jsp" />
         

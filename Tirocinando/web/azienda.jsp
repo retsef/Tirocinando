@@ -13,7 +13,7 @@
         <title>Azienda</title>
     </head>
     <body>
-           <jsp:include page="part/navbarazienda.jsp" />
+           <jsp:include page="part/navbar_azienda.jsp" />
            <jsp:include page="part/guest/home_content.jsp"/>
            <jsp:include page="part/footer.jsp" />
         

@@ -13,7 +13,7 @@
         <title>Tutor</title>
     </head>
     <body>
-           <jsp:include page="part/navbartutor.jsp" />
+           <jsp:include page="part/navbar_tutor.jsp" />
            <jsp:include page="part/guest/home_content.jsp"/>
            <jsp:include page="part/footer.jsp" />
         
@@ -26,7 +26,26 @@
 
   <!-- Table -->
   <table class="table">
-    Nome Studente   Libretto  Status
+           <thead>
+            Tabella
+        </thead>
+
+        <tr>
+            <td>
+                col1
+            </td>
+            <td>
+                col2
+            </td>
+        </tr>
+        <tr>
+            <td>
+                val1
+            </td>
+            <td>
+                val2
+            </td>
+        </tr>
   </table>
 </div>
         
