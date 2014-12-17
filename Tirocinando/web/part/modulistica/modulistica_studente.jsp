@@ -185,12 +185,125 @@
     <div class="panel-body">
         <div id="Studente_form">
             <div class="row">
-
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Anno di corso
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+               <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            N° totale degli esami del CdL
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div> 
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            N° di esami sostenuti
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Media
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Data prevista di laurea
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Materia della tesi
+                        </span>
+                        <input type="text" class="form-control" value="Titolo/Argomento della Tesi di Laurea">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Anno di corso
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
             </div>
         </div>
+        
+        
+        
         <div id="Laureato_form">
             <div class="row">
-
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Laureato il
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Voto
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Relatore
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Materia della Tesi
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Titolo/Argomento della Tesi di Laurea
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Eventuali borse di studio/Pubblicazioni/Premi/titoli sportivi certificati
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Eventuali corsi di perfezionamento o specializzazione (specificare)
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
