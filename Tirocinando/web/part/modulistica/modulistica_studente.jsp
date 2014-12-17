@@ -332,136 +332,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-<div class="panel panel-default">
-    <div class="panel-heading" id="esperienze_professionali">Esperienze Professionali (Attuali e precedenti)</div>
-    <div class="panel-body">
-        <div class="panel panel-default">
-        <div class="panel-heading" id="stage">Stage 1</div>
-            <div class="panel-body">
-                
-            <div class="row">
-                <div class="col-lg-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                Dal
-                            </span>
-                        <input type="text" class="form-control">
-                        </div>
-                </div>
-                <div class="col-lg-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                al
-                            </span>
-                        <input type="text" class="form-control">
-                        </div>
-                </div>
-            </div>    
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Presso
-                        </span>
-                    <input type="text" class="form-control">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Attività svolta
-                        </span>
-                    <input type="text" class="form-control">
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Soggetto promotore
-                        </span>
-                    <input type="text" class="form-control">
-                    </div>
-                </div>
-                
-            </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading" id="stage">Stage 2</div>
-            <div class="panel-body">
-        
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                Dal
-                            </span>
-                        <input type="text" class="form-control">
-                        </div>
-                    </div>
-                
-                
-                 
-                <div class="col-lg-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                al
-                            </span>
-                        <input type="text" class="form-control">
-                        </div>
-                </div>
-                 </div>
-                
-                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Presso
-                        </span>
-                    <input type="text" class="form-control">
-                    </div>
-                </div>
-                 </div>
-                
-                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Attività svolta
-                        </span>
-                    <input type="text" class="form-control">
-                    </div>
-                </div>
-                 </div>
-                
-                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Soggetto promotore
-                        </span>
-                    <input type="text" class="form-control">
-                    </div>
-                </div>
-                 </div>
-        
-            </div>
-        </div>
-    </div>
-</div>
         
         
 <div class="panel panel-default">
@@ -589,11 +459,118 @@
             </div>
         </div>
     </div>
-        
-        
-        
     
-       
+    <div class="panel-body">
+        <div class="panel panel-default">
+        <div class="panel-heading" id="stage">Attività Lavorativa 1</div>
+            <div class="panel-body">
+                
+            <div class="row">
+                <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Dal
+                            </span>
+                        <input type="text" class="form-control">
+                        </div>
+                </div>
+                <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                al
+                            </span>
+                        <input type="text" class="form-control">
+                        </div>
+                </div>
+            </div>    
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Presso
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Attività svolta
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" id="stage">Attività Lavorativa 2</div>
+            <div class="panel-body">
         
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Dal
+                            </span>
+                        <input type="text" class="form-control">
+                        </div>
+                    </div>
+                
+                
+                 
+                <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                al
+                            </span>
+                        <input type="text" class="form-control">
+                        </div>
+                </div>
+                 </div>
+                
+                 <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Presso
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                 </div>
+                
+                 <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Attività svolta
+                        </span>
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+                 </div>
+                
+            </div>
+        </div>
     </div>
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">Esperienze all'estero</div>
+        <div class="panel-body">
+            <input type="text" class="form-control" placeholder="Indicare il periodo e specificare se per studio o per lavoro">
+        </div>
+    </div>
+    
+    </div>
+
+
+        
+        
 </section>
