@@ -8,20 +8,6 @@
     .row {
         padding-bottom: 25px;
     }
-    
-    .Studente_form *,
-    .Laureato_form * {
-        display: none;
-    }
-    
-    .Studente_form:focus * {
-        display: block;
-    }
-    
-    .Laureato_form:focus * {
-        display: block; 
-    }
-    
 </style>
 <div class="panel panel-default">
     <!-- Default panel contents -->
@@ -188,16 +174,18 @@
     </div> 
 </div>
 
-
 <div class="panel panel-default">
-    <div class="panel-heading" id="informazioni_curriculari">Informazioni curriculari</div>
-        <ul class="nav nav-tabs">
-          <li role="presentation"><a href="#Studente_form">Se studente</a></li>
-          
-          <li role="presentation"><a href="#Laureato_form">Se laureato</a></li>
+    <div class="panel-heading">Informazioni curriculari</div>
+        <ul class="nav nav-tabs" id="informazioni_curriculari" role="tablist">
+          <li role="presentation" class="active">
+              <a href="#Studente_form" role="tab" data-toggle="tab" aria-controls="Studente_form" aria-expanded="true">Se studente</a>
+          </li>
+          <li role="presentation">
+              <a href="#Laureato_form" role="tab" data-toggle="tab" aria-controls="Laureato_form" aria-expanded="true">Se laureato</a>
+          </li>
         </ul>
-    <div class="panel-body">
-        <div id="Studente_form">
+    <div class="panel-body tab-content">
+        <div role="tabpanel" class="tab-pane active" id="Studente_form">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
@@ -215,6 +203,8 @@
                     <input type="text" class="form-control">
                     </div>
                 </div> 
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -231,6 +221,8 @@
                     <input type="text" class="form-control">
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -244,9 +236,11 @@
                         <span class="input-group-addon">
                             Materia della tesi
                         </span>
-                        <input type="text" class="form-control" value="Titolo/Argomento della Tesi di Laurea">
+                        <input type="text" class="form-control" placeholder="Titolo/Argomento della Tesi di Laurea">
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -258,9 +252,7 @@
             </div>
         </div>
         
-        
-        
-        <div id="Laureato_form">
+        <div role="tabpanel" class="tab-pane" id="Laureato_form">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
@@ -278,6 +270,8 @@
                     <input type="text" class="form-control">
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -294,7 +288,9 @@
                     <input type="text" class="form-control">
                     </div>
                 </div>
-                <div class="col-lg-6">
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="input-group">
                         <span class="input-group-addon">
                             Titolo/Argomento della Tesi di Laurea
@@ -302,6 +298,8 @@
                     <input type="text" class="form-control">
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
                         <span class="input-group-addon">
