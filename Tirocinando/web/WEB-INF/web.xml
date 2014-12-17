@@ -8,6 +8,10 @@
         <servlet-name>Servlet_auth</servlet-name>
         <servlet-class>it.unimol.tirocinio.utils.auth.Servlet_auth</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Registrazione</servlet-name>
+        <servlet-class>it.unimol.tirocinio.user.Servlet_registrazione</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servlet_db</servlet-name>
         <url-pattern>/Servlet_db</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>Servlet_auth</servlet-name>
         <url-pattern>/Servlet_auth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Registrazione</servlet-name>
+        <url-pattern>/Servlet_registrazione</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

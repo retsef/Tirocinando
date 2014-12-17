@@ -1,7 +1,6 @@
 package it.unimol.tirocinio.utils.auth;
 
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
-import it.unimol.tirocinio.utils.auth.Exception_auth;
 import it.unimol.tirocinio.utils.db.Adapter;
 import java.util.HashMap;
 import java.util.UUID;

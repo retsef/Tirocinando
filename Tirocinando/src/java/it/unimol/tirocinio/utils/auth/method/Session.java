@@ -14,6 +14,7 @@ public class Session extends Abstract {
     private HttpSession session;
     
     public Session(HttpSession psession) {
+        super();
         this.session = psession;
     }
     

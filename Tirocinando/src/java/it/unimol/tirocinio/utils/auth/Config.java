@@ -11,7 +11,7 @@ public class Config {
     static private final String table_utenti = "utenti";
     
     static private final String table_instance = "user_session";
-    static private final String expire = ""+ 3600*24;
+    static private final int expire =  3600*24;
     
     public enum STATISTICS {
         AUTH_LOGGED,
@@ -43,7 +43,7 @@ public class Config {
         return table_instance;
     }
 
-    public static String getExpire() {
+    public static int getExpire() {
         return expire;
     }
     

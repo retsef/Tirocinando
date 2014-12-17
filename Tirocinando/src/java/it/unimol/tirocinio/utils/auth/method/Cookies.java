@@ -2,9 +2,15 @@ package it.unimol.tirocinio.utils.auth.method;
 
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
+import it.unimol.tirocinio.utils.auth.Exception_auth;
 import it.unimol.tirocinio.utils.auth.Servlet_auth;
+import it.unimol.tirocinio.utils.db.Exception_db;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +26,7 @@ public class Cookies extends Abstract {
     private HttpServletResponse response;
     
     public Cookies() {
+        super();
         request = Servlet_auth.getRequest();
         response = Servlet_auth.getResponse();
         
@@ -27,7 +34,25 @@ public class Cookies extends Abstract {
     
     @Override
     public void clean_expired() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            this.conn.select(Config.getTable_sessioni(), "creation_date", "uid='"+this.get_uid()+"'");
+            if(this.conn.getNumResult()==1){
+                ResultSet rs = this.conn.getResult();
+                while(rs.next()){
+                    int creation_date = Integer.getInteger(rs.getString("creation_date"));
+                    if( creation_date + Config.getExpire() < System.currentTimeMillis()) {
+                        this.cookie = new Cookie("uid","");
+                        this.response.addCookie(this.cookie);
+                    } else {
+                        this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
+                        this.response.addCookie(this.cookie);
+                    }
+                }
+            } else 
+                throw new Exception_auth("Errore: Chiave di autenticazione univoca non trovata");
+        } catch (SQLException | Exception_db | Exception_auth ex) {
+            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

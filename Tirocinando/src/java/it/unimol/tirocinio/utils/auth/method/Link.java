@@ -12,6 +12,10 @@ public class Link extends Abstract {
 
     private String link;
     
+    public Link() {
+        super();
+    }
+    
     @Override
     public void clean_expired() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

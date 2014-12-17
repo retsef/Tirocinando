@@ -3,17 +3,18 @@
         padding-bottom: 25px;
     }
 </style>
+<form action="Servlet_registrazione" method="POST">
 <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">Informazioni Personali</div>
     <div class="panel-body">
         <div class="row">
             <div class="col-lg-6">
-                <div class="input-group has-error">
+                <div class="input-group">
                     <span class="input-group-addon">
                         Nome
                     </span>
-                    <input type="text" class="form-control" id="NomeError">
+                    <input type="text" class="form-control">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -115,11 +116,11 @@
         </div>
         <div class='row'>
             <div class="col-lg-6">
-                <div class="input-group has-error">
+                <div class="input-group">
                     <span class="input-group-addon">
                         Email
                     </span>
-                    <input type="text" class="form-control" id="MailError">
+                    <input type="text" class="form-control">
                     <span class="input-group-addon">@studenti.unimol.it</span>
                 </div>
             </div>
@@ -167,3 +168,13 @@
         </div>
     </div> 
 </div>
+
+    <div class="row">
+        <div class="col-lg-11"></div>
+        <div class="col-md-1">
+            <div class="btn-group right">
+                <button type="submit" class="btn btn-primary" >Avanti</button>
+            </div>
+        </div>
+    </div>
+</form>
