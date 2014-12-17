@@ -338,9 +338,13 @@
 
 <div class="panel panel-default">
     <div class="panel-heading" id="esperienze_professionali">Esperienze Professionali (Attuali e precedenti)</div>
-    <div class="panel-heading" style="background-color: #BDBDBD">Stage</div>
-    
-    
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>Stage</h3>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-lg-3">
                     <div class="input-group">
@@ -375,7 +379,7 @@
                     </div>
             </div>
         </div>    
-    
+
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
@@ -394,7 +398,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
@@ -413,8 +417,8 @@
                 </div>
             </div>
         </div>
-            
-    
+
+
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
@@ -433,6 +437,7 @@
                 </div>
             </div>
         </div>
+    </div>
         
         
         
