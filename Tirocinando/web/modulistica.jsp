@@ -15,9 +15,7 @@
     <body>
         <jsp:include page="part/navbar.jsp" />
         
-            <div class="well" style="margin-top: 70px;">
-                <jsp:include page="part/modulistica/modulistica_studente.jsp"/>
-            </div>
+        <jsp:include page="part/modulistica/modulistica_studente.jsp"/>
         
         <jsp:include page="part/footer.jsp" />
         
