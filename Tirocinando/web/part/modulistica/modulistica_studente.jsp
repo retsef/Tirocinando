@@ -182,7 +182,18 @@
           
           <li role="presentation"><a href="#informazioni_curriculari">Se laureato</a></li>
         </ul>
-    
+    <div class="panel-body">
+        <div id="Studente_form">
+            <div class="row">
+
+            </div>
+        </div>
+        <div id="Laureato_form">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
 </div>
 
     
