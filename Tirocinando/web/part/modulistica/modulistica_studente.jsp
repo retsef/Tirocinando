@@ -8,6 +8,20 @@
     .row {
         padding-bottom: 25px;
     }
+    
+    .Studente_form *,
+    .Laureato_form * {
+        display: none;
+    }
+    
+    .Studente_form:focus * {
+        display: block;
+    }
+    
+    .Laureato_form:focus * {
+        display: block; 
+    }
+    
 </style>
 <div class="panel panel-default">
     <!-- Default panel contents -->
@@ -19,7 +33,7 @@
                     <span class="input-group-addon">
                         Nome
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="Vittorio" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="Vittorio" disabled>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -27,7 +41,7 @@
                     <span class="input-group-addon">
                         Cognome
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="Barile" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="Barile" disabled>
                 </div>
             </div>
         </div>
@@ -37,7 +51,7 @@
                     <span class="input-group-addon">
                         Nato/a a
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="Campobasso" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="Campobasso" disabled>
                 </div>
             </div>
             <div class="col-lg-3">
@@ -45,7 +59,7 @@
                     <span class="input-group-addon">
                         il
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="29/07/1991" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="29/07/1991" disabled>
                 </div>
             </div>
             <div class="col-lg-3">
@@ -53,7 +67,7 @@
                     <span class="input-group-addon">
                         Nazionalita'
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="Italiana" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="Italiana" disabled>
                 </div>
             </div>
         </div>
@@ -63,7 +77,7 @@
                     <span class="input-group-addon">
                         Residente in
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="Sepino" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="Sepino" disabled>
                 </div>
             </div>
             <div class="col-lg-3">
@@ -71,7 +85,7 @@
                     <span class="input-group-addon">
                         Cap
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="86017" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="86017" disabled>
                 </div>
             </div>
             <div class="col-lg-3">
@@ -79,7 +93,7 @@
                     <span class="input-group-addon">
                         Prov.
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="CB" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="CB" disabled>
                 </div>
             </div>
         </div>
@@ -89,7 +103,7 @@
                     <span class="input-group-addon">
                         Via
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="Roma" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="Roma" disabled>
                 </div>
             </div>
             <div class="col-lg-3">
@@ -97,7 +111,7 @@
                     <span class="input-group-addon">
                         N.
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="6" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="6" disabled>
                 </div>
             </div>
         </div>
@@ -107,7 +121,7 @@
                     <span class="input-group-addon">
                         Telefono
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="0874790823" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="0874790823" disabled>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -115,7 +129,7 @@
                     <span class="input-group-addon">
                         Cellulare
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="3276897089" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="3276897089" disabled>
                 </div>
             </div>
         </div>
@@ -125,7 +139,7 @@
                     <span class="input-group-addon">
                         Email
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="v.barile" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="v.barile" disabled>
                     <span class="input-group-addon">@studenti.unimol.it</span>
                 </div>
             </div>
@@ -134,7 +148,7 @@
                     <span class="input-group-addon">
                         Codice fiscale
                     </span>
-                    <input class="form-control" id="disabledInput" type="text" placeholder="BRLVTR91L29B519C" disabled>
+                    <input class="form-control" id="disabledInput" type="text" value="BRLVTR91L29B519C" disabled>
                 </div>
             </div>
         </div>
@@ -178,19 +192,19 @@
 <div class="panel panel-default">
     <div class="panel-heading" id="informazioni_curriculari">Informazioni curriculari</div>
         <ul class="nav nav-tabs">
-          <li role="presentation"><a href="#informazioni_curriculari">Se studente</a></li>
+          <li role="presentation"><a href="#Studente_form">Se studente</a></li>
           
-          <li role="presentation"><a href="#informazioni_curriculari">Se laureato</a></li>
+          <li role="presentation"><a href="#Laureato_form">Se laureato</a></li>
         </ul>
     <div class="panel-body">
         <div id="Studente_form">
             <div class="row">
-
+                <h1>Studente</h1>
             </div>
         </div>
         <div id="Laureato_form">
             <div class="row">
-
+                <h1>Laureato</h1>
             </div>
         </div>
     </div>
