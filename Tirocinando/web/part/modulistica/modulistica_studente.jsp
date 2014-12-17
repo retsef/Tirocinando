@@ -9,6 +9,10 @@
         padding-bottom: 25px;
     }
 </style>
+
+<section id="main">
+    <div class="container" style="padding-top: 70px;">
+        
 <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">Informazioni Personali</div>
@@ -290,32 +294,38 @@
                 </div>
             </div>
             <div class="row">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Titolo/Argomento della Tesi di Laurea</h3>
-                    </div>
-                    <div class="panel-body">
-                      <input type="text" class="form-control">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Titolo/Argomento della Tesi di Laurea</h3>
+                        </div>
+                        <div class="panel-body">
+                          <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Eventuali borse di studio/Pubblicazioni/Premi/titoli sportivi certificati</h3>
-                    </div>
-                    <div class="panel-body">
-                      <input type="text" class="form-control">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Eventuali borse di studio/Pubblicazioni/Premi/titoli sportivi certificati</h3>
+                        </div>
+                        <div class="panel-body">
+                          <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
             </div>
            <div class="row">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Eventuali corsi di perfezionamento o specializzazione (specificare)</h3>
-                    </div>
-                    <div class="panel-body">
-                      <input type="text" class="form-control">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Eventuali corsi di perfezionamento o specializzazione (specificare)</h3>
+                        </div>
+                        <div class="panel-body">
+                          <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -429,10 +439,6 @@
     
        
 </div>
-
-    
-
-
-
-    
-
+        
+    </div>
+</section>
