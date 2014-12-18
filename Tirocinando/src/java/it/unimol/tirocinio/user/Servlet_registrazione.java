@@ -23,7 +23,13 @@ public class Servlet_registrazione extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
+        if(request.getParameter("selection")!=null) {
+            if(request.getParameter("selection").equals("studente")) {
+                
+            }
+        } else {
+            response.sendRedirect("/Tirocinando/registrazione.jsp?error=true");
+        }
         
     }
 

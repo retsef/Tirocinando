@@ -11,6 +11,7 @@
               <button type="button" class="btn btn-success" onclick="window.location.href='/Tirocinando/registrazione.jsp?selection=tutor'">Tutor Accademico</button>
             </div>
         </div>
+        <form action="Servlet_registazione" method="POST">
         <% if(request.getParameter("selection")!=null) {
             if(request.getParameter("selection").equals("studente")) { %>
             <div class="well" style="margin-top: 20px;">
@@ -30,5 +31,6 @@
                 <%@include file="default.jsp" %>
             </div>
         <% } %>
+        </form>
     </div>
 </section>
