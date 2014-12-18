@@ -21,7 +21,8 @@
                         <a href="#">Convenzione</a>
                     </li>
                     <li>
-                        <a href="#">Tirocinandi</a>
+                         <li <%if(request.getRequestURL().toString().equals("http://localhost:8080/azienda_tirocinanti.jsp")) {%> class="active" <%}%>>
+                        <a href="/Tirocinando/azienda_tirocinanti.jsp">Tirocinanti</a>
                     </li>
                     <li>
                         <a href="#">Profilo</a>
