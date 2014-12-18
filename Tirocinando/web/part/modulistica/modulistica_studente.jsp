@@ -588,10 +588,10 @@
       <tbody>
           <tr>
               <td>Inglese</td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
+              <td><input type="radio" name="Inglese" value="Ottimo_1"/></td>
+              <td><input type="radio" name="Inglese" value="Buono_1"/></td>
+              <td><input type="radio" name="Inglese" value="Sufficiente_1"/></td>
+              <td><input type="radio" name="Inglese" value="Scarso_1"/></td>
           </tr>
           <tr>
               <td>Francese</td>
