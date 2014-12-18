@@ -15,7 +15,15 @@
     <body>
         <jsp:include page="part/navbar.jsp" />
         
-        <jsp:include page="part/modulistica/modulistica_studente.jsp"/>
+        <% if(request.getParameter("section")!=null) {
+            switch(request.getParameter("section")) {
+                case "studente": %>
+                    <jsp:include page="part/modulistica/modulistica_studente.jsp"/>
+                <% case "azienda": %>
+                    <jsp:include page="part/modulistica/modulistica_azienda.jsp"/>
+                <%
+            }
+        }%>
         
         <jsp:include page="part/footer.jsp" />
         
