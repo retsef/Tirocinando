@@ -18,7 +18,7 @@
                     <div class="media-body">
                         <h4 class="media-heading">Russo Giuseppe</h4>
                         <span class="glyphicon glyphicon-briefcase"></span> Manager <br> 
-                        <span class="glyphicon glyphicon-envelope"></span> bronty@email.com
+                        <span class="glyphicon glyphicon-envelope"></span> bro@email.com
                     </div>
                 </div>
             </div>
