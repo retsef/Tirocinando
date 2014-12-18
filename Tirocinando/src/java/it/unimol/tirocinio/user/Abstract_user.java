@@ -22,4 +22,10 @@ public class Abstract_user {
         return this.UserData.get(str);
     }
     
+    public void setParameter(String key, String value) throws Exception_user {
+        if(!this.UserData.containsKey(key))
+            throw new Exception_user("Campo Utente inesistente");
+        this.UserData.put(key, value);
+    }
+    
 }

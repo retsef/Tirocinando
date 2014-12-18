@@ -338,7 +338,7 @@
     <div class="panel-heading" id="esperienze_professionali">Esperienze Professionali (Attuali e precedenti)</div>
     <div class="panel-body">
         <div class="panel panel-default">
-        <div class="panel-heading" id="stage">Stage 1</div>
+        <div class="panel-heading" id="stage_1">Stage 1</div>
             <div class="panel-body">
                 
             <div class="row">
@@ -398,7 +398,7 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading" id="stage">Stage 2</div>
+            <div class="panel-heading" id="stage_2">Stage 2</div>
             <div class="panel-body">
         
                 <div class="row">
@@ -411,106 +411,102 @@
                         </div>
                     </div>
                 
-                
-                 
-                <div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="input-group">
                             <span class="input-group-addon">
                                 al
                             </span>
                         <input type="text" class="form-control">
                         </div>
-                </div>
-                 </div>
-                
-                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Presso
-                        </span>
-                    <input type="text" class="form-control">
                     </div>
                 </div>
-                 </div>
                 
-                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Attività svolta
-                        </span>
-                    <input type="text" class="form-control">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Presso
+                            </span>
+                        <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
-                 </div>
                 
-                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Soggetto promotore
-                        </span>
-                    <input type="text" class="form-control">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Attività svolta
+                            </span>
+                            <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
-                 </div>
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Soggetto promotore
+                            </span>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
         
             </div>
         </div>
-    </div>
     
-    <div class="panel-body">
         <div class="panel panel-default">
-        <div class="panel-heading" id="stage">Attività Lavorativa 1</div>
+        <div class="panel-heading" id="attivita_1">Attività Lavorativa 1</div>
             <div class="panel-body">
                 
-            <div class="row">
-                <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
                         <div class="input-group">
                             <span class="input-group-addon">
                                 Dal
                             </span>
-                        <input type="text" class="form-control">
+                            <input type="text" class="form-control">
                         </div>
-                </div>
-                <div class="col-lg-6">
+                    </div>
+                    <div class="col-lg-6">
                         <div class="input-group">
                             <span class="input-group-addon">
                                 al
                             </span>
-                        <input type="text" class="form-control">
+                            <input type="text" class="form-control">
                         </div>
-                </div>
-            </div>    
+                    </div>
+                </div>    
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Presso
-                        </span>
-                    <input type="text" class="form-control">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Presso
+                            </span>
+                            <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Attività svolta
-                        </span>
-                    <input type="text" class="form-control">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Attività svolta
+                            </span>
+                            <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
-            </div>
 
             </div>
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading" id="stage">Attività Lavorativa 2</div>
+            <div class="panel-heading" id="attivita_2">Attività Lavorativa 2</div>
             <div class="panel-body">
         
                 <div class="row">
@@ -523,50 +519,47 @@
                         </div>
                     </div>
                 
-                
-                 
-                <div class="col-lg-6">
+                    <div class="col-lg-6">
                         <div class="input-group">
                             <span class="input-group-addon">
                                 al
                             </span>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Presso
+                            </span>
                         <input type="text" class="form-control">
                         </div>
-                </div>
-                 </div>
-                
-                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Presso
-                        </span>
-                    <input type="text" class="form-control">
                     </div>
                 </div>
-                 </div>
                 
-                 <div class="row">
-                <div class="col-lg-12">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Attività svolta
-                        </span>
-                    <input type="text" class="form-control">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Attività svolta
+                            </span>
+                        <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
-                 </div>
                 
             </div>
         </div>
-    </div>
     
-    <div class="panel panel-default">
-        <div class="panel-heading" id="esperienza_estero">Esperienze all'estero</div>
-        <div class="panel-body">
-            <textarea class="form-control" name="esperienza_estero" rows="3" style="resize: none" placeholder="Indicare il periodo e specificare se per studio o per lavoro"></textarea>
+        <div class="panel panel-default">
+            <div class="panel-heading" id="esperienza_estero">Esperienze all'estero</div>
+            <div class="panel-body">
+                <textarea class="form-control" name="esperienza_estero" rows="3" style="resize: none" placeholder="Indicare il periodo e specificare se per studio o per lavoro"></textarea>
+            </div>
         </div>
-    </div>
     
     
     <div class="panel panel-default">
@@ -627,7 +620,8 @@
       
   </table>
   
-</div>
+    </div>
+    </div>
     </div>
     
     <div class="panel panel-default">
@@ -639,17 +633,17 @@
                     <p>Indicare il livello di interesse per il settore: attribuire un punteggio da 1 a 8 (1 = max)</p>
                     <table class="table">
                         <thead>
-                        <tr>
-                            <th>Settore</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            <th>6</th>
-                            <th>7</th>
-                            <th>8</th>
-                        </tr>
+                            <tr>
+                                <th>Settore</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                                <th>7</th>
+                                <th>8</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
@@ -778,10 +772,9 @@
                         
                     </table>
                 </div>
-                
             </div>
                     
-        <div class="panel panel-default">
+            <div class="panel panel-default">
                 <div class="panel-heading">Funzione</div>
                 <div class="panel-body">
                     <p>Indicare il livello di interesse per la funzione da svolgere: attribuire un punteggio da 1 a 6 (1 = max)</p>
@@ -888,23 +881,21 @@
                                 <td><input type="radio" name="f_altro" value="f_10_5"/></td>
                                 <td><input type="radio" name="f_altro" value="f_10_6"/></td>
                             </tr>
-                    </table
+                    </table>
                 </div>
-            
             </div>
-        </div>
         
-        <!-- non mi piace, da vedere -->
-        <div class="row">
-                    <div class="col-lg-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                Preferenza relativa al periodo dello Stage dal
-                            </span>
+            <!-- non mi piace, da vedere -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Preferenza relativa al periodo dello Stage dal
+                        </span>
                         <input type="date" class="form-control">
-                        </div>
                     </div>
-                
+                </div>
+
                 <div class="col-lg-6">
                     <div class="input-group">
                         <span class="input-group-addon">
@@ -913,49 +904,47 @@
                         <input type="date" class="form-control">
                     </div>
                 </div>
-        </div>
+            </div>
         
-        <div class="row">
-            <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Disponibilità al Trasferimento (anche più di una risposta)
                         </div>
-                        
                         <div class="panel-body">
-            
-                        <div class="row">
+                            <div class="row">
                             <div class="col-lg-3">
-                              <div class="input-group">
+                                <div class="input-group">
                                 <span class="input-group-addon">
-                                  <input type="checkbox">
+                                    <input type="checkbox">
                                 </span>
-                                  <input type="text" class="form-control" placeholder="Nell'ambito Regionale" disabled>
-                              </div>
+                                    <input type="text" class="form-control" placeholder="Nell'ambito Regionale" disabled>
+                                </div>
                             </div>
                             <div class="col-lg-3">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <input type="checkbox">
-                                </span>
-                                  <input type="text" class="form-control" placeholder="In Italia" disabled>
-                              </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <input type="checkbox">
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="In Italia" disabled>
+                                </div>
                             </div>
                             <div class="col-lg-3">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <input type="checkbox">
-                                </span>
-                                  <input type="text" class="form-control" placeholder="All'Estero" disabled>
-                              </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <input type="checkbox">
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="All'Estero" disabled>
+                                </div>
                             </div>
-                    </div>
+                        </div>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
         
-        <div class="row">
+            <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -968,58 +957,58 @@
                 </div>
             </div>
         
-        <div class="row">
-            <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Allegati
                         </div>
-                        
+
                         <div class="panel-body">
-            
-                        <div class="row">
-                            <div class="col-lg-4">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <input type="checkbox">
-                                </span>
-                                  <input type="text" class="form-control" placeholder="Certificato degli Studi effettuati" disabled>
-                              </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <input type="checkbox">
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Certificato degli Studi effettuati" disabled>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <input type="checkbox">
-                                </span>
-                                  <input type="text" class="form-control" placeholder="Curriculum Vitae in italiano" disabled>
-                              </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <input type="checkbox">
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in italiano" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <input type="checkbox">
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in inglese" disabled>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-3">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <input type="checkbox">
-                                </span>
-                                  <input type="text" class="form-control" placeholder="Curriculum Vitae in inglese" disabled>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                        <div class="col-lg-7">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                  <input type="checkbox">
-                                </span>
-                                  <input type="text" class="form-control" placeholder="Eventuale altra documentazione ritenuta utile per la valutazione della domanda" disabled>
-                            </div>
-                        </div>
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <input type="checkbox">
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Eventuale altra documentazione ritenuta utile per la valutazione della domanda" disabled>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
+            
         </div>
-        
         
     </div>
         

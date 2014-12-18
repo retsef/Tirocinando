@@ -1,6 +1,7 @@
 package it.unimol.tirocinio.user;
 
 import java.io.IOException;
+import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,19 +28,19 @@ public class Servlet_registrazione extends HttpServlet {
             switch (request.getParameter("selection")) {
                 case "studente":
                     if(this.ChekStudenteForm(request, response)) {
-                        this.SetStudenteForm();
+                        //this.SetStudenteForm();
                     } else 
                         response.sendRedirect("/Tirocinando/registrazione.jsp?section=studente&error=true");
                     break;
                 case "azienda":
                     if(this.ChekAziendaForm(request, response)) {
-                        this.SetAziendaForm();
+                        //this.SetAziendaForm();
                     } else 
                         response.sendRedirect("/Tirocinando/registrazione.jsp?section=azienda&error=true");
                     break;
                 case "tutor":
                     if(this.ChekTutorForm(request, response)) {
-                        this.SetTutorForm();
+                        //this.SetTutorForm();
                     } else 
                         response.sendRedirect("/Tirocinando/registrazione.jsp?section=tutor&error=true");
                     break;
@@ -65,15 +66,15 @@ public class Servlet_registrazione extends HttpServlet {
         return false;
     }
     
-    private void SetStudenteForm() {
+    private void SetStudenteForm(HashMap<String, String> UserData) {
         
     }
     
-    private void SetAziendaForm() {
+    private void SetAziendaForm(HashMap<String, String> UserData) {
         
     }
     
-    private void SetTutorForm() {
+    private void SetTutorForm(HashMap<String, String> UserData) {
         
     }
     
