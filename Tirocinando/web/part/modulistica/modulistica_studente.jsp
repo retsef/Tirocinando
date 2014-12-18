@@ -300,7 +300,7 @@
                             Titolo/Argomento della Tesi di Laurea
                         </div>
                         <div class="panel-body">
-                          <input type="text" class="form-control">
+                          <textarea class="form-control" name="laureato_tesi" rows="3" style="resize: none"></textarea>
                         </div>
                     </div>
                 </div>
@@ -312,7 +312,7 @@
                             Eventuali borse di studio/Pubblicazioni/Premi/titoli sportivi certificati
                         </div>
                         <div class="panel-body">
-                          <input type="text" class="form-control">
+                          <textarea class="form-control" name="laureato_borse" rows="3" style="resize: none"></textarea>
                         </div>
                     </div>
                 </div>
@@ -324,7 +324,7 @@
                             Eventuali corsi di perfezionamento o specializzazione (specificare)
                         </div>
                         <div class="panel-body">
-                          <input type="text" class="form-control">
+                          <textarea class="form-control" name="laureato_corsi" rows="3" style="resize: none"></textarea>
                         </div>
                     </div>
                 </div>
@@ -564,7 +564,7 @@
     <div class="panel panel-default">
         <div class="panel-heading" id="esperienza_estero">Esperienze all'estero</div>
         <div class="panel-body">
-            <input type="text" class="form-control" placeholder="Indicare il periodo e specificare se per studio o per lavoro">
+            <textarea class="form-control" name="esperienza_estero" rows="3" style="resize: none" placeholder="Indicare il periodo e specificare se per studio o per lavoro"></textarea>
         </div>
     </div>
     
@@ -595,31 +595,31 @@
           </tr>
           <tr>
               <td>Francese</td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
+              <td><input type="radio" name="Francese" value="Ottimo_2"/></td>
+              <td><input type="radio" name="Francese" value="Buono_2"/></td>
+              <td><input type="radio" name="Francese" value="Sufficiente_2"/></td>
+              <td><input type="radio" name="Francese" value="Scarso_2"/></td>
           </tr>
           <tr>
               <td>Spagnolo</td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
+              <td><input type="radio" name="Spagnolo" value="Ottimo_3"/></td>
+              <td><input type="radio" name="Spagnolo" value="Buono_3"/></td>
+              <td><input type="radio" name="Spagnolo" value="Sufficiente_3"/></td>
+              <td><input type="radio" name="Spagnolo" value="Scarso_3"/></td>
           </tr>
           <tr>
               <td>Tedesco</td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
+              <td><input type="radio" name="Tedesco" value="Ottimo_4"/></td>
+              <td><input type="radio" name="Tedesco" value="Buono_4"/></td>
+              <td><input type="radio" name="Tedesco" value="Sufficiente_4"/></td>
+              <td><input type="radio" name="Tedesco" value="Scarso_4"/></td>
           </tr>
           <tr>
               <td><input type="text" class="form-control" placeholder="Altre lingue"></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
-              <td><input type="radio" name="lingua" value="html"/></td>
+              <td><input type="radio" name="Altre_lingue" value="Ottimo_5"/></td>
+              <td><input type="radio" name="Altre_lingue" value="Buono_5"/></td>
+              <td><input type="radio" name="Altre_lingue" value="Sufficiente_5"/></td>
+              <td><input type="radio" name="Altre_lingue" value="Scarso_5"/></td>
           </tr>
           
           
@@ -654,124 +654,124 @@
                         <tbody>
                             <tr>
                                 <td>Servizi alle imprese</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_impresa" value="s_1_1"/></td>
+                                <td><input type="radio" name="s_impresa" value="s_1_2"/></td>
+                                <td><input type="radio" name="s_impresa" value="s_1_3"/></td>
+                                <td><input type="radio" name="s_impresa" value="s_1_4"/></td>
+                                <td><input type="radio" name="s_impresa" value="s_1_5"/></td>
+                                <td><input type="radio" name="s_impresa" value="s_1_6"/></td>
+                                <td><input type="radio" name="s_impresa" value="s_1_7"/></td>
+                                <td><input type="radio" name="s_impresa" value="s_1_8"/></td>
                             </tr>
                             <tr>
                                 <td>Servizi alle persone</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_persone" value="s_2_1"/></td>
+                                <td><input type="radio" name="s_persone" value="s_2_2"/></td>
+                                <td><input type="radio" name="s_persone" value="s_2_3"/></td>
+                                <td><input type="radio" name="s_persone" value="s_2_4"/></td>
+                                <td><input type="radio" name="s_persone" value="s_2_5"/></td>
+                                <td><input type="radio" name="s_persone" value="s_2_6"/></td>
+                                <td><input type="radio" name="s_persone" value="s_2_7"/></td>
+                                <td><input type="radio" name="s_persone" value="s_2_8"/></td>
                             </tr>
                             <tr>
                                 <td>Settore industriale</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_industriale" value="s_3_1"/></td>
+                                <td><input type="radio" name="s_industriale" value="s_3_2"/></td>
+                                <td><input type="radio" name="s_industriale" value="s_3_3"/></td>
+                                <td><input type="radio" name="s_industriale" value="s_3_4"/></td>
+                                <td><input type="radio" name="s_industriale" value="s_3_5"/></td>
+                                <td><input type="radio" name="s_industriale" value="s_3_6"/></td>
+                                <td><input type="radio" name="s_industriale" value="s_3_7"/></td>
+                                <td><input type="radio" name="s_industriale" value="s_3_8"/></td>
                             </tr>
                             <tr>
                                 <td>Settore Agro - alimentare</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_alimentare" value="s_4_1"/></td>
+                                <td><input type="radio" name="s_alimentare" value="s_4_2"/></td>
+                                <td><input type="radio" name="s_alimentare" value="s_4_3"/></td>
+                                <td><input type="radio" name="s_alimentare" value="s_4_4"/></td>
+                                <td><input type="radio" name="s_alimentare" value="s_4_5"/></td>
+                                <td><input type="radio" name="s_alimentare" value="s_4_6"/></td>
+                                <td><input type="radio" name="s_alimentare" value="s_4_7"/></td>
+                                <td><input type="radio" name="s_alimentare" value="s_4_8"/></td>
                             </tr>
                             <tr>
                                 <td>Settore pubblico</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_pubblico" value="s_5_1"/></td>
+                                <td><input type="radio" name="s_pubblico" value="s_5_2"/></td>
+                                <td><input type="radio" name="s_pubblico" value="s_5_3"/></td>
+                                <td><input type="radio" name="s_pubblico" value="s_5_4"/></td>
+                                <td><input type="radio" name="s_pubblico" value="s_5_5"/></td>
+                                <td><input type="radio" name="s_pubblico" value="s_5_6"/></td>
+                                <td><input type="radio" name="s_pubblico" value="s_5_7"/></td>
+                                <td><input type="radio" name="s_pubblico" value="s_5_8"/></td>
                             </tr>
                             <tr>
                                 <td>Mercati finanziari</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_finanziari" value="s_6_1"/></td>
+                                <td><input type="radio" name="s_finanziari" value="s_6_2"/></td>
+                                <td><input type="radio" name="s_finanziari" value="s_6_3"/></td>
+                                <td><input type="radio" name="s_finanziari" value="s_6_4"/></td>
+                                <td><input type="radio" name="s_finanziari" value="s_6_5"/></td>
+                                <td><input type="radio" name="s_finanziari" value="s_6_6"/></td>
+                                <td><input type="radio" name="s_finanziari" value="s_6_7"/></td>
+                                <td><input type="radio" name="s_finanziari" value="s_6_8"/></td>
                             </tr>
                             <tr>
                                 <td>Settore educativo</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_educativo" value="s_7_1"/></td>
+                                <td><input type="radio" name="s_educativo" value="s_7_2"/></td>
+                                <td><input type="radio" name="s_educativo" value="s_7_3"/></td>
+                                <td><input type="radio" name="s_educativo" value="s_7_4"/></td>
+                                <td><input type="radio" name="s_educativo" value="s_7_5"/></td>
+                                <td><input type="radio" name="s_educativo" value="s_7_6"/></td>
+                                <td><input type="radio" name="s_educativo" value="s_7_7"/></td>
+                                <td><input type="radio" name="s_educativo" value="s_7_8"/></td>
                             </tr>
                             <tr>
                                 <td>Settore riabilitativo</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_riabilitativo" value="s_8_1"/></td>
+                                <td><input type="radio" name="s_riabilitativo" value="s_8_2"/></td>
+                                <td><input type="radio" name="s_riabilitativo" value="s_8_3"/></td>
+                                <td><input type="radio" name="s_riabilitativo" value="s_8_4"/></td>
+                                <td><input type="radio" name="s_riabilitativo" value="s_8_5"/></td>
+                                <td><input type="radio" name="s_riabilitativo" value="s_8_6"/></td>
+                                <td><input type="radio" name="s_riabilitativo" value="s_8_7"/></td>
+                                <td><input type="radio" name="s_riabilitativo" value="s_8_8"/></td>
                             </tr>
                             <tr>
                                 <td>Settore ludico</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_ludico" value="s_9_1"/></td>
+                                <td><input type="radio" name="s_ludico" value="s_9_2"/></td>
+                                <td><input type="radio" name="s_ludico" value="s_9_3"/></td>
+                                <td><input type="radio" name="s_ludico" value="s_9_4"/></td>
+                                <td><input type="radio" name="s_ludico" value="s_9_5"/></td>
+                                <td><input type="radio" name="s_ludico" value="s_9_6"/></td>
+                                <td><input type="radio" name="s_ludico" value="s_9_7"/></td>
+                                <td><input type="radio" name="s_ludico" value="s_9_8"/></td>
                             </tr>
                             <tr>
                                 <td>Settore sportivo</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_sportivo" value="s_10_1"/></td>
+                                <td><input type="radio" name="s_sportivo" value="s_10_2"/></td>
+                                <td><input type="radio" name="s_sportivo" value="s_10_3"/></td>
+                                <td><input type="radio" name="s_sportivo" value="s_10_4"/></td>
+                                <td><input type="radio" name="s_sportivo" value="s_10_5"/></td>
+                                <td><input type="radio" name="s_sportivo" value="s_10_6"/></td>
+                                <td><input type="radio" name="s_sportivo" value="s_10_7"/></td>
+                                <td><input type="radio" name="s_sportivo" value="s_10_8"/></td>
                             </tr>
                             <tr>
                                 <td><input type="text" class="form-control" placeholder="Altro (da specificare)"></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="s_altro" value="s_11_1"/></td>
+                                <td><input type="radio" name="s_altro" value="s_11_2"/></td>
+                                <td><input type="radio" name="s_altro" value="s_11_3"/></td>
+                                <td><input type="radio" name="s_altro" value="s_11_4"/></td>
+                                <td><input type="radio" name="s_altro" value="s_11_5"/></td>
+                                <td><input type="radio" name="s_altro" value="s_11_6"/></td>
+                                <td><input type="radio" name="s_altro" value="s_11_7"/></td>
+                                <td><input type="radio" name="s_altro" value="s_11_8"/></td>
                             </tr>
                             
                         </tbody>
@@ -800,93 +800,93 @@
                         <tbody>
                             <tr>
                                 <td>Finanza</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_finanza" value="f_1_1"/></td>
+                                <td><input type="radio" name="f_finanza" value="f_1_2"/></td>
+                                <td><input type="radio" name="f_finanza" value="f_1_3"/></td>
+                                <td><input type="radio" name="f_finanza" value="f_1_4"/></td>
+                                <td><input type="radio" name="f_finanza" value="f_1_5"/></td>
+                                <td><input type="radio" name="f_finanza" value="f_1_6"/></td>
                             </tr>
                             <tr>
                                 <td>Marketing</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_marketing" value="f_2_1"/></td>
+                                <td><input type="radio" name="f_marketing" value="f_2_2"/></td>
+                                <td><input type="radio" name="f_marketing" value="f_2_3"/></td>
+                                <td><input type="radio" name="f_marketing" value="f_2_4"/></td>
+                                <td><input type="radio" name="f_marketing" value="f_2_5"/></td>
+                                <td><input type="radio" name="f_marketing" value="f_2_6"/></td>
                             </tr>
                             <tr>
                                 <td>Produzione</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_produzione" value="f_3_1"/></td>
+                                <td><input type="radio" name="f_produzione" value="f_3_2"/></td>
+                                <td><input type="radio" name="f_produzione" value="f_3_3"/></td>
+                                <td><input type="radio" name="f_produzione" value="f_3_4"/></td>
+                                <td><input type="radio" name="f_produzione" value="f_3_5"/></td>
+                                <td><input type="radio" name="f_produzione" value="f_3_6"/></td>
                             </tr>
                             <tr>
                                 <td>Amministrazione</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_amministrazione" value="f_4_1"/></td>
+                                <td><input type="radio" name="f_amministrazione" value="f_4_2"/></td>
+                                <td><input type="radio" name="f_amministrazione" value="f_4_3"/></td>
+                                <td><input type="radio" name="f_amministrazione" value="f_4_4"/></td>
+                                <td><input type="radio" name="f_amministrazione" value="f_4_5"/></td>
+                                <td><input type="radio" name="f_amministrazione" value="f_4_6"/></td>
                             </tr>
                             <tr>
                                 <td>Risorse umane</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_risorse" value="f_5_1"/></td>
+                                <td><input type="radio" name="f_risorse" value="f_5_2"/></td>
+                                <td><input type="radio" name="f_risorse" value="f_5_3"/></td>
+                                <td><input type="radio" name="f_risorse" value="f_5_4"/></td>
+                                <td><input type="radio" name="f_risorse" value="f_5_5"/></td>
+                                <td><input type="radio" name="f_risorse" value="f_5_6"/></td>
                             </tr>
                             <tr>
                                 <td>Didattico - educativa</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_didattico" value="f_6_1"/></td>
+                                <td><input type="radio" name="f_didattico" value="f_6_2"/></td>
+                                <td><input type="radio" name="f_didattico" value="f_6_3"/></td>
+                                <td><input type="radio" name="f_didattico" value="f_6_4"/></td>
+                                <td><input type="radio" name="f_didattico" value="f_6_5"/></td>
+                                <td><input type="radio" name="f_didattico" value="f_6_6"/></td>
                             </tr>
                             <tr>
                                 <td>Prevenzione e educazione motoria per disabili e per soggetti in età diversa</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_prevenzione" value="f_7_1"/></td>
+                                <td><input type="radio" name="f_prevenzione" value="f_7_2"/></td>
+                                <td><input type="radio" name="f_prevenzione" value="f_7_3"/></td>
+                                <td><input type="radio" name="f_prevenzione" value="f_7_4"/></td>
+                                <td><input type="radio" name="f_prevenzione" value="f_7_5"/></td>
+                                <td><input type="radio" name="f_prevenzione" value="f_7_6"/></td>
                             </tr>
                             <tr>
                                 <td>Tecnico - Sportiva</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_tecnico" value="f_8_1"/></td>
+                                <td><input type="radio" name="f_tecnico" value="f_8_2"/></td>
+                                <td><input type="radio" name="f_tecnico" value="f_8_3"/></td>
+                                <td><input type="radio" name="f_tecnico" value="f_8_4"/></td>
+                                <td><input type="radio" name="f_tecnico" value="f_8_5"/></td>
+                                <td><input type="radio" name="f_tecnico" value="f_8_6"/></td>
                             </tr>
                             <tr>
                                 <td>Manageriale</td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_manageriale" value="f_9_1"/></td>
+                                <td><input type="radio" name="f_manageriale" value="f_9_2"/></td>
+                                <td><input type="radio" name="f_manageriale" value="f_9_3"/></td>
+                                <td><input type="radio" name="f_manageriale" value="f_9_4"/></td>
+                                <td><input type="radio" name="f_manageriale" value="f_9_5"/></td>
+                                <td><input type="radio" name="f_manageriale" value="f_9_6"/></td>
                             </tr>
                             <tr>
                                 <td><input type="text" class="form-control" placeholder="Altro (da specificare)"></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
-                                <td><input type="radio" name="lingua" value="html"/></td>
+                                <td><input type="radio" name="f_altro" value="f_10_1"/></td>
+                                <td><input type="radio" name="f_altro" value="f_10_2"/></td>
+                                <td><input type="radio" name="f_altro" value="f_10_3"/></td>
+                                <td><input type="radio" name="f_altro" value="f_10_4"/></td>
+                                <td><input type="radio" name="f_altro" value="f_10_5"/></td>
+                                <td><input type="radio" name="f_altro" value="f_10_6"/></td>
                             </tr>
                     </table
                 </div>
@@ -930,7 +930,7 @@
                                 <span class="input-group-addon">
                                   <input type="checkbox">
                                 </span>
-                                  <input type="text" class="form-control" placeholder="Nell'ambito Regionale">
+                                  <input type="text" class="form-control" placeholder="Nell'ambito Regionale" disabled>
                               </div>
                             </div>
                             <div class="col-lg-3">
@@ -938,7 +938,7 @@
                                 <span class="input-group-addon">
                                   <input type="checkbox">
                                 </span>
-                                  <input type="text" class="form-control" placeholder="In Italia">
+                                  <input type="text" class="form-control" placeholder="In Italia" disabled>
                               </div>
                             </div>
                             <div class="col-lg-3">
@@ -946,7 +946,7 @@
                                 <span class="input-group-addon">
                                   <input type="checkbox">
                                 </span>
-                                  <input type="text" class="form-control" placeholder="All'Estero">
+                                  <input type="text" class="form-control" placeholder="All'Estero" disabled>
                               </div>
                             </div>
                     </div>
@@ -962,7 +962,7 @@
                             Motivazioni dell'adesione al programma stages universitario
                         </div>
                         <div class="panel-body">
-                          <input type="text" class="form-control">
+                            <textarea class="form-control" name="motivazioni_adesione" rows="5" style="resize: none"></textarea>
                         </div>
                     </div>
                 </div>
@@ -978,40 +978,42 @@
                         <div class="panel-body">
             
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-lg-4">
                               <div class="input-group">
                                 <span class="input-group-addon">
                                   <input type="checkbox">
                                 </span>
-                                  <input type="text" class="form-control" placeholder="Certificato degli Studi effettuati">
-                              </div>
-                            </div>
-                            <div class="col-lg-3">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <input type="checkbox">
-                                </span>
-                                  <input type="text" class="form-control" placeholder="Curriculum Vitae in italiano">
-                              </div>
-                            </div>
-                            <div class="col-lg-3">
-                              <div class="input-group">
-                                <span class="input-group-addon">
-                                  <input type="checkbox">
-                                </span>
-                                  <input type="text" class="form-control" placeholder="Curriculum Vitae in inglese">
+                                  <input type="text" class="form-control" placeholder="Certificato degli Studi effettuati" disabled>
                               </div>
                             </div>
                         </div>
-                            <div class="row">
-                            <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-lg-3">
                               <div class="input-group">
                                 <span class="input-group-addon">
                                   <input type="checkbox">
                                 </span>
-                                  <input type="text" class="form-control" placeholder="Eventuale altra documentazione ritenuta utile per la valutazione della domanda">
+                                  <input type="text" class="form-control" placeholder="Curriculum Vitae in italiano" disabled>
                               </div>
                             </div>
+                            <div class="col-lg-3">
+                              <div class="input-group">
+                                <span class="input-group-addon">
+                                  <input type="checkbox">
+                                </span>
+                                  <input type="text" class="form-control" placeholder="Curriculum Vitae in inglese" disabled>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-lg-7">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                  <input type="checkbox">
+                                </span>
+                                  <input type="text" class="form-control" placeholder="Eventuale altra documentazione ritenuta utile per la valutazione della domanda" disabled>
+                            </div>
+                        </div>
                             </div>
                         </div>
                     </div>
