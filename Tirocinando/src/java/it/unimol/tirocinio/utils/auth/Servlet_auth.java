@@ -39,8 +39,15 @@ public class Servlet_auth extends HttpServlet {
             request = pRequest;
             response = pResponse;
             
+            this.manager = new Manager(request, response);
+            this.manager.check();
+            
+            String Username = request.getAttribute("username").toString();
+            String Password = request.getAttribute("password").toString();
+            
+            //this.manager.login(Username, Password);
             response.sendRedirect("/Tirocinando/index.jsp?error=true");
-            //this.manager = new Manager();
+            
             
     }
 

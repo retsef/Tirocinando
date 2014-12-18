@@ -16,8 +16,10 @@ public class Abstract_user {
         UserData = new HashMap<>();
     }
     
-    public String getParameter(String str){
-        return "";
+    public String getParameter(String str) throws Exception_user{
+        if(!this.UserData.containsKey(str))
+            throw new Exception_user("Campo Utente inesistente");
+        return this.UserData.get(str);
     }
     
 }

@@ -1,5 +1,6 @@
 package it.unimol.tirocinio.utils.auth;
 
+import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
 import it.unimol.tirocinio.utils.db.Adapter;
 import java.util.HashMap;
@@ -19,9 +20,9 @@ public abstract class Abstract {
     
     abstract public void clean_expired();
     
-    abstract public void get_status();
+    abstract public HashMap<STATISTICS, UUID> get_status();
     
-    abstract public void login();
+    abstract public Abstract_user login(String Username, String Password);
     
     /**
      * L'identificativo univoco universale (universally unique identifier o UUID) è un identificativo standard usato nelle infrastrutture software, 

@@ -1,5 +1,6 @@
 package it.unimol.tirocinio.utils.auth.method;
 
+import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
 import java.util.HashMap;
@@ -29,12 +30,12 @@ public class Session extends Abstract {
     }
 
     @Override
-    public void get_status() {
+    public HashMap<Config.STATISTICS, UUID> get_status() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void login() {
+    public Abstract_user login(String Username, String Password) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

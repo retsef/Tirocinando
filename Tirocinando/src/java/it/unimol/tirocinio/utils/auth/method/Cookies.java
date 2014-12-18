@@ -1,7 +1,9 @@
 package it.unimol.tirocinio.utils.auth.method;
 
+import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
+import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
 import it.unimol.tirocinio.utils.auth.Exception_auth;
 import it.unimol.tirocinio.utils.auth.Servlet_auth;
 import it.unimol.tirocinio.utils.db.Exception_db;
@@ -25,11 +27,10 @@ public class Cookies extends Abstract {
     private HttpServletRequest request;
     private HttpServletResponse response;
     
-    public Cookies() {
+    public Cookies(HttpServletRequest pRequest, HttpServletResponse pResponse) {
         super();
-        request = Servlet_auth.getRequest();
-        response = Servlet_auth.getResponse();
-        
+        this.request = pRequest;
+        this.response = pResponse; 
     }
     
     @Override
@@ -70,12 +71,34 @@ public class Cookies extends Abstract {
     }
 
     @Override
-    public void get_status() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public HashMap<STATISTICS, UUID> get_status() {
+        try {
+            this.clean_expired();
+            String temp_uid = this.get_uid();
+            this.state = new HashMap<>();
+            if(temp_uid==null || temp_uid.equals("")) {
+                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
+                return this.state;
+            }
+            
+            this.conn.select(Config.getTable_sessioni(),"*","uid = '"+ temp_uid +"'");
+            
+            if(this.conn.getNumResult() !=1) {
+                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
+                return this.state;
+            } else {
+                //???
+                return this.state;
+            }
+        } catch (SQLException | Exception_db ex) {
+            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return this.state;
     }
 
     @Override
-    public void login() {
+    public Abstract_user login(String Username, String Password) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -86,7 +109,15 @@ public class Cookies extends Abstract {
 
     @Override
     public void logout() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(this.get_uid()!=null || this.get_uid().equals("")) {
+            
+        } else {
+            try {
+                this.conn.delete(Config.getTable_sessioni(),"uid = '"+this.get_uid()+"'");
+            } catch (SQLException | Exception_db ex) {
+                Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     @Override

@@ -17,14 +17,14 @@
               <span class="input-group-addon">
                   <div class="glyphicon glyphicon-user"></div>
               </span>
-            <input type="text" class="form-control" placeholder="Username">
+            <input type="text" id="username" class="form-control" placeholder="Username">
           </div>
           <span style="padding: 7px;"></span>
           <div class="input-group">
               <span class="input-group-addon">
                   <div class="glyphicon glyphicon-lock"></div>
               </span>
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="password" id="password" class="form-control" placeholder="Password">
           </div>
       </div>
       <div class="modal-footer">

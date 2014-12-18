@@ -1,10 +1,14 @@
 package it.unimol.tirocinio.utils.auth;
 
+import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.utils.auth.Config.AUTH_METHOD;
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
 import it.unimol.tirocinio.utils.auth.method.*;
+import java.lang.String;
 import java.util.HashMap;
 import java.util.UUID;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author Roberto
@@ -17,12 +21,12 @@ public class Manager extends Abstract {
     private Link link;
     private Session session;
     
-    public Manager(){
+    public Manager(HttpServletRequest request, HttpServletResponse response) {
         super();
         
-        this.cookie = new Cookies();
-        this.link = new Link();
-        this.session = new Session(Servlet_auth.getRequest().getSession());
+        this.cookie = new Cookies(request, response);
+        this.link = new Link(request, response);
+        this.session = new Session(request.getSession());
         
         //metodo predefinito
         this.method = AUTH_METHOD.AUTH_USE_COOKIE;
@@ -70,26 +74,30 @@ public class Manager extends Abstract {
     }
 
     @Override
-    public void get_status() {
+    public HashMap<STATISTICS, UUID> get_status() {
         switch(this.method){
             case AUTH_USE_COOKIE:
-                this.cookie.get_status();
+                return this.cookie.get_status();
             case AUTH_USE_LINK:
-                this.link.get_status();
+                return this.link.get_status();
             case AUTH_USE_SESSION:
-                this.session.get_status();
+                return this.session.get_status();
+            default:
+                return null;
         }
     }
 
     @Override
-    public void login() {
+    public Abstract_user login(String Username, String Password) {
         switch(this.method){
             case AUTH_USE_COOKIE:
-                this.cookie.login();
+                return this.cookie.login(Username, Password);
             case AUTH_USE_LINK:
-                this.link.login();
+                return this.link.login(Username, Password);
             case AUTH_USE_SESSION:
-                this.session.login();
+                return this.session.login(Username, Password);
+            default:
+                return null;
         }
     }
 

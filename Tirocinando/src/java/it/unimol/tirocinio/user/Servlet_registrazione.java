@@ -24,8 +24,25 @@ public class Servlet_registrazione extends HttpServlet {
             throws ServletException, IOException {
         
         if(request.getParameter("selection")!=null) {
-            if(request.getParameter("selection").equals("studente")) {
-                
+            switch (request.getParameter("selection")) {
+                case "studente":
+                    if(this.ChekStudenteForm(request, response)) {
+                        
+                    } else 
+                        response.sendRedirect("/Tirocinando/registrazione.jsp?error=true");
+                    break;
+                case "azienda":
+                    if(this.ChekAziendaForm(request, response)) {
+                        
+                    } else 
+                        response.sendRedirect("/Tirocinando/registrazione.jsp?error=true");
+                    break;
+                case "tutor":
+                    if(this.ChekTutorForm(request, response)) {
+                        
+                    } else 
+                        response.sendRedirect("/Tirocinando/registrazione.jsp?error=true");
+                    break;
             }
         } else {
             response.sendRedirect("/Tirocinando/registrazione.jsp?error=true");
@@ -33,6 +50,21 @@ public class Servlet_registrazione extends HttpServlet {
         
     }
 
+    private boolean ChekStudenteForm(HttpServletRequest request, HttpServletResponse response) {
+        
+        return false;
+    }
+    
+    private boolean ChekAziendaForm(HttpServletRequest request, HttpServletResponse response) {
+        
+        return false;
+    }
+    
+    private boolean ChekTutorForm(HttpServletRequest request, HttpServletResponse response) {
+        
+        return false;
+    }
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
