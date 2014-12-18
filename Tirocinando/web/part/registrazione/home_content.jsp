@@ -14,15 +14,15 @@
         <form action="Servlet_registazione" method="POST">
         <% if(request.getParameter("selection")!=null) {
             if(request.getParameter("selection").equals("studente")) { %>
-            <div class="well" style="margin-top: 20px;">
+            <div style="margin-top: 20px;">
                 <%@include file="studente.jsp" %>
             </div>
         <% } else if(request.getParameter("selection").equals("azienda")) { %>
-            <div class="well" style="margin-top: 20px;">
+            <div style="margin-top: 20px;">
                 <%@include file="azienda.jsp" %>
             </div>
         <% } else if(request.getParameter("selection").equals("tutor")) { %>
-            <div class="well" style="margin-top: 20px;">
+            <div style="margin-top: 20px;">
                 <%@include file="tutor.jsp" %>
             </div>
         <%}

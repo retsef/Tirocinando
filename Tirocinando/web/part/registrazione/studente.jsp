@@ -4,95 +4,144 @@
     }
 </style>
 <form action="Servlet_registrazione" method="POST">
+     
+<% if(request.getParameter("error")!=null) { 
+   if(request.getParameter("error").equals("true")) { %>
+   <div class="alert alert-danger" role="alert">
+       <span class="glyphicon glyphicon-warning-sign" />
+       Alcuni dei campi inseriti non sono completi o parzialmente errati!
+   </div>
+   <% } } %>
 <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">Informazioni Personali</div>
     <div class="panel-body">
         <div class="row">
             <div class="col-lg-6">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>
+                     ">
                     <span class="input-group-addon">
                         Nome
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Nome" class="form-control">
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Cognome
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Cognome" class="form-control">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Nato/a a
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Nato_a" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         il
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Il" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Nazionalita'
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Nazionalita" class="form-control">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Residente in
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Residente_in" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Cap
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Cap" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Prov.
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Provincia" class="form-control">
                 </div>
             </div>
         </div>
         <div class='row'>
             <div class="col-lg-9">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Via
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Via" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         N.
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Via_n" class="form-control">
                 </div>
             </div>
         </div>
@@ -102,7 +151,7 @@
                     <span class="input-group-addon">
                         Telefono
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Telefono" class="form-control">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -110,26 +159,34 @@
                     <span class="input-group-addon">
                         Cellulare
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Cellulare" class="form-control">
                 </div>
             </div>
         </div>
         <div class='row'>
             <div class="col-lg-6">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Email
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Email" class="form-control">
                     <span class="input-group-addon">@studenti.unimol.it</span>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Codice fiscale
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="CF" class="form-control">
                 </div>
             </div>
         </div>
@@ -141,11 +198,15 @@
     <div class="panel-body">
         <div class='row'>
             <div class="col-lg-6">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Dipartimento di
                     </span>
-                    <select name="Dipartimento" class="form-control">
+                    <select name="Dipartimento" id="Dipartimento" class="form-control">
                         <option value=""></option>
                         <option value="Agraria">Agricoltura, Ambiente e Alimenti</option>
                         <option value="BioTer">Bioscienze e Territorio</option>
@@ -158,11 +219,15 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="input-group">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Corso di laurea in
                     </span>
-                    <input type="text" class="form-control">
+                    <input type="text" id="Corso_laurea" class="form-control">
                 </div>
             </div>
         </div>

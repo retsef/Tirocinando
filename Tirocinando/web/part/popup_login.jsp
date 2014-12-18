@@ -10,7 +10,10 @@
       <div class="modal-body">
           <% if(request.getParameter("error")!=null) { 
               if(request.getParameter("error").equals("true")) { %>
-                <div class="alert alert-danger" role="alert">Username e Password non sono corretti!</div>
+                <div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-warning-sign"/>
+                    Username e Password non sono corretti!
+                </div>
               <% }
           }%>
           <div class="input-group">
