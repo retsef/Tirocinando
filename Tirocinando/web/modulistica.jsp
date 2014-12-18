@@ -16,13 +16,11 @@
         <jsp:include page="part/navbar.jsp" />
         
         <% if(request.getParameter("section")!=null) {
-            switch(request.getParameter("section")) {
-                case "studente": %>
-                    <jsp:include page="part/modulistica/modulistica_studente.jsp"/>
-                <% case "azienda": %>
-                    <jsp:include page="part/modulistica/modulistica_azienda.jsp"/>
-                <%
-            }
+            if(request.getParameter("section").equals("studente")) {%>
+                <jsp:include page="part/modulistica/modulistica_studente.jsp"/>
+            <%} else if(request.getParameter("section").equals("azienda")) { %>
+                <jsp:include page="part/modulistica/modulistica_azienda.jsp"/>
+            <%}
         }%>
         
         <jsp:include page="part/footer.jsp" />
