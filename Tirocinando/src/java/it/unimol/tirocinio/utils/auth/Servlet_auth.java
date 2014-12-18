@@ -39,7 +39,8 @@ public class Servlet_auth extends HttpServlet {
             request = pRequest;
             response = pResponse;
             
-            this.manager = new Manager();
+            response.sendRedirect("/Tirocinando/index.jsp?error=true");
+            //this.manager = new Manager();
             
     }
 

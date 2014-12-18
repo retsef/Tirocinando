@@ -1,3 +1,4 @@
+<form action="Servlet_auth" method="POST">
 <!-- Modal -->
 <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="width: 450px">
@@ -7,6 +8,11 @@
         <h4 class="modal-title" id="myModalLabel">Accedi</h4>
       </div>
       <div class="modal-body">
+          <% if(request.getParameter("error")!=null) { 
+              if(request.getParameter("error").equals("true")) { %>
+                <div class="alert alert-danger" role="alert">Username e Password non sono corretti!</div>
+              <% }
+          }%>
           <div class="input-group">
               <span class="input-group-addon">
                   <div class="glyphicon glyphicon-user"></div>
@@ -22,8 +28,15 @@
           </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Ok</button>
+        <button type="submit" class="btn btn-primary">Ok</button>
       </div>
     </div>
   </div>
 </div>
+          <% if(request.getParameter("error")!=null) { 
+              if(request.getParameter("error").equals("true")) { %>
+                <script type="text/javascript"> 
+                    $('#LoginModal').modal('show');
+                </script>
+                <% } } %>
+</form>
