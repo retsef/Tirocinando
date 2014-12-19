@@ -181,8 +181,23 @@
                 </div>
             </div>
         </div>
-        
-                
+         <div class="panel panel-default">
+            <div class="panel panel-heading">Obiettivi formativi</div>
+            <div class="panel panel-body">
+                <div class="panel panel-default">
+                <div class="panel panel-heading">Illustrazione dei contenuti e delle attività del progetto di stage</div>
+                    <div class="panel panel-body">
+                        <textarea class="form-control" name="attività_progetto" rows="5" style="resize: none" placeholder="Se possibile specificare operativamente"></textarea>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                <div class="panel panel-heading">Attività previste per gli stagisti nel progetto</div>
+                    <div class="panel panel-body">
+                        <textarea class="form-control" name="attività_progetto" rows="5" style="resize: none" placeholder="Precisare, se possibile, impostazione, gestione, supporto operativo,competenza specialistica, ecc"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>        
                 
                 
                 
