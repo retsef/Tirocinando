@@ -13,7 +13,7 @@
             <div class="col-lg-4">
                 <div class="media">
                     <a class="media-left" href="#">
-                        <img src="/Tirocinando/img/russo_peppe.jpg" alt="..." class="img-circle">
+                        <img src="/Tirocinando/img/team/russo_peppe.jpg" alt="..." class="img-circle">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Russo Giuseppe</h4>
@@ -25,7 +25,7 @@
             <div class="col-lg-4">
                 <div class="media">
                     <a class="media-left" href="#">
-                        <img src="/Tirocinando/img/scopinaro.jpg" alt="..." class="img-circle">
+                        <img src="/Tirocinando/img/team/scopinaro.jpg" alt="..." class="img-circle">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Scopinaro Nicola</h4>
@@ -42,7 +42,7 @@
             <div class="col-lg-4">
                 <div class="media">
                     <a class="media-left" href="#">
-                        <img src="/Tirocinando/img/scinocca.jpg" alt="..." class="img-circle">
+                        <img src="/Tirocinando/img/team/scinocca.jpg" alt="..." class="img-circle">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Roberto Scinocca</h4>
@@ -54,7 +54,7 @@
             <div class="col-lg-4">
                 <div class="media">
                     <a class="media-left" href="#">
-                        <img src="/Tirocinando/img/barile.jpg" alt="..." class="img-circle">
+                        <img src="/Tirocinando/img/team/barile.jpg" alt="..." class="img-circle">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Vittorio Barile</h4>
@@ -66,7 +66,7 @@
             <div class="col-lg-4">
                 <div class="media">
                     <a class="media-left" href="#">
-                        <img src="/Tirocinando/img/russo.jpg" alt="..." class="img-circle">
+                        <img src="/Tirocinando/img/team/russo.jpg" alt="..." class="img-circle">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Michele Russo</h4>
@@ -82,7 +82,7 @@
             <div class="col-lg-4">
                 <div class="media">
                     <a class="media-left" href="#">
-                        <img src="/Tirocinando/img/calabrese.jpg" alt="..." class="img-circle">
+                        <img src="/Tirocinando/img/team/calabrese.jpg" alt="..." class="img-circle">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Cristian Calabrese</h4>
@@ -94,7 +94,7 @@
             <div class="col-lg-4">
                 <div class="media">
                     <a class="media-left" href="#">
-                        <img src="/Tirocinando/img/crisetti.jpg" alt="..." class="img-circle">
+                        <img src="/Tirocinando/img/team/crisetti.jpg" alt="..." class="img-circle">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Federico Crisetti</h4>
@@ -106,7 +106,7 @@
             <div class="col-lg-4">
                 <div class="media">
                     <a class="media-left" href="#">
-                        <img src="/Tirocinando/img/gianni.jpg" alt="..." class="img-circle">
+                        <img src="/Tirocinando/img/team/gianni.jpg" alt="..." class="img-circle">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Gianni De Gregorio</h4>

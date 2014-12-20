@@ -12,6 +12,7 @@
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <title>Tirocinanti</title>
+        <link rel="shortcut icon" href="img/Logo_mini.png">
     </head>
     <body>
         <% if(request.getParameter("section")!=null) {

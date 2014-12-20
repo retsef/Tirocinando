@@ -10,7 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <title>Home Page</title>
+        <title>Modulistica</title>
+        <link rel="shortcut icon" href="img/Logo_mini.png">
     </head>
     <body>
         <jsp:include page="part/navbar.jsp" />
