@@ -31,34 +31,4 @@
                 </div>
             </div>
          
-        <div class="col-lg-4">
-                <div class="panel panel-warning">
-                    <div class="panel-heading"> 
-                        <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-                        Tirocinanti
-                    </div>
-                    <div class="panel-body">
-                        <h5 class="page-header">Nome:</h5>
-                        <h5 class="page-header">Cognome:</h5>
-                        <h5 class="page-header">Ore Fatte:</h5>
-                        <h5 class="page-header">Ore Mancanti:</h5>
-                     
-                    </div>
-                </div>
-            </div>
-
-        <div class="col-lg-4">
-                <div class="panel panel-warning">
-                    <div class="panel-heading"> 
-                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
-                     Libretto Diario
-                    </div>
-                    <div class="panel-body">
-                        <h5 class="page-header">Status:</h5>
-                        <h5 class="page-header">Ore:</h5>
-                        <h5 class="page-header">ADF:</h5>
-                        
-                    </div>
-                </div>
-            </div>
 </section>

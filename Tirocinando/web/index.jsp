@@ -16,7 +16,7 @@
         <jsp:include page="part/navbar.jsp" />
         
         <jsp:include page="part/guest/home_content.jsp"/>
-            
+        
         <jsp:include page="part/footer.jsp" />
         
     </body>

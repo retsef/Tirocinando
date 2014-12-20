@@ -20,18 +20,14 @@
 	  <!-- Collect the nav links, forms, and other content for toggling -->
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
-                    <li>
-                        <a href="/Tirocinando/index.jsp">Home</a>
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/tirocinanti.jsp")) {%> class="active" <%}%> >
+                        <a href="/Tirocinando/tirocinanti.jsp?section=tutor">Tirocinanti</a>
                     </li>
-                    <li>
-                        
-                        <li <%if(request.getRequestURL().toString().equals("http://localhost:8080/tutor_tirocinanti.jsp")) {%> class="active" <%}%>>
-                        <a href="/Tirocinando/tutor_tirocinanti.jsp">Tirocinanti</a>
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/richieste.jsp")) {%> class="active" <%}%> >
+                        <a href="/Tirocinando/richieste.jsp?section=tutor">Richieste</a>
                     </li>
-                       
-                  
-                    <li>
-                        <a href="#">Profilo</a>
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
+                        <a href="/Tirocinando/home.jsp?section=tutor">Profilo</a>
                     </li>
                 
 		</ul>
