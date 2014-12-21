@@ -14,20 +14,17 @@
 	  <!-- Collect the nav links, forms, and other content for toggling -->
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
-                    <li>
-                        <a href="/Tirocinando/index.jsp">Home</a>
-                    </li>
-                    <li>
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/modulistica.jsp")) {%> class="active" <%}%> >
                         <a href="#">Modulistica</a>
                     </li>
-                    <li>
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/ente.jsp")) {%> class="active" <%}%> >
                         <a href="#">Ente</a>
                     </li>
-                    <li>
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/libretto.jsp")) {%> class="active" <%}%> >
                         <a href="#">Libretto</a>
                     </li>
-                    <li>
-                        <a href="#">Profilo</a>
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
+                        <a href="/Tirocinando/home.jsp?section=studente">Profilo</a>
                     </li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">

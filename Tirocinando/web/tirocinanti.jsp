@@ -1,3 +1,9 @@
+<%-- 
+    Document   : tirocinanti
+    Created on : 19-dic-2014, 19.44.44
+    Author     : roberto
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -5,16 +11,21 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <title>Contatti</title>
+        <title>Tirocinanti</title>
         <link rel="shortcut icon" href="img/Logo_mini.png">
     </head>
     <body>
-        <jsp:include page="part/navbar.jsp" />
+        <% if(request.getParameter("section")!=null) {
+            if(request.getParameter("section").equals("azienda")){%>
+                <jsp:include page="part/user/navbar/navbar_azienda.jsp" />
+                <jsp:include page="part/user/tirocinanti/azienda.jsp" />
+            <%} else if(request.getParameter("section").equals("tutor")) {%>
+                <jsp:include page="part/user/navbar/navbar_tutor.jsp" />
+                <jsp:include page="part/user/tirocinanti/tutor.jsp" />
+            <%}
+        } %>
         
-        <jsp:include page="part/guest/contatti_content.jsp"/>
-            
         <jsp:include page="part/footer.jsp" />
-        
         
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

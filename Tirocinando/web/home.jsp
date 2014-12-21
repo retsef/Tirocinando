@@ -9,23 +9,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <title>Azienda</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <title>Home Page</title>
+        <link rel="shortcut icon" href="img/Logo_mini.png">
     </head>
     <body>
         <% if(request.getParameter("section")!=null) {
             if(request.getParameter("section").equals("studente")) {
                 %>
                 <jsp:include page="part/user/navbar/navbar_studente.jsp" />
-                <jsp:include page="part/user/home_page/home_studente.jsp"/>
+                <jsp:include page="part/user/homepage/home_studente.jsp"/>
         <%  } else if(request.getParameter("section").equals("azienda")) {
                 %>
                 <jsp:include page="part/user/navbar/navbar_azienda.jsp" />
-                <jsp:include page="part/user/home_page/home_azienda.jsp"/>
+                <jsp:include page="part/user/homepage/home_azienda.jsp"/>
         <%  } else if(request.getParameter("section").equals("tutor")) {
                 %>
                 <jsp:include page="part/user/navbar/navbar_tutor.jsp" />
-                <jsp:include page="part/user/home_page/home_tutor.jsp"/>
+                <jsp:include page="part/user/homepage/home_tutor.jsp"/>
         <%  }
         }
          %>

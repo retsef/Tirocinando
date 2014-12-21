@@ -6,6 +6,7 @@
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <title>Registrazione</title>
+        <link rel="shortcut icon" href="img/Logo_mini.png">
     </head>
     <body>
         <jsp:include page="part/navbar.jsp" />
