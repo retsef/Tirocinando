@@ -1,15 +1,15 @@
 package it.unimol.tirocinio.user.tutor;
 
 import it.unimol.tirocinio.user.Abstract_user;
-import it.unimol.tirocinio.user.Config;
+import it.unimol.tirocinio.user.Config.User_Type;
 
 /**
  * @author roberto
  */
 public class Tutor extends Abstract_user {
 
-    public Tutor(Config.User_Type ptype) {
-        super(ptype);
+    public Tutor() {
+        super(User_Type.TUTOR);
     }
     
 }

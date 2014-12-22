@@ -29,22 +29,28 @@ public class Servlet_registrazione extends HttpServlet {
         if(request.getParameter("selection")!=null) {
             switch (request.getParameter("selection")) {
                 case "studente":
-                    if(this.ChekStudenteForm(request, response)) {
-                        //this.SetStudenteForm();
-                    } else 
+                    try {
+                        this.UserData = this.ChekStudenteForm(request, response);
+                        this.SetStudenteForm(this.UserData);
+                    } catch(Exception_user ex) {
                         response.sendRedirect("/Tirocinando/registrazione.jsp?section=studente&error=true");
+                    }
                     break;
                 case "azienda":
-                    if(this.ChekAziendaForm(request, response)) {
-                        //this.SetAziendaForm();
-                    } else 
+                    try {
+                        this.UserData = this.ChekAziendaForm(request, response);
+                        this.SetAziendaForm(this.UserData);
+                    } catch(Exception_user ex) {
                         response.sendRedirect("/Tirocinando/registrazione.jsp?section=azienda&error=true");
+                    }
                     break;
                 case "tutor":
-                    if(this.ChekTutorForm(request, response)) {
-                        //this.SetTutorForm();
-                    } else 
+                    try {
+                        this.UserData = this.ChekTutorForm(request, response);
+                        this.SetTutorForm(this.UserData);
+                    } catch(Exception_user ex) {
                         response.sendRedirect("/Tirocinando/registrazione.jsp?section=tutor&error=true");
+                    }
                     break;
             }
         } else {
@@ -58,33 +64,64 @@ public class Servlet_registrazione extends HttpServlet {
         return this.UserData.get(str);
     }
     
-    private boolean ChekStudenteForm(HttpServletRequest request, HttpServletResponse response) {
-        if(
-                    request.getAttribute("Nome")!=null && request.getAttribute("Cognome")!=null &&
-                    request.getAttribute("Nato_a")!=null && request.getAttribute("Il")!=null &&
-                    request.getAttribute("Nazionalita")!=null && request.getAttribute("Residente_in")!=null &&
-                    request.getAttribute("Cap")!=null && request.getAttribute("Provincia")!=null &&
-                    request.getAttribute("Via")!=null && request.getAttribute("Via_n")!=null &&
-                    request.getAttribute("Telefono")!=null && request.getAttribute("Cellulare")!=null &&
-                    request.getAttribute("Email")!=null && request.getAttribute("CF")!=null &&
-                    request.getAttribute("Dipartimento")!=null && request.getAttribute("Corso_laurea")!=null
-            ){
-                HashMap<String, String> temp_UserData = new HashMap<>();
-                temp_UserData.put(null, null);
-                return true;
+    private HashMap<String, String> ChekStudenteForm(HttpServletRequest request, HttpServletResponse response) throws Exception_user {
+        HashMap<String, String> temp_UserData = new HashMap<>();
+        
+        while(request.getAttributeNames().hasMoreElements()){
+            if(!request.getAttributeNames().nextElement().equals("") &&
+                    request.getAttributeNames().nextElement()!=null) {
+                
+                temp_UserData.put(
+                        request.getAttributeNames().nextElement(),
+                        request.getAttribute(request.getAttributeNames().nextElement()).toString()
+                );
+                
             } else {
-                return false;
+                throw new Exception_user("Campi nella pagina di registrazione non validi");
             }
+        }
+        
+        return temp_UserData;
     }
     
-    private boolean ChekAziendaForm(HttpServletRequest request, HttpServletResponse response) {
+    private HashMap<String, String> ChekAziendaForm(HttpServletRequest request, HttpServletResponse response) throws Exception_user {
+        HashMap<String, String> temp_UserData = new HashMap<>();
         
-        return false;
-}
+        while(request.getAttributeNames().hasMoreElements()){
+            if(!request.getAttributeNames().nextElement().equals("") &&
+                    request.getAttributeNames().nextElement()!=null) {
+                
+                temp_UserData.put(
+                        request.getAttributeNames().nextElement(),
+                        request.getAttribute(request.getAttributeNames().nextElement()).toString()
+                );
+                
+            } else {
+                throw new Exception_user("Campi nella pagina di registrazione non validi");
+            }
+        }
+        
+        return temp_UserData;
+    }
     
-    private boolean ChekTutorForm(HttpServletRequest request, HttpServletResponse response) {
+    private HashMap<String, String> ChekTutorForm(HttpServletRequest request, HttpServletResponse response) throws Exception_user {
+        HashMap<String, String> temp_UserData = new HashMap<>();
         
-        return false;
+        while(request.getAttributeNames().hasMoreElements()){
+            if(!request.getAttributeNames().nextElement().equals("") &&
+                    request.getAttributeNames().nextElement()!=null) {
+                
+                temp_UserData.put(
+                        request.getAttributeNames().nextElement(),
+                        request.getAttribute(request.getAttributeNames().nextElement()).toString()
+                );
+                
+            } else {
+                throw new Exception_user("Campi nella pagina di registrazione non validi");
+            }
+        }
+        
+        return temp_UserData;
     }
     
     private void SetStudenteForm(HashMap<String, String> UserData) {
