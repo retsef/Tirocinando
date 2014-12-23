@@ -13,8 +13,8 @@
 <section id="main">
     <div class="container" style="padding-top: 70px;">
         <div class="panel panel-default">
-            <div class="panel panel-heading">Azienda/Ente</div>
-            <div class="panel panel-body">
+            <div class="panel-heading">Azienda/Ente</div>
+            <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="input-group">
@@ -47,8 +47,8 @@
         </div><!-- chiude il panel-default -->
                 
         <div class="panel panel-default">
-            <div class="panel panel-heading">Tutor Aziendale</div>
-            <div class="panel panel-body">
+            <div class="panel-heading">Tutor Aziendale</div>
+            <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="input-group">
@@ -89,8 +89,8 @@
         </div>
         
         <div class="panel panel-default">
-            <div class="panel panel-heading">Tutor Aziendale</div>
-            <div class="panel panel-body">
+            <div class="panel-heading">Tutor Aziendale</div>
+            <div class="panel-body">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="input-group">
@@ -182,17 +182,17 @@
             </div>
         </div>
          <div class="panel panel-default">
-            <div class="panel panel-heading">Obiettivi formativi</div>
-            <div class="panel panel-body">
+            <div class="panel-heading">Obiettivi formativi</div>
+            <div class="panel-body">
                 <div class="panel panel-default">
-                <div class="panel panel-heading">Illustrazione dei contenuti e delle attività del progetto di stage</div>
-                    <div class="panel panel-body">
+                <div class="panel-heading">Illustrazione dei contenuti e delle attività del progetto di stage</div>
+                    <div class="panel-body">
                         <textarea class="form-control" name="attività_progetto" rows="5" style="resize: none" placeholder="Se possibile specificare operativamente"></textarea>
                     </div>
                 </div>
                 <div class="panel panel-default">
-                <div class="panel panel-heading">Attività previste per gli stagisti nel progetto</div>
-                    <div class="panel panel-body">
+                <div class="panel-heading">Attività previste per gli stagisti nel progetto</div>
+                    <div class="panel-body">
                         <textarea class="form-control" name="attività_progetto" rows="5" style="resize: none" placeholder="Precisare, se possibile, impostazione, gestione, supporto operativo,competenza specialistica, ecc"></textarea>
                     </div>
                 </div>
@@ -201,8 +201,8 @@
         
         
         <div class="panel panel-default">
-            <div class="panel panel-heading">Modalità di effettuazione dello stage</div>
-                <div class="panel panel-body">
+            <div class="panel-heading">Modalità di effettuazione dello stage</div>
+                <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="input-group">
@@ -268,14 +268,14 @@
                         </div>
                     </div>
                     <div class="panel panel-default">
-                    <div class="panel panel-heading">Eventuali agevolazioni e/o contributi che l'Azienda / Ente è in grado di mettere a disposizione dello stagista</div>
-                        <div class="panel panel-body">
-                            <textarea class="form-control" name="agecolazioni_azienda" rows="5" style="resize: none" placeholder="servizi aziendali, mensa, trasporti, rimborsi spese, borse di studio, ecc."></textarea>
+                    <div class="panel-heading">Eventuali agevolazioni e/o contributi che l'Azienda / Ente è in grado di mettere a disposizione dello stagista</div>
+                        <div class="panel-body">
+                            <textarea class="form-control" name="agevolazioni_azienda" rows="5" style="resize: none" placeholder="servizi aziendali, mensa, trasporti, rimborsi spese, borse di studio, ecc."></textarea>
                         </div>
                     </div>
                     <div class="panel panel-default">
-                    <div class="panel panel-heading">Indicare se lo stagista potrà o meno utilizzare i risultati (o parte di essi) dell'attività svolta nell'azienda, ente o studio professionale nel periodo di stage a scopo di pubblicazione</div>
-                        <div class="panel panel-body">
+                    <div class="panel-heading">Indicare se lo stagista potrà o meno utilizzare i risultati (o parte di essi) dell'attività svolta nell'azienda, ente o studio professionale nel periodo di stage a scopo di pubblicazione</div>
+                        <div class="panel-body">
                             <div class="col-lg-4">
                                 <div class="input-group">
                                     <span class="input-group-addon">
@@ -307,23 +307,23 @@
         </div>
         
         <div class="panel panel-default">
-            <div class="panel panel-heading">Conoscenza / Requisiti</div>
-            <div class="panel panel-body">
+            <div class="panel-heading">Conoscenza / Requisiti</div>
+            <div class="panel-body">
                 <div class="panel panel-default">
-                <div class="panel panel-heading">Conoscenze tecniche, informatiche, richieste agli stagisti</div>
-                    <div class="panel panel-body">
+                <div class="panel-heading">Conoscenze tecniche, informatiche, richieste agli stagisti</div>
+                    <div class="panel-body">
                         <textarea class="form-control" name="conoscenze_tecniche" rows="3" style="resize: none" placeholder="Tipo e livello"></textarea>
                     </div>
                 </div>
                 <div class="panel panel-default">
-                <div class="panel panel-heading">Eventuali conoscenze linguistiche richieste</div>
-                    <div class="panel panel-body">
+                <div class="panel-heading">Eventuali conoscenze linguistiche richieste</div>
+                    <div class="panel-body">
                         <textarea class="form-control" name="conoscenze_linguistiche" rows="3" style="resize: none"></textarea>
                     </div>
                 </div>
                 <div class="panel panel-default">
-                <div class="panel panel-heading">Alcune caratteristiche gradite</div>
-                    <div class="panel panel-body">
+                <div class="panel-heading">Alcune caratteristiche gradite</div>
+                    <div class="panel-body">
                         <textarea class="form-control" name="caratteristiche_gradite" rows="3" style="resize: none"></textarea>
                     </div>
                 </div>
@@ -331,11 +331,11 @@
         </div>
     
     <div class="panel panel-default">
-        <div class="panel panel-heading">Altre indicazioni</div>
-        <div class="panel panel-body">
+        <div class="panel-heading">Altre indicazioni</div>
+        <div class="panel-body">
             <div class="panel panel-default">
-            <div class="panel panel-heading">Ulteriori precisazioni ed indicazioni utili a predisporre una proficua collaborazione</div>
-                <div class="panel panel-body">
+            <div class="panel-heading">Ulteriori precisazioni ed indicazioni utili a predisporre una proficua collaborazione</div>
+                <div class="panel-body">
                     <textarea class="form-control" name="conoscenze_linguistiche" rows="5" style="resize: none"></textarea>
                 </div>
             </div>
