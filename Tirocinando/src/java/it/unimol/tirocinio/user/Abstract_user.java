@@ -4,8 +4,8 @@ import it.unimol.tirocinio.user.Config.*;
 import java.util.HashMap;
 
 /**
- * Definisce l'istanza dell'utente immagazinando i suoi attributi
- * Si inspira ai JavaBean, ovvero traposizioni di dati SQL su oggetti java, ma ne semplifica l'utilizzo/organizzazione
+ * Definisce l'istanza dell'utente immagazzinando i suoi attributi
+ * Si ispira ai JavaBean, ovvero traposizioni di dati SQL su oggetti java, ma ne semplifica l'utilizzo/organizzazione
  * 
  * @author roberto
  */
