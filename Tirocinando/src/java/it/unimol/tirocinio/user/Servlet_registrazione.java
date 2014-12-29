@@ -70,11 +70,12 @@ public class Servlet_registrazione extends HttpServlet {
         Enumeration<String> enumeration = request.getParameterNames();
         
         while(enumeration.hasMoreElements()){
-            if(!request.getParameter(enumeration.nextElement()).equals("")) {
+            String parameterName = (String) enumeration.nextElement();
+            if(!request.getParameter(parameterName).equals("")) {
                 
                 temp_UserData.put(
-                        enumeration.nextElement(),
-                        request.getParameter(enumeration.nextElement())
+                        parameterName,
+                        request.getParameter(parameterName)
                 );
                 
             } else {
@@ -90,11 +91,12 @@ public class Servlet_registrazione extends HttpServlet {
         Enumeration<String> enumeration = request.getParameterNames();
         
         while(enumeration.hasMoreElements()){
-            if(!request.getParameter(enumeration.nextElement()).equals("")) {
+            String parameterName = (String) enumeration.nextElement();
+            if(!request.getParameter(parameterName).equals("")) {
                 
                 temp_UserData.put(
-                        enumeration.nextElement(),
-                        request.getParameter(enumeration.nextElement())
+                        parameterName,
+                        request.getParameter(parameterName)
                 );
                 
             } else {
@@ -110,11 +112,12 @@ public class Servlet_registrazione extends HttpServlet {
         Enumeration<String> enumeration = request.getParameterNames();
         
         while(enumeration.hasMoreElements()){
-            if(!request.getParameter(enumeration.nextElement()).equals("")) {
+            String parameterName = (String) enumeration.nextElement();
+            if(!request.getParameter(parameterName).equals("")) {
                 
                 temp_UserData.put(
-                        enumeration.nextElement(),
-                        request.getParameter(enumeration.nextElement())
+                        parameterName,
+                        request.getParameter(parameterName)
                 );
                 
             } else {
