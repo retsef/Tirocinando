@@ -3,7 +3,7 @@
         padding-bottom: 25px;
     }
 </style>
-<form action="Servlet_registrazione?selection=studente" method="POST">
+<form action="Registrazione?selection=studente" method="POST">
      
 <% if(request.getParameter("error")!=null) { 
    if(request.getParameter("error").equals("true")) { %>
@@ -27,7 +27,7 @@
                     <span class="input-group-addon">
                         Nome
                     </span>
-                    <input type="text" id="Nome" class="form-control">
+                    <input type="text" name="Nome" class="form-control">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -39,7 +39,7 @@
                     <span class="input-group-addon">
                         Cognome
                     </span>
-                    <input type="text" id="Cognome" class="form-control">
+                    <input type="text" name="Cognome" class="form-control">
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                     <span class="input-group-addon">
                         Nato/a a
                     </span>
-                    <input type="text" id="Nato_a" class="form-control">
+                    <input type="text" name="Nato_a" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -65,7 +65,7 @@
                     <span class="input-group-addon">
                         il
                     </span>
-                    <input type="text" id="Il" class="form-control">
+                    <input type="text" name="Il" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -77,7 +77,7 @@
                     <span class="input-group-addon">
                         Nazionalita'
                     </span>
-                    <input type="text" id="Nazionalita" class="form-control">
+                    <input type="text" name="Nazionalita" class="form-control">
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@
                     <span class="input-group-addon">
                         Residente in
                     </span>
-                    <input type="text" id="Residente_in" class="form-control">
+                    <input type="text" name="Residente_in" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -103,7 +103,7 @@
                     <span class="input-group-addon">
                         Cap
                     </span>
-                    <input type="text" id="Cap" class="form-control">
+                    <input type="text" name="Cap" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -115,7 +115,7 @@
                     <span class="input-group-addon">
                         Prov.
                     </span>
-                    <input type="text" id="Provincia" class="form-control">
+                    <input type="text" name="Provincia" class="form-control">
                 </div>
             </div>
         </div>
@@ -129,7 +129,7 @@
                     <span class="input-group-addon">
                         Via
                     </span>
-                    <input type="text" id="Via" class="form-control">
+                    <input type="text" name="Via" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -141,7 +141,7 @@
                     <span class="input-group-addon">
                         N.
                     </span>
-                    <input type="text" id="Via_n" class="form-control">
+                    <input type="text" name="Via_n" class="form-control">
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@
                     <span class="input-group-addon">
                         Telefono
                     </span>
-                    <input type="text" id="Telefono" class="form-control">
+                    <input type="text" name="Telefono" class="form-control">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -159,7 +159,7 @@
                     <span class="input-group-addon">
                         Cellulare
                     </span>
-                    <input type="text" id="Cellulare" class="form-control">
+                    <input type="text" name="Cellulare" class="form-control">
                 </div>
             </div>
         </div>
@@ -173,7 +173,7 @@
                     <span class="input-group-addon">
                         Email
                     </span>
-                    <input type="text" id="Email" class="form-control">
+                    <input type="text" name="Email" class="form-control">
                     <span class="input-group-addon">@studenti.unimol.it</span>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                     <span class="input-group-addon">
                         Codice fiscale
                     </span>
-                    <input type="text" id="CF" class="form-control">
+                    <input type="text" name="CF" class="form-control">
                 </div>
             </div>
         </div>
@@ -227,7 +227,7 @@
                     <span class="input-group-addon">
                         Corso di laurea in
                     </span>
-                    <input type="text" id="Corso_laurea" class="form-control">
+                    <input type="text" name="Corso_laurea" class="form-control">
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
         padding-bottom: 25px;
     }
 </style>
-<form action="Servlet_registrazione?selection=azienda" method="POST">
+<form action="Registrazione?selection=azienda" method="POST">
      
 <% if(request.getParameter("error")!=null) { 
    if(request.getParameter("error").equals("true")) { %>
@@ -25,7 +25,7 @@
                     <span class="input-group-addon">
                         Denominazione
                     </span>
-                    <input type="text" id="Denominazione" class="form-control">
+                    <input type="text" name="Denominazione" class="form-control">
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                     <span class="input-group-addon">
                         Indirizzo
                     </span>
-                    <input type="text" id="Indirizzo" class="form-control">
+                    <input type="text" name="Indirizzo" class="form-control">
                 </div>
             </div>
             <div class="col-lg-4">
@@ -51,7 +51,7 @@
                     <span class="input-group-addon">
                         Cap/Citta'
                     </span>
-                    <input type="text" id="Cap_Citta" class="form-control">
+                    <input type="text" name="Cap_Citta" class="form-control">
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
                     <span class="input-group-addon">
                         Numero Tel
                     </span>
-                    <input type="text" id="Telefono" class="form-control">
+                    <input type="text" name="Telefono" class="form-control">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -73,7 +73,7 @@
                     <span class="input-group-addon">
                         Numero Fax
                     </span>
-                    <input type="text" id="Fax" class="form-control">
+                    <input type="text" name="Fax" class="form-control">
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                     <span class="input-group-addon">
                         Email
                     </span>
-                    <input type="text" id="Email" class="form-control">
+                    <input type="text" name="Email" class="form-control">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -95,7 +95,7 @@
                     <span class="input-group-addon">
                         www
                     </span>
-                    <input type="text" id="Sito_internet" class="form-control">
+                    <input type="text" name="Sito_internet" class="form-control">
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
                     <span class="input-group-addon">
                         Codice Fiscale o Partita IVA
                     </span>
-                    <input type="text" id="CF_PIVA" class="form-control">
+                    <input type="text" name="CF_PIVA" class="form-control">
                 </div>
             </div>
         </div>

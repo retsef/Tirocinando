@@ -3,7 +3,7 @@
         padding-bottom: 25px;
     }
 </style>
-<form action="Servlet_registrazione?selection=tutor" method="POST">
+<form action="Registrazione?selection=tutor" method="POST">
      
 <% if(request.getParameter("error")!=null) { 
    if(request.getParameter("error").equals("true")) { %>
@@ -26,7 +26,7 @@
                     <span class="input-group-addon">
                         Nome
                     </span>
-                    <input type="text" id="Nome" class="form-control">
+                    <input type="text" name="Nome" class="form-control">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -38,7 +38,7 @@
                     <span class="input-group-addon">
                         Cognome
                     </span>
-                    <input type="text" id="Cognome" class="form-control">
+                    <input type="text" name="Cognome" class="form-control">
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                     <span class="input-group-addon">
                         Email
                     </span>
-                    <input type="text" id="Email" class="form-control">
+                    <input type="text" name="Email" class="form-control">
                     <span class="input-group-addon">
                         @unimol.it
                     </span>

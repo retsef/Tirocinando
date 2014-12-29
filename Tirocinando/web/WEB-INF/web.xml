@@ -10,11 +10,11 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Autenticazione</servlet-name>
-        <url-pattern>/Servlet_auth</url-pattern>
+        <url-pattern>/Autenticazione</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Registrazione</servlet-name>
-        <url-pattern>/Servlet_registrazione</url-pattern>
+        <url-pattern>/Registrazione</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

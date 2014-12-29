@@ -1,6 +1,7 @@
 package it.unimol.tirocinio.user;
 
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -66,14 +67,14 @@ public class Servlet_registrazione extends HttpServlet {
     
     private HashMap<String, String> ChekStudenteForm(HttpServletRequest request, HttpServletResponse response) throws Exception_user {
         HashMap<String, String> temp_UserData = new HashMap<>();
+        Enumeration<String> enumeration = request.getParameterNames();
         
-        while(request.getAttributeNames().hasMoreElements()){
-            if(!request.getAttributeNames().nextElement().equals("") &&
-                    request.getAttributeNames().nextElement()!=null) {
+        while(enumeration.hasMoreElements()){
+            if(!request.getParameter(enumeration.nextElement()).equals("")) {
                 
                 temp_UserData.put(
-                        request.getAttributeNames().nextElement(),
-                        request.getAttribute(request.getAttributeNames().nextElement()).toString()
+                        enumeration.nextElement(),
+                        request.getParameter(enumeration.nextElement())
                 );
                 
             } else {
@@ -86,14 +87,14 @@ public class Servlet_registrazione extends HttpServlet {
     
     private HashMap<String, String> ChekAziendaForm(HttpServletRequest request, HttpServletResponse response) throws Exception_user {
         HashMap<String, String> temp_UserData = new HashMap<>();
+        Enumeration<String> enumeration = request.getParameterNames();
         
-        while(request.getAttributeNames().hasMoreElements()){
-            if(!request.getAttributeNames().nextElement().equals("") &&
-                    request.getAttributeNames().nextElement()!=null) {
+        while(enumeration.hasMoreElements()){
+            if(!request.getParameter(enumeration.nextElement()).equals("")) {
                 
                 temp_UserData.put(
-                        request.getAttributeNames().nextElement(),
-                        request.getAttribute(request.getAttributeNames().nextElement()).toString()
+                        enumeration.nextElement(),
+                        request.getParameter(enumeration.nextElement())
                 );
                 
             } else {
@@ -106,14 +107,14 @@ public class Servlet_registrazione extends HttpServlet {
     
     private HashMap<String, String> ChekTutorForm(HttpServletRequest request, HttpServletResponse response) throws Exception_user {
         HashMap<String, String> temp_UserData = new HashMap<>();
+        Enumeration<String> enumeration = request.getParameterNames();
         
-        while(request.getAttributeNames().hasMoreElements()){
-            if(!request.getAttributeNames().nextElement().equals("") &&
-                    request.getAttributeNames().nextElement()!=null) {
+        while(enumeration.hasMoreElements()){
+            if(!request.getParameter(enumeration.nextElement()).equals("")) {
                 
                 temp_UserData.put(
-                        request.getAttributeNames().nextElement(),
-                        request.getAttribute(request.getAttributeNames().nextElement()).toString()
+                        enumeration.nextElement(),
+                        request.getParameter(enumeration.nextElement())
                 );
                 
             } else {
