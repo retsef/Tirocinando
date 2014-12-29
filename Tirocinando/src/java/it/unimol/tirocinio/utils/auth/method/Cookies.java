@@ -1,14 +1,16 @@
 package it.unimol.tirocinio.utils.auth.method;
 
 import it.unimol.tirocinio.user.Abstract_user;
+import it.unimol.tirocinio.user.Exception_user;
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
 import it.unimol.tirocinio.utils.auth.Exception_auth;
-import it.unimol.tirocinio.utils.auth.Servlet_auth;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.UUID;
 import java.util.logging.Level;
@@ -57,44 +59,23 @@ public class Cookies extends Abstract {
     }
 
     @Override
-    public String get_uid() {
+    public String get_uid() throws Exception_auth{
         Cookie[] cookies = request.getCookies();
 
-        uid = null;
+        this.uid = null;
         for(Cookie cook : cookies){
             if("uid".equals(cook.getName())){
-                uid = cook.getValue();
-            }
+                this.uid = cook.getValue();
+                return this.uid;
+            } 
         }
         
-        return uid;
+        throw new Exception_auth("Chiave univoca non trovata");
     }
 
     @Override
     public HashMap<STATISTICS, UUID> get_status() {
-        try {
-            this.clean_expired();
-            String temp_uid = this.get_uid();
-            this.state = new HashMap<>();
-            if(temp_uid==null || temp_uid.equals("")) {
-                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
-                return this.state;
-            }
-            
-            this.conn.select(Config.getTable_sessioni(),"*","uid = '"+ temp_uid +"'");
-            
-            if(this.conn.getNumResult() !=1) {
-                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
-                return this.state;
-            } else {
-                //???
-                return this.state;
-            }
-        } catch (SQLException | Exception_db ex) {
-            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        return this.state;
+        return super.get_status();
     }
 
     @Override
@@ -103,26 +84,43 @@ public class Cookies extends Abstract {
     }
 
     @Override
-    public void register_session() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void logout() {
-        if(this.get_uid()!=null || this.get_uid().equals("")) {
+    public void register_session(Abstract_user pUser) throws Exception_user {
+        this.uid = this.generate_uid().toString();
+        int time = (int) System.currentTimeMillis();
+        String[] temp_value = { this.uid, pUser.getParameter("id"), Integer.toString(time) };
+        try {
+            this.conn.insert(Config.getTable_sessioni(), temp_value);
             
-        } else {
-            try {
-                this.conn.delete(Config.getTable_sessioni(),"uid = '"+this.get_uid()+"'");
-            } catch (SQLException | Exception_db ex) {
-                Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            this.cookie = new Cookie("uid",this.uid);
+            this.response.addCookie(this.cookie);
+            this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
+            
+        } catch (SQLException | Exception_db ex) {
+            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     @Override
-    public HashMap<Config.STATISTICS, UUID> check() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void logout() {
+        try {
+            if(this.get_uid()!=null || !this.get_uid().equals(""))
+                this.conn.delete(Config.getTable_sessioni(),"uid = '"+this.get_uid()+"'");
+                //???
+        } catch (SQLException | Exception_db | Exception_auth ex) {
+            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public Abstract_user check() throws Exception_auth {
+        HashMap<STATISTICS, UUID> temp_status = this.get_status();
+        
+        if(temp_status.containsKey(STATISTICS.AUTH_LOGGED)) {
+            Abstract_user temp_user = null;
+            //Creazione Abstract_user
+            return temp_user;
+        } else 
+            throw new Exception_auth("Non esiste una sessione valida pre esistente");
     }
 
     

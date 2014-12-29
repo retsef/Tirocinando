@@ -1,10 +1,10 @@
 package it.unimol.tirocinio.utils.auth;
 
 import it.unimol.tirocinio.user.Abstract_user;
+import it.unimol.tirocinio.user.Exception_user;
 import it.unimol.tirocinio.utils.auth.Config.AUTH_METHOD;
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
 import it.unimol.tirocinio.utils.auth.method.*;
-import java.lang.String;
 import java.util.HashMap;
 import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
@@ -60,7 +60,7 @@ public class Manager extends Abstract {
     }
 
     @Override
-    public String get_uid() {
+    public String get_uid() throws Exception_auth{
         switch(this.method){
             case AUTH_USE_COOKIE:
                 return this.cookie.get_uid();
@@ -107,14 +107,14 @@ public class Manager extends Abstract {
     }
 
     @Override
-    public void register_session() {
+    public void register_session(Abstract_user pUser) throws Exception_user {
         switch(this.method){
             case AUTH_USE_COOKIE:
-                this.cookie.register_session();
+                this.cookie.register_session(pUser);
             case AUTH_USE_LINK:
-                this.link.register_session();
+                this.link.register_session(pUser);
             case AUTH_USE_SESSION:
-                this.session.register_session();
+                this.session.register_session(pUser);
         }
     }
 
@@ -131,14 +131,14 @@ public class Manager extends Abstract {
     }
 
     @Override
-    public HashMap<STATISTICS, UUID> check(){
+    public Abstract_user check() throws Exception_auth {
         switch(this.method){
             case AUTH_USE_COOKIE:
-                this.cookie.check();
+                return this.cookie.check();
             case AUTH_USE_LINK:
-                this.link.check();
+                return this.link.check();
             case AUTH_USE_SESSION:
-                this.session.check();
+                return this.session.check();
             default:
                 return null;
         }

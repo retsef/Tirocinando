@@ -3,7 +3,7 @@
         padding-bottom: 25px;
     }
 </style>
-<form action="Servlet_registrazione" method="POST">
+<form action="Servlet_registrazione?selection=tutor" method="POST">
      
 <% if(request.getParameter("error")!=null) { 
    if(request.getParameter("error").equals("true")) { %>

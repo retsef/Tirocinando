@@ -25,15 +25,15 @@ public class Servlet_registrazione extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    
-        if(request.getParameter("selection")!=null) {
+        
+        if(request.getParameter("selection")!=null && !request.getParameter("selection").equals("") ) {
             switch (request.getParameter("selection")) {
                 case "studente":
                     try {
                         this.UserData = this.ChekStudenteForm(request, response);
                         this.SetStudenteForm(this.UserData);
                     } catch(Exception_user ex) {
-                        response.sendRedirect("/Tirocinando/registrazione.jsp?section=studente&error=true");
+                        response.sendRedirect("/Tirocinando/registrazione.jsp?selection=studente&error=true");
                     }
                     break;
                 case "azienda":
@@ -41,7 +41,7 @@ public class Servlet_registrazione extends HttpServlet {
                         this.UserData = this.ChekAziendaForm(request, response);
                         this.SetAziendaForm(this.UserData);
                     } catch(Exception_user ex) {
-                        response.sendRedirect("/Tirocinando/registrazione.jsp?section=azienda&error=true");
+                        response.sendRedirect("/Tirocinando/registrazione.jsp?selection=azienda&error=true");
                     }
                     break;
                 case "tutor":
@@ -49,7 +49,7 @@ public class Servlet_registrazione extends HttpServlet {
                         this.UserData = this.ChekTutorForm(request, response);
                         this.SetTutorForm(this.UserData);
                     } catch(Exception_user ex) {
-                        response.sendRedirect("/Tirocinando/registrazione.jsp?section=tutor&error=true");
+                        response.sendRedirect("/Tirocinando/registrazione.jsp?selection=tutor&error=true");
                     }
                     break;
             }

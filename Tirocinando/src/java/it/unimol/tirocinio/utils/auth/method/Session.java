@@ -3,6 +3,7 @@ package it.unimol.tirocinio.utils.auth.method;
 import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
+import it.unimol.tirocinio.utils.auth.Exception_auth;
 import java.util.HashMap;
 import java.util.UUID;
 import javax.servlet.http.HttpSession;
@@ -25,13 +26,13 @@ public class Session extends Abstract {
     }
 
     @Override
-    public String get_uid() {
+    public String get_uid() throws Exception_auth{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public HashMap<Config.STATISTICS, UUID> get_status() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return super.get_status();
     }
 
     @Override
@@ -40,7 +41,7 @@ public class Session extends Abstract {
     }
 
     @Override
-    public void register_session() {
+    public void register_session(Abstract_user pUser) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -50,7 +51,7 @@ public class Session extends Abstract {
     }
 
     @Override
-    public HashMap<Config.STATISTICS, UUID> check() {
+    public Abstract_user check() throws Exception_auth {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

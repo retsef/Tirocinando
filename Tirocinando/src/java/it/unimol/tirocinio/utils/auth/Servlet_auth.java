@@ -6,6 +6,8 @@
 package it.unimol.tirocinio.utils.auth;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,7 +42,11 @@ public class Servlet_auth extends HttpServlet {
             response = pResponse;
             
             this.manager = new Manager(request, response);
+        try {
             this.manager.check();
+        } catch (Exception_auth ex) {
+            Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
+        }
             
             String Username = request.getAttribute("username").toString();
             String Password = request.getAttribute("password").toString();

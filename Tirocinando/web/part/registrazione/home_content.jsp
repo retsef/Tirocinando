@@ -11,7 +11,7 @@
               <button type="button" class="btn btn-success" onclick="window.location.href='/Tirocinando/registrazione.jsp?selection=tutor'">Tutor Accademico</button>
             </div>
         </div>
-        <form action="Servlet_registazione" method="POST">
+        <form action="Servlet_registrazione" method="POST">
         <% if(request.getParameter("selection")!=null) {
             if(request.getParameter("selection").equals("studente")) { %>
             <div style="margin-top: 20px;">

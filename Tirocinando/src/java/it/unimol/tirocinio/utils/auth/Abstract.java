@@ -1,10 +1,15 @@
 package it.unimol.tirocinio.utils.auth;
 
 import it.unimol.tirocinio.user.Abstract_user;
+import it.unimol.tirocinio.user.Exception_user;
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
 import it.unimol.tirocinio.utils.db.Adapter;
+import it.unimol.tirocinio.utils.db.Exception_db;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author Roberto
@@ -32,7 +37,31 @@ public abstract class Abstract {
      * 
      * @return Coppia di Identificativo di stato e chiave univoca della sessione
      */
-    abstract public HashMap<STATISTICS, UUID> get_status();
+    public HashMap<STATISTICS, UUID> get_status() {
+        try {
+            this.clean_expired();
+            String temp_uid = this.get_uid();
+            this.state = new HashMap<>();
+            if(temp_uid==null || temp_uid.equals("")) {
+                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
+                return this.state;
+            }
+            
+            this.conn.select(Config.getTable_sessioni(),"*","uid = '"+ temp_uid +"'");
+            
+            if(this.conn.getNumResult() !=1) {
+                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
+                return this.state;
+            } else {
+                this.state.put(STATISTICS.AUTH_LOGGED, UUID.fromString(temp_uid));
+                return this.state;
+            }
+        } catch (SQLException | Exception_db | Exception_auth ex) {
+            Logger.getLogger(Abstract.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return this.state;
+    }
     
     /**
      * Login
@@ -62,10 +91,11 @@ public abstract class Abstract {
      * Restituisce l'uid
      * 
      * @return UUID come stringa
+     * @throws it.unimol.tirocinio.utils.auth.Exception_auth
      */
-    abstract public String get_uid();
+    abstract public String get_uid() throws Exception_auth;
     
-    abstract public void register_session();
+    abstract public void register_session(Abstract_user pUser) throws Exception_user;
     
     /**
      * Distrugge la sessione dell'utente
@@ -76,7 +106,8 @@ public abstract class Abstract {
      * Controlla se esiste l'istanza della sessione utente
      * 
      * @return Istanza dell'utente loggato (il Bean per intenderci ma piu' FIGO!)
+     * @throws it.unimol.tirocinio.utils.auth.Exception_auth
      */
-    abstract public Abstract_user check();
+    abstract public Abstract_user check() throws Exception_auth;
     
 }

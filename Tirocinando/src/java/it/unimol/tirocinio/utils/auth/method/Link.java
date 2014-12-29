@@ -1,11 +1,16 @@
 package it.unimol.tirocinio.utils.auth.method;
 
 import it.unimol.tirocinio.user.Abstract_user;
+import it.unimol.tirocinio.user.Exception_user;
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
-import it.unimol.tirocinio.utils.auth.Servlet_auth;
+import it.unimol.tirocinio.utils.auth.Exception_auth;
+import it.unimol.tirocinio.utils.db.Exception_db;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -31,13 +36,22 @@ public class Link extends Abstract {
     }
 
     @Override
-    public String get_uid() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String get_uid() throws Exception_auth{
+        this.uid = null;
+        if(request.getParameter("uid")!=null && !request.getParameter("uid").equals("")) {
+            this.uid = request.getParameter("uid");
+            return this.uid;
+        } else if(request.getAttribute("uid")!=null && !request.getAttribute("uid").equals("")) {
+            this.uid = (String) request.getAttribute("uid");
+            return this.uid;
+        } else 
+            throw new Exception_auth("Chiave univoca non trovata");
+        
     }
 
     @Override
     public HashMap<Config.STATISTICS, UUID> get_status() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return super.get_status();
     }
 
     @Override
@@ -46,8 +60,17 @@ public class Link extends Abstract {
     }
 
     @Override
-    public void register_session() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void register_session(Abstract_user pUser) throws Exception_user {
+        this.uid = this.generate_uid().toString();
+        int time = (int) System.currentTimeMillis();
+        String[] temp_value = { this.uid, pUser.getParameter("id"), Integer.toString(time) };
+        try {
+            this.conn.insert(Config.getTable_sessioni(), temp_value);
+            request.setAttribute("uid", this.uid);
+            
+        } catch (SQLException | Exception_db ex) {
+            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override
@@ -56,7 +79,7 @@ public class Link extends Abstract {
     }
 
     @Override
-    public HashMap<Config.STATISTICS, UUID> check() {
+    public Abstract_user check() throws Exception_auth {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
