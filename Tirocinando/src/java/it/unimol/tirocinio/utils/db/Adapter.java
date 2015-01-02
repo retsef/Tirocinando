@@ -2,6 +2,8 @@ package it.unimol.tirocinio.utils.db;
 
 import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -115,6 +117,43 @@ public class Adapter {
     
     public void delete(String table) throws SQLException, Exception_db{
         this.delete(table, null);
+    }
+    
+    /**
+     * UPDATE table_name
+     * SET column1=value1,column2=value2,...
+     * WHERE some_column=some_value;
+     * @param table
+     * @param rows
+     * @param where
+     * @throws java.sql.SQLException
+     * @throws it.unimol.tirocinio.utils.db.Exception_db
+     */
+    public void update(String table, 
+            HashMap<String,String> rows, 
+            HashMap<String,String> where) throws SQLException, Exception_db {
+        if(this.TableExist(table)){
+            String query = "UPDATE " + table + " SET ";
+            //rows
+            ArrayList<String> temp_listrows = new ArrayList<>();
+            for (String key : rows.keySet()) {
+                temp_listrows.add(""+key+"='"+rows.get(key)+"'");
+            }
+            query += implode(",", (String[]) temp_listrows.toArray());
+            
+            query += " WHERE ";
+            
+            //where
+            ArrayList<String> temp_listwhere = new ArrayList<>();
+            for (String key : rows.keySet()) {
+                temp_listwhere.add(""+key+"='"+rows.get(key)+"'");
+            }
+            query += implode(",", (String[]) temp_listwhere.toArray());
+            
+            //query
+            this.db_manager.execUpdate(query);
+        }else 
+            throw new Exception_db("La tabella inclusa nella query non Esiste");
     }
     
     public int getNumResult() throws SQLException{
