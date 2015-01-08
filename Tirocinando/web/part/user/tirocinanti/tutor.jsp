@@ -45,7 +45,9 @@
                             Microsoft
                         </td>
                         <td> 
-                            Attivo <img src="img/PallinoVerde.png" />
+                            <span class="label label-success">Attivo 
+                                <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -59,7 +61,9 @@
                             Da Bastone
                         </td>
                         <td>
-                            Non Attivo <img src="img/nonAttivo.gif" />
+                            <span class="label label-danger">Non attivo
+                                <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+                            </span>
                         </td>
                     </tr>
                 </tbody>
