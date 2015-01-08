@@ -44,9 +44,9 @@ public class Servlet_Collector_Accettazione extends HttpServlet {
                     String matricola = rs.getString("matricola");
 
                     System.out.println("<h1>" + nome + cognome + matricola + 
-                                        "<div class=\"btn-group\" role=\"group\" aria-label=\"...\">\n" +
-                                        "<button type=\"button\" class=\"btn btn-default\">Accetta</button>\n" +
-                                        "<button type=\"button\" class=\"btn btn-default\">Rifiuta</button>\n" +
+                                        "<div class=\"btn-group\" role=\"group\" aria-label=\"...\">" +
+                                        "<button type=\"button\" class=\"btn btn-default\">Accetta</button>" +
+                                        "<button type=\"button\" class=\"btn btn-default\">Rifiuta</button>" +
                                         "</div>" + "<h1>");
                 }
             } catch (SQLException ex) {
