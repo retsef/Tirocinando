@@ -41,7 +41,7 @@ public class Servlet_Collector_Accettazione extends HttpServlet {
                 while(rs.next()) {
                     String nome = rs.getString("nome");
                     String cognome = rs.getString("cognome");
-                    String matricola = rs.getString("matricola");
+                    int matricola = rs.getInt("matricola");
 
                     System.out.println("<h1>" + nome + cognome + matricola + 
                                         "<div class=\"btn-group\" role=\"group\" aria-label=\"...\">" +
@@ -50,8 +50,8 @@ public class Servlet_Collector_Accettazione extends HttpServlet {
                                         "</div>" + "<h1>");
                 }
             } catch (SQLException ex) {
-            System.out.println("<h1>Errore select</h1>");
-            Logger.getLogger(Servlet_Collector_Accettazione.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("<h1>Errore select</h1>");
+                Logger.getLogger(Servlet_Collector_Accettazione.class.getName()).log(Level.SEVERE, null, ex);
             } catch (Exception_db ex) {
                 Logger.getLogger(Servlet_Collector_Accettazione.class.getName()).log(Level.SEVERE, null, ex);
             }
