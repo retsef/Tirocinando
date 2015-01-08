@@ -23,7 +23,7 @@ public class FieldCollector {
             Map.put(Config.getField(pDoc)[i], pValue[i]);
         }
     } else
-        throw new Exception_doc("Impossibile comporre l'HasMap");
+        throw new Exception_doc("Impossibile comporre l'HashMap");
     
     }
     
