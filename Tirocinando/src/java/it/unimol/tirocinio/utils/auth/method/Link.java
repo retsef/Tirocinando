@@ -55,7 +55,7 @@ public class Link extends Abstract {
     }
 
     @Override
-    public Abstract_user login(String Username, String Password) {
+    public Abstract_user login(String Username, String Password) throws Exception_user {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

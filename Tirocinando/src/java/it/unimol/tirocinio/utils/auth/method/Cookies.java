@@ -9,8 +9,6 @@ import it.unimol.tirocinio.utils.auth.Exception_auth;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.UUID;
 import java.util.logging.Level;
@@ -79,8 +77,16 @@ public class Cookies extends Abstract {
     }
 
     @Override
-    public Abstract_user login(String Username, String Password) {
+    public Abstract_user login(String Username, String Password) throws Exception_user {
+        
+        /**
+         * la funzione di controllo e' questa:
+         * this.conn.select(Config.getTable_utenti(),"*", "username='"+Username+"' and password='"+Password+"'");
+         * 
+         * Ma non esiste un unico Table_utenti, ne possono esistere 3!
+         */
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
@@ -92,8 +98,8 @@ public class Cookies extends Abstract {
             this.conn.insert(Config.getTable_sessioni(), temp_value);
             
             this.cookie = new Cookie("uid",this.uid);
-            this.response.addCookie(this.cookie);
             this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
+            this.response.addCookie(this.cookie);
             
         } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
@@ -105,7 +111,10 @@ public class Cookies extends Abstract {
         try {
             if(this.get_uid()!=null || !this.get_uid().equals(""))
                 this.conn.delete(Config.getTable_sessioni(),"uid = '"+this.get_uid()+"'");
-                //???
+                //creare un cookie vuoto di rimpiazzo
+                this.cookie = new Cookie("uid","");
+                this.response.addCookie(this.cookie);
+        
         } catch (SQLException | Exception_db | Exception_auth ex) {
             Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -117,7 +126,9 @@ public class Cookies extends Abstract {
         
         if(temp_status.containsKey(STATISTICS.AUTH_LOGGED)) {
             Abstract_user temp_user = null;
-            //Creazione Abstract_user
+            /**
+             * Creazione Abstract_user
+             */
             return temp_user;
         } else 
             throw new Exception_auth("Non esiste una sessione valida pre esistente");

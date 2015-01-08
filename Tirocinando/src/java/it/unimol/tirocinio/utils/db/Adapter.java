@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 /**
  * Questa classe formalizza l'esecuzione delle query SQL:
- * SELECT,INSERT,DELETE
+ * SELECT,INSERT,DELETE,UPDATE
  * 
  * @author Roberto
  */

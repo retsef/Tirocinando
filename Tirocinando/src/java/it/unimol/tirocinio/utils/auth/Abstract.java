@@ -40,7 +40,7 @@ public abstract class Abstract {
     public HashMap<STATISTICS, UUID> get_status() {
         try {
             this.clean_expired();
-            String temp_uid = this.get_uid();
+            String temp_uid = get_uid();
             this.state = new HashMap<>();
             if(temp_uid==null || temp_uid.equals("")) {
                 this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
@@ -69,8 +69,9 @@ public abstract class Abstract {
      * @param Username
      * @param Password
      * @return Istanza dell'utente loggato (il Bean per intenderci ma piu' FIGO!)
+     * @throws it.unimol.tirocinio.user.Exception_user
      */
-    abstract public Abstract_user login(String Username, String Password);
+    abstract public Abstract_user login(String Username, String Password) throws Exception_user;
     
     /**
      * L'identificativo univoco universale (universally unique identifier o UUID) è un identificativo standard usato nelle infrastrutture software, 

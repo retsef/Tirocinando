@@ -5,6 +5,7 @@
  */
 package it.unimol.tirocinio.utils.auth;
 
+import it.unimol.tirocinio.user.Abstract_user;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -38,21 +39,24 @@ public class Servlet_auth extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest pRequest, HttpServletResponse pResponse)
             throws ServletException, IOException {
-            request = pRequest;
-            response = pResponse;
-            
-            this.manager = new Manager(request, response);
+        request = pRequest;
+        response = pResponse;
+
+        this.manager = new Manager(request, response);
+        Abstract_user user;
+        
+        String Username = request.getAttribute("username").toString();
+        String Password = request.getAttribute("password").toString();
+
+        
         try {
-            this.manager.check();
+            user = this.manager.check();
         } catch (Exception_auth ex) {
-            Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
+            
+            //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
         }
-            
-            String Username = request.getAttribute("username").toString();
-            String Password = request.getAttribute("password").toString();
-            
-            //this.manager.login(Username, Password);
-            response.sendRedirect("/Tirocinando/index.jsp?error=true");
+        
+        user = this.manager.login(Username, Password);
             
             
     }
