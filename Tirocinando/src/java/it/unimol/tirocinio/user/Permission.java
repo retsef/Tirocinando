@@ -22,7 +22,6 @@ public class Permission  {
     
     public User_Type getUserType(String Username, String Password) throws Exception_user, Exception_db {
         try {
-            ResultSet rs;
             this.conn.select("Studenti","*", "username='"+Username+"' and password='"+Password+"'");
             if(this.conn.getNumResult()==1){
                 return User_Type.STUDENTE;
@@ -43,8 +42,26 @@ public class Permission  {
         return null;
     }
     
+    //Salvarsi il result set prima del retrun
     public User_Type getUserType(UUID uid) throws Exception_user, Exception_db {
-        
+        try {
+            this.conn.select(it.unimol.tirocinio.utils.auth.Config.getTable_instance_student() ,"*", "uid='"+uid.toString()+"'");
+            if(this.conn.getNumResult()==1){
+                return User_Type.STUDENTE;
+            }
+            this.conn.select(it.unimol.tirocinio.utils.auth.Config.getTable_instance_azienda() ,"*", "uid='"+uid.toString()+"'");
+            if(this.conn.getNumResult()==1){
+                return User_Type.AZIENDA;
+            }
+            this.conn.select(it.unimol.tirocinio.utils.auth.Config.getTable_instance_tutor() ,"*", "uid='"+uid.toString()+"'");
+            if(this.conn.getNumResult()==1){
+                return User_Type.TUTOR;
+            }
+            throw new Exception_user("Non esistono utenti con UUID corrispondente!");
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Permission.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return null;
     }
     

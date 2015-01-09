@@ -84,9 +84,7 @@ public class Cookies extends Abstract {
     @Override
     public Abstract_user login(String Username, String Password) throws Exception_user {
         try {
-            Permission guard = new Permission(this.conn);
-            
-            User_Type type = guard.getUserType(Username, Password);
+            User_Type type = this.guard.getUserType(Username, Password);
             ResultSet rs = this.conn.getResult();
             
             Abstract_user user = null;
@@ -146,13 +144,33 @@ public class Cookies extends Abstract {
         HashMap<STATISTICS, UUID> temp_status = this.get_status();
         
         if(temp_status.containsKey(STATISTICS.AUTH_LOGGED)) {
-            Abstract_user temp_user = null;
-            
-            
-            
-            return temp_user;
+            try {
+                Abstract_user temp_user = null;
+                
+                User_Type type = this.guard.getUserType(temp_status.get(STATISTICS.AUTH_LOGGED));
+                ResultSet rs = this.conn.getResult();
+                
+                Abstract_user user = null;
+                switch(type){
+                    case STUDENTE:
+                        user = new Studente();
+                        break;
+                    case AZIENDA:
+                        user = new Azienda();
+                        break;
+                    case TUTOR:
+                        user = new Tutor();
+                        break;
+                }
+                user.setIstance(rs);
+                
+                return temp_user;
+            } catch (Exception_user | Exception_db ex) {
+                Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } else 
             throw new Exception_auth("Non esiste una sessione valida pre esistente");
+        return null;
     }
 
     

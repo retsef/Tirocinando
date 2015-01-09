@@ -53,6 +53,18 @@ public class Config {
         return table_utenti;
     }
 
+    public static String getTable_instance_student() {
+        return table_instance_student;
+    }
+
+    public static String getTable_instance_azienda() {
+        return table_instance_azienda;
+    }
+
+    public static String getTable_instance_tutor() {
+        return table_instance_tutor;
+    }
+
     public static int getExpire() {
         return expire;
     }
