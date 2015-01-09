@@ -26,9 +26,6 @@ public class Servlet_auth extends HttpServlet {
     
     private Manager manager;
 
-    public static HttpServletRequest getRequest() { return request; }
-    public static HttpServletResponse getResponse() { return response; }
-    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -46,14 +43,14 @@ public class Servlet_auth extends HttpServlet {
         this.manager = new Manager(request, response);
         Abstract_user user;
         
-        String Username = request.getAttribute("username").toString();
-        String Password = request.getAttribute("password").toString();
+        String Username = request.getParameter("username");
+        String Password = request.getParameter("password");
 
         
         try {
             user = this.manager.check();
         } catch (Exception_auth ex) {
-            
+            response.sendRedirect("/Tirocinando/index.jsp?error=true");
             //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
         }
         

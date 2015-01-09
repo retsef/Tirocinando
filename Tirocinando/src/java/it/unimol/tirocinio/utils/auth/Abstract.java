@@ -43,7 +43,7 @@ public abstract class Abstract {
     public HashMap<STATISTICS, UUID> get_status() {
         try {
             this.clean_expired();
-            String temp_uid = get_uid();
+            String temp_uid = this.get_uid();
             this.state = new HashMap<>();
             if(temp_uid==null || temp_uid.equals("")) {
                 this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);

@@ -38,6 +38,7 @@ public class Cookies extends Abstract {
         this.response = pResponse; 
     }
     
+    //BUG!!!
     @Override
     public void clean_expired() {
         try {
@@ -65,7 +66,7 @@ public class Cookies extends Abstract {
     public String get_uid() throws Exception_auth{
         Cookie[] cookies = request.getCookies();
 
-        this.uid = null;
+        this.uid = "";
         for(Cookie cook : cookies){
             if("uid".equals(cook.getName())){
                 this.uid = cook.getValue();
@@ -78,7 +79,29 @@ public class Cookies extends Abstract {
 
     @Override
     public HashMap<STATISTICS, UUID> get_status() {
-        return super.get_status();
+        try {
+            this.clean_expired();
+            String temp_uid = this.get_uid();
+            this.state = new HashMap<>();
+            if(temp_uid==null || temp_uid.equals("")) {
+                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
+                return this.state;
+            }
+            
+            this.conn.select(Config.getTable_sessioni(),"*","uid = '"+ temp_uid +"'");
+            
+            if(this.conn.getNumResult() !=1) {
+                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
+                return this.state;
+            } else {
+                this.state.put(STATISTICS.AUTH_LOGGED, UUID.fromString(temp_uid));
+                return this.state;
+            }
+        } catch (SQLException | Exception_db | Exception_auth ex) {
+            Logger.getLogger(Abstract.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return this.state;
     }
 
     @Override

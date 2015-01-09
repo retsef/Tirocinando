@@ -1,4 +1,4 @@
-<form action="Servlet_auth" method="POST">
+<form action="Autenticazione" method="POST">
 <!-- Modal -->
 <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="width: 450px">
