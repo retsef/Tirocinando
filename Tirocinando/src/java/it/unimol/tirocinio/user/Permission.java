@@ -42,6 +42,7 @@ public class Permission  {
         return null;
     }
     
+    //Salvarsi il result set prima del retrun
     public User_Type getUserType(UUID uid) throws Exception_user, Exception_db {
         try {
             this.conn.select(it.unimol.tirocinio.utils.auth.Config.getTable_instance_student() ,"*", "uid='"+uid.toString()+"'");
