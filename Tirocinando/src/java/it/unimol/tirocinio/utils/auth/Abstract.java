@@ -2,6 +2,7 @@ package it.unimol.tirocinio.utils.auth;
 
 import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.user.Exception_user;
+import it.unimol.tirocinio.user.Permission;
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
 import it.unimol.tirocinio.utils.db.Adapter;
 import it.unimol.tirocinio.utils.db.Exception_db;
@@ -17,6 +18,7 @@ import java.util.logging.Logger;
 public abstract class Abstract {
     
     public Adapter conn;
+    public Permission guard;
     //Coppia di Identificativo di stato e chiave univoca della sessione
     public HashMap<STATISTICS, UUID> state;
     
@@ -25,6 +27,7 @@ public abstract class Abstract {
      */
     public Abstract() {
         this.conn = new Adapter(Config.getDb_name());
+        this.guard = new Permission(this.conn);
     }
     
     /**
