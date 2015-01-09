@@ -6,6 +6,7 @@
 package it.unimol.tirocinio.utils.auth;
 
 import it.unimol.tirocinio.user.Abstract_user;
+import it.unimol.tirocinio.user.Exception_user;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -56,7 +57,11 @@ public class Servlet_auth extends HttpServlet {
             //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        user = this.manager.login(Username, Password);
+        try {
+            user = this.manager.login(Username, Password);
+        } catch (Exception_user ex) {
+            Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
+        }
             
             
     }

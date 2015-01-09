@@ -1,7 +1,9 @@
 package it.unimol.tirocinio.utils.auth.method;
 
 import it.unimol.tirocinio.user.Abstract_user;
+import it.unimol.tirocinio.user.Config.User_Type;
 import it.unimol.tirocinio.user.Exception_user;
+import it.unimol.tirocinio.user.Permission;
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
@@ -78,15 +80,27 @@ public class Cookies extends Abstract {
 
     @Override
     public Abstract_user login(String Username, String Password) throws Exception_user {
-        
-        /**
-         * la funzione di controllo e' questa:
-         * this.conn.select(Config.getTable_utenti(),"*", "username='"+Username+"' and password='"+Password+"'");
-         * 
-         * Ma non esiste un unico Table_utenti, ne possono esistere 3!
-         */
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        
+        try {
+            Permission guard = new Permission(this.conn);
+            
+            User_Type type = guard.getUserType(Username, Password);
+            ResultSet rs = this.conn.getResult();
+            
+            /**
+             * Non e' leggibile!
+             * La creazione dell Abstract_user va ceduto all'Abstract_user stesso!
+             */
+            Abstract_user user = new Abstract_user(type);
+            while(rs.next()){
+                user.setParameter("Nome",rs.getString("Nome"));
+                user.setParameter("Cognome",rs.getString("Nome"));
+            }
+            return user;
+            
+        } catch (Exception_db | SQLException ex) {
+            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
     @Override

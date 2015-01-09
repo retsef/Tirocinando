@@ -88,7 +88,7 @@ public class Manager extends Abstract {
     }
 
     @Override
-    public Abstract_user login(String Username, String Password) {
+    public Abstract_user login(String Username, String Password) throws Exception_user {
         switch(this.method){
             case AUTH_USE_COOKIE:
                 return this.cookie.login(Username, Password);

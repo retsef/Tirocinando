@@ -59,10 +59,10 @@ public class Servlet_db extends HttpServlet {
             */
             try {
                 out.println("<h1>Valori database</h1>");
-                adapt.select("sessioni");
+                adapt.select("Tutor");
                 ResultSet rs = adapt.getResult();
                 while(rs.next()){
-                    String uid = rs.getString("uid");
+                    String uid = rs.getString("nome");
                     out.println("<h1>"+uid+"</h1>");
                 }
             } catch (SQLException ex) {

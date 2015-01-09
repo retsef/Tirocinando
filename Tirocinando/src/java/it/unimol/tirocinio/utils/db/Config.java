@@ -9,8 +9,8 @@ public class Config {
     
     static private final String db_host = "localhost";
     static private final String db_user = "root";
-    static private final String db_pswd = "";
-    static private final String db_name = "accessi";  //da cambiare
+    static private final String db_pswd = "root";
+    static private final String db_name = "tirocinando";
     
     static public String getDb_host(){
         return db_host;
