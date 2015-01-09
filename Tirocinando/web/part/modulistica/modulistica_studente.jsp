@@ -16,6 +16,7 @@
 <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">Informazioni Personali</div>
+    <input style="visibility: hidden" type="text" value="Informatica" readonly name="Corso di laurea in">
     <div class="panel-body">
         <div class="row">
             <div class="col-lg-6">
@@ -23,7 +24,7 @@
                     <span class="input-group-addon">
                         Nome
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="Vittorio" disabled>
+                    <input class="form-control" type="text" value="Vittorio" readonly name="Nome">
                 </div>
      </div>
             <div class="col-lg-6">
@@ -31,7 +32,7 @@
                     <span class="input-group-addon">
                         Cognome
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="Barile" disabled>
+                    <input class="form-control" type="text" value="Barile" readonly name="Cognome">
                 </div>
             </div>
         </div>
@@ -41,7 +42,7 @@
                     <span class="input-group-addon">
                         Nato/a a
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="Campobasso" disabled>
+                    <input class="form-control"  type="text" value="Campobasso" readonly name="Natoa a">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -49,7 +50,7 @@
                     <span class="input-group-addon">
                         il
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="29/07/1991" disabled>
+                    <input class="form-control"  type="text" value="29/07/1991" readonly name="il">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -57,7 +58,7 @@
                     <span class="input-group-addon">
                         Nazionalita'
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="Italiana" disabled>
+                    <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalità">
                 </div>
             </div>
         </div>
@@ -67,7 +68,7 @@
                     <span class="input-group-addon">
                         Residente in
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="Sepino" disabled>
+                    <input class="form-control"  type="text" value="Sepino" readonly name="Residente in">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -75,7 +76,7 @@
                     <span class="input-group-addon">
                         Cap
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="86017" disabled>
+                    <input class="form-control"  type="text" value="86017" readonly name="Cap">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -83,7 +84,7 @@
                     <span class="input-group-addon">
                         Prov.
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="CB" disabled>
+                    <input class="form-control"  type="text" value="CB" readonly name="Prov">
                 </div>
             </div>
         </div>
@@ -93,7 +94,7 @@
                     <span class="input-group-addon">
                         Via
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="Roma" disabled>
+                    <input class="form-control"  type="text" value="Roma" readonly name="Via">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -101,7 +102,7 @@
                     <span class="input-group-addon">
                         N.
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="6" disabled>
+                    <input class="form-control"  type="text" value="6" readonly name="N">
                 </div>
             </div>
         </div>
@@ -111,7 +112,7 @@
                     <span class="input-group-addon">
                         Telefono
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="0874790823" disabled>
+                    <input class="form-control"  type="text" value="0874790823" readonly name="Telefono">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -119,7 +120,7 @@
                     <span class="input-group-addon">
                         Cellulare
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="3276897089" disabled>
+                    <input class="form-control"  type="text" value="3276897089" readonly name="Cellulare">
                 </div>
             </div>
         </div>
@@ -129,8 +130,7 @@
                     <span class="input-group-addon">
                         Email
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="v.barile" disabled>
-                    <span class="input-group-addon">@studenti.unimol.it</span>
+                    <input class="form-control"  type="text" value="v.barile@studenti.unimol.it" readonly name="email">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -138,7 +138,7 @@
                     <span class="input-group-addon">
                         Codice fiscale
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" value="BRLVTR91L29B519C" disabled>
+                    <input class="form-control"  type="text" value="BRLVTR91L29B519C" readonly name="Codice fiscale">
                 </div>
             </div>
         </div>
@@ -154,7 +154,7 @@
                     <span class="input-group-addon">
                         Dipartimento di
                     </span>
-                    <select name="Dipartimento" class="form-control" name="disabledSelector" disabled>
+                    <select name="Dipartimento" class="form-control" name="readonlySelector" readonly>
                         <option value="Bioscienze e Territorio">Bioscienze e Territorio</option>
                         <option value="Agraria">Agricoltura, Ambiente e Alimenti</option>
                         <option value="BioTer">Bioscienze e Territorio</option>
@@ -171,7 +171,7 @@
                     <span class="input-group-addon">
                         Corso di laurea in
                     </span>
-                    <input class="form-control" name="disabledInput" type="text" placeholder="Informatica" disabled>
+                    <input class="form-control" type="text" value="Informatica" readonly name="Corso di Laurea in">
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
           </li>
         </ul>
     <div class="panel-body tab-content">
-        <div role="tabpanel" class="tab-pane active" name="Studente_form">
+        <div role="tabpanel" class="tab-pane active" id="Studente_form">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
@@ -240,23 +240,13 @@
                         <span class="input-group-addon">
                             Materia della tesi
                         </span>
-                        <input type="text" class="form-control" placeholder="Titolo/Argomento della Tesi di Laurea" name="Materia della tesi">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            Anno di corso
-                        </span>
-                        <input type="text" class="form-control" name="Anno di corso">
+                        <input type="text" class="form-control" placeholder="Titolo/Argomento della Tesi di Laurea" name="Materia della Tesi">
                     </div>
                 </div>
             </div>
         </div>
         
-        <div role="tabpanel" class="tab-pane" name="Laureato_form">
+        <div role="tabpanel" class="tab-pane" id="Laureato_form">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
@@ -366,7 +356,7 @@
                         <span class="input-group-addon">
                             Presso
                         </span>
-                        <input type="text" class="form-control" name="presso_1">
+                        <input type="text" class="form-control" name="Presso">
                     </div>
                 </div>
             </div>
@@ -377,7 +367,7 @@
                         <span class="input-group-addon">
                             Attività svolta
                         </span>
-                        <input type="text" class="form-control" name="Attivita svolta">
+                        <input type="text" class="form-control" name="Attività svolta">
                     </div>
                 </div>
             </div>
@@ -427,7 +417,7 @@
                             <span class="input-group-addon">
                                 Presso
                             </span>
-                            <input type="text" class="form-control" name="presso_2">
+                            <input type="text" class="form-control" name="Presso_2">
                         </div>
                     </div>
                 </div>
@@ -438,7 +428,7 @@
                             <span class="input-group-addon">
                                 Attività svolta
                             </span>
-                            <input type="text" class="form-control" name="Attivita svolta_2">
+                            <input type="text" class="form-control" name="Attività svolta_2">
                         </div>
                     </div>
                 </div>
@@ -497,7 +487,7 @@
                             <span class="input-group-addon">
                                 Attività svolta
                             </span>
-                            <input type="text" class="form-control" name="Attivita svolta_3">
+                            <input type="text" class="form-control" name="Attività svolta_3">
                         </div>
                     </div>
                 </div>
@@ -546,7 +536,7 @@
                             <span class="input-group-addon">
                                 Attività svolta
                             </span>
-                            <input type="text" class="form-control" name="Attivita svolta_4">
+                            <input type="text" class="form-control" name="Attività svolta_4">
                         </div>
                     </div>
                 </div>
@@ -555,9 +545,9 @@
         </div>
     
         <div class="panel panel-default">
-            <div class="panel-heading" name="Testo2">Esperienze all'estero</div>
+            <div class="panel-heading">Esperienze all'estero</div>
             <div class="panel-body">
-                <textarea name="esperienze_estero" class="form-control" name="esperienza_estero" rows="3" style="resize: none" placeholder="Indicare il periodo e specificare se per studio o per lavoro"></textarea>
+                <textarea name="Testo2" class="form-control" name="esperienza_estero" rows="3" style="resize: none" placeholder="Indicare il periodo e specificare se per studio o per lavoro"></textarea>
             </div>
         </div>
     
@@ -581,43 +571,40 @@
       <tbody>
           <tr>
               <td>Inglese</td>
-              <td><input name="ing_Ottimo_1" type="radio" name="Inglese" value="Ottimo_1"/></td>
-              <td><input name="ing_Buono_1" type="radio" name="Inglese" value="Buono_1"/></td>
-              <td><input name="ing_Sufficiente_1" type="radio" name="Inglese" value="Sufficiente_1"/></td>
-              <td><input name="ing_Scarso_1" type="radio" name="Inglese" value="Scarso_1"/></td>
+              <td><input name="Ottimo" type="radio" name="Inglese" value="Ottimo_1"/></td>
+              <td><input name="Buono" type="radio" name="Inglese" value="Buono_1"/></td>
+              <td><input name="Sufficiente" type="radio" name="Inglese" value="Sufficiente_1"/></td>
+              <td><input name="Scarso" type="radio" name="Inglese" value="Scarso_1"/></td>
           </tr>
           <tr>
               <td>Francese</td>
-              <td><input name="fra_Ottimo_2" type="radio" name="Francese" value="Ottimo_2"/></td>
-              <td><input name="fra_Buono_2" type="radio" name="Francese" value="Buono_2"/></td>
-              <td><input name="fra_Sufficiente_2" type="radio" name="Francese" value="Sufficiente_2"/></td>
-              <td><input name="fra_Scarso_2" type="radio" name="Francese" value="Scarso_2"/></td>
+              <td><input name="Ottimo_2" type="radio" name="Francese" value="Ottimo_2"/></td>
+              <td><input name="Buono_2" type="radio" name="Francese" value="Buono_2"/></td>
+              <td><input name="Sufficiente_2" type="radio" name="Francese" value="Sufficiente_2"/></td>
+              <td><input name="Scarso_2" type="radio" name="Francese" value="Scarso_2"/></td>
           </tr>
           <tr>
               <td>Spagnolo</td>
-              <td><input name="spa_Ottimo_3" type="radio" name="Spagnolo" value="Ottimo_3"/></td>
-              <td><input name="spa_Buono_3" type="radio" name="Spagnolo" value="Buono_3"/></td>
-              <td><input name="spa_Sufficiente_3" type="radio" name="Spagnolo" value="Sufficiente_3"/></td>
-              <td><input name="spa_Scarso_3" type="radio" name="Spagnolo" value="Scarso_3"/></td>
+              <td><input name="Ottimo_3" type="radio" name="Spagnolo" value="Ottimo_3"/></td>
+              <td><input name="Buono_3" type="radio" name="Spagnolo" value="Buono_3"/></td>
+              <td><input name="Sufficiente_3" type="radio" name="Spagnolo" value="Sufficiente_3"/></td>
+              <td><input name="Scarso_3" type="radio" name="Spagnolo" value="Scarso_3"/></td>
           </tr>
           <tr>
               <td>Tedesco</td>
-              <td><input name="ted_Ottimo_4" type="radio" name="Tedesco" value="Ottimo_4"/></td>
-              <td><input name="ted_Buono_4" type="radio" name="Tedesco" value="Buono_4"/></td>
-              <td><input name="ted_Sufficiente_4" type="radio" name="Tedesco" value="Sufficiente_4"/></td>
-              <td><input name="ted_Scarso_4" type="radio" name="Tedesco" value="Scarso_4"/></td>
+              <td><input name="Ottimo_4" type="radio" name="Tedesco" value="Ottimo_4"/></td>
+              <td><input name="Buono_4" type="radio" name="Tedesco" value="Buono_4"/></td>
+              <td><input name="Sufficiente_4" type="radio" name="Tedesco" value="Sufficiente_4"/></td>
+              <td><input name="Scarso_4" type="radio" name="Tedesco" value="Scarso_4"/></td>
           </tr>
           <tr>
-              <td><input name="altre_lingue" type="text" class="form-control" placeholder="Altre lingue"></td>
-              <td><input name="altre_lingue_Ottimo_5" type="radio" name="Altre_lingue" value="Ottimo_5"/></td>
-              <td><input name="altre_lingue_Buono_5" type="radio" name="Altre_lingue" value="Buono_5"/></td>
-              <td><input name="altre_lingue_Sufficiente_5" type="radio" name="Altre_lingue" value="Sufficiente_5"/></td>
-              <td><input name="altre_lingue_Scarso_5" type="radio" name="Altre_lingue" value="Scarso_5"/></td>
+              <td><input name="Altre lingue" type="text" class="form-control" placeholder="Altre lingue"></td>
+              <td><input name="Ottimo_5" type="radio" name="Altre_lingue" value="Ottimo_5"/></td>
+              <td><input name="Buono_5" type="radio" name="Altre_lingue" value="Buono_5"/></td>
+              <td><input name="Sufficiente_5" type="radio" name="Altre_lingue" value="Sufficiente_5"/></td>
+              <td><input name="Scarso_5" type="radio" name="Altre_lingue" value="Scarso_5"/></td>
           </tr>
-          
-          
       </tbody>
-      
   </table>
   
     </div>
@@ -890,7 +877,7 @@
                         <span class="input-group-addon">
                             Preferenza relativa al periodo dello Stage dal
                         </span>
-                        <input type="date" class="form-control" name="Presferenza relativa al periodo dello Stage">
+                        <input type="date" class="form-control" name="Preferenza relativa al Periodo dello Stage dal">
                     </div>
                 </div>
 
@@ -899,7 +886,7 @@
                         <span class="input-group-addon">
                             al
                         </span>
-                        <input type="date" class="form-control" name="Al_2">
+                        <input type="date" class="form-control" name="al_5">
                     </div>
                 </div>
             </div>
@@ -917,7 +904,7 @@
                                 <span class="input-group-addon">
                                     <input type="checkbox">
                                 </span>
-                                    <input type="text" class="form-control" placeholder="Nell'ambito Regionale" disabled name="trasf_regione">
+                                    <input type="text" class="form-control" placeholder="Nell'ambito Regionale" readonly name="Nellambito Regionale">
                                 </div>
                             </div>
                             <div class="col-lg-3">
@@ -925,7 +912,7 @@
                                     <span class="input-group-addon">
                                         <input type="checkbox">
                                     </span>
-                                    <input type="text" class="form-control" placeholder="In Italia" disabled name="trasf_italia">
+                                    <input type="text" class="form-control" placeholder="In Italia" readonly name="In Italia">
                                 </div>
                             </div>
                             <div class="col-lg-3">
@@ -933,7 +920,7 @@
                                     <span class="input-group-addon">
                                         <input type="checkbox">
                                     </span>
-                                    <input type="text" class="form-control" placeholder="All'Estero" disabled  name="trasf_estero">
+                                    <input type="text" class="form-control" placeholder="All'Estero" readonly  name="AllEstero">
                                 </div>
                             </div>
                         </div>
@@ -949,7 +936,7 @@
                             Motivazioni dell'adesione al programma stages universitario
                         </div>
                         <div class="panel-body">
-                            <textarea class="form-control" name="motivazioni_adesione" rows="5" style="resize: none" name="Testo3"></textarea>
+                            <textarea class="form-control" rows="5" style="resize: none" name="Testo3"></textarea>
                         </div>
                     </div>
                 </div>
@@ -969,7 +956,7 @@
                                         <span class="input-group-addon">
                                             <input type="checkbox">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Certificato degli Studi effettuati" disabled name="certificato_studi">
+                                        <input type="text" class="form-control" placeholder="Certificato degli Studi effettuati" readonly name="certificato_studi">
                                     </div>
                                 </div>
                             </div>
@@ -979,7 +966,7 @@
                                         <span class="input-group-addon">
                                             <input type="checkbox">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in italiano" disabled name="cv_ita">
+                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in italiano" readonly name="cv_ita">
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
@@ -987,7 +974,7 @@
                                         <span class="input-group-addon">
                                             <input type="checkbox">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in inglese" disabled name="cv_ing">
+                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in inglese" readonly name="cv_ing">
                                     </div>
                                 </div>
                             </div>
@@ -997,7 +984,7 @@
                                         <span class="input-group-addon">
                                             <input type="checkbox">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Eventuale altra documentazione ritenuta utile per la valutazione della domanda" disabled name="doc_domanda">
+                                        <input type="text" class="form-control" placeholder="Eventuale altra documentazione ritenuta utile per la valutazione della domanda" readonly name="doc_domanda">
                                     </div>
                                 </div>
                             </div>
@@ -1006,6 +993,18 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            Data
+                        </span>
+                        <input type="text" class="form-control" name="Data">
+                    </div>
+                </div>
+            </div>
+            
             <div class="row">
                 <div class="col-lg-11"></div>
                 <div class="col-md-1">
