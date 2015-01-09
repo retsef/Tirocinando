@@ -2,6 +2,8 @@ package it.unimol.tirocinio.database.profilo;
 
 import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.user.Exception_user;
+import it.unimol.tirocinio.utils.auth.Exception_auth;
+import it.unimol.tirocinio.utils.auth.Manager;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,9 +29,16 @@ public class Profilo extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            /* Commento per poter compilare il progetto
         try {
-            Abstract_user tempUser;
+            //Commento per poter compilare il progetto
+
+            Manager auth = new Manager(request, response);
+            Abstract_user tempUser = null;
+            try {
+                tempUser = auth.check();
+            } catch (Exception_auth ex) {
+                Logger.getLogger(Profilo.class.getName()).log(Level.SEVERE, null, ex);
+            }
             
             String Nome = tempUser.getParameter("Nome");
             String Cognome = tempUser.getParameter("Cognome");
@@ -59,19 +68,16 @@ public class Profilo extends HttpServlet {
             String Numero_Dipendenti = tempUser.getParameter("Numero Dipendenti");
             String Posizione_Ricoperta = tempUser.getParameter("Posizione Ricoperta");
             String Nominativo_Abbilitato_Firma = tempUser.getParameter("Nominativo abbilitato firma");
-        
+            
+            
+            
+            
         } catch (Exception_user ex) {
             Logger.getLogger(Profilo.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
             
-            
-            
-            
-            
-            
-            
-            
-            */
      
     }
 
