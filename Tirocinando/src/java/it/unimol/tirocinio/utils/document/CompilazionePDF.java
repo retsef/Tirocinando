@@ -19,7 +19,7 @@ public class CompilazionePDF {
     /** The resulting PDFs. */
     public static final String RESULT = "web/doc/studente/proposta_modulo_di_candidatura_modificato.pdf";
     
-    public void manipulatePdf(
+    public static void manipulatePdf(
             String src, 
             String dest, 
             HashMap<String, TextField> cache,
@@ -36,7 +36,7 @@ public class CompilazionePDF {
         
         
         for (String key : pContenuto.keySet()) {
-            System.out.println(key);
+            //System.out.println(key);
             form.setField(key, pContenuto.get(key));
         }
         
