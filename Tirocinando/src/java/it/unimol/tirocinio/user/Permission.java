@@ -5,6 +5,7 @@ import it.unimol.tirocinio.utils.db.Adapter;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,6 +40,11 @@ public class Permission  {
         } catch (SQLException ex) {
             Logger.getLogger(Permission.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return null;
+    }
+    
+    public User_Type getUserType(UUID uid) throws Exception_user, Exception_db {
+        
         return null;
     }
     

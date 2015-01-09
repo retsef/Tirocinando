@@ -4,6 +4,9 @@ import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.user.Config.User_Type;
 import it.unimol.tirocinio.user.Exception_user;
 import it.unimol.tirocinio.user.Permission;
+import it.unimol.tirocinio.user.azienda.Azienda;
+import it.unimol.tirocinio.user.studente.Studente;
+import it.unimol.tirocinio.user.tutor.Tutor;
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
 import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
@@ -47,8 +50,8 @@ public class Cookies extends Abstract {
                         this.cookie = new Cookie("uid","");
                         this.response.addCookie(this.cookie);
                     } else {
-                        this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
-                        this.response.addCookie(this.cookie);
+                        //this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
+                        //this.response.addCookie(this.cookie);
                     }
                 }
             } else 
@@ -86,18 +89,22 @@ public class Cookies extends Abstract {
             User_Type type = guard.getUserType(Username, Password);
             ResultSet rs = this.conn.getResult();
             
-            /**
-             * Non e' leggibile!
-             * La creazione dell Abstract_user va ceduto all'Abstract_user stesso!
-             */
-            Abstract_user user = new Abstract_user(type);
-            while(rs.next()){
-                user.setParameter("Nome",rs.getString("Nome"));
-                user.setParameter("Cognome",rs.getString("Nome"));
+            Abstract_user user = null;
+            switch(type){
+                case STUDENTE:
+                    user = new Studente();
+                    break;
+                case AZIENDA:
+                    user = new Azienda();
+                    break;
+                case TUTOR:
+                    user = new Tutor();
+                    break;
             }
+            user.setIstance(rs);
             return user;
             
-        } catch (Exception_db | SQLException ex) {
+        } catch (Exception_db ex) {
             Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
@@ -140,9 +147,9 @@ public class Cookies extends Abstract {
         
         if(temp_status.containsKey(STATISTICS.AUTH_LOGGED)) {
             Abstract_user temp_user = null;
-            /**
-             * Creazione Abstract_user
-             */
+            
+            
+            
             return temp_user;
         } else 
             throw new Exception_auth("Non esiste una sessione valida pre esistente");

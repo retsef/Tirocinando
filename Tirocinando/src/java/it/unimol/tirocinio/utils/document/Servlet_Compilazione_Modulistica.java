@@ -46,7 +46,10 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
         }
         
         try {
-            CompilazionePDF.manipulatePdf("web/doc/studente/proposta_modulo_di_candidatura.pdf", "web/doc/studente/proposta_modulo_di_candidatura_mod.pdf", new HashMap<String,TextField>(), temp_UserData);
+            CompilazionePDF.manipulatePdf(
+                    "/home/roberto/NetBeansProjects/Tirocinando/Tirocinando/web/doc/studente/proposta_modulo_di_candidatura.pdf", 
+                    "/home/roberto/NetBeansProjects/Tirocinando/Tirocinando/web/doc/studente/proposta_modulo_di_candidatura_mod.pdf", 
+                    new HashMap<String,TextField>(), temp_UserData);
         } catch (DocumentException ex) {
             Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
         }

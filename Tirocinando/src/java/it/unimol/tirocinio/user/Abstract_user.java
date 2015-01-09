@@ -1,6 +1,7 @@
 package it.unimol.tirocinio.user;
 
 import it.unimol.tirocinio.user.Config.*;
+import java.sql.ResultSet;
 import java.util.HashMap;
 
 /**
@@ -9,7 +10,7 @@ import java.util.HashMap;
  * 
  * @author roberto
  */
-public class Abstract_user {
+public abstract class Abstract_user {
     
     //identificatore di tipo di utente connesso
     private User_Type type;
@@ -20,6 +21,8 @@ public class Abstract_user {
         ptype = this.type;
         UserData = new HashMap<>();
     }
+    
+    abstract public void setIstance(ResultSet rs) throws Exception_user;
     
     /**
      * Restituisce un Parametro

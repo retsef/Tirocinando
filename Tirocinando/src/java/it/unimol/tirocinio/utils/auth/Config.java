@@ -12,7 +12,9 @@ public class Config {
     static private final String table_sessioni = "sessioni";
     static private final String table_utenti = "utenti";
     //Vista in SQL che unisce in una join la tabella utenti con quella delle sessioni
-    static private final String table_instance = "user_session";
+    static private final String table_instance_student = "sessioni_Studente";
+    static private final String table_instance_azienda = "sessioni_Azienda";
+    static private final String table_instance_tutor = "sessioni_Tutor";
     //limite di tempo eccessivo per determinare se una sessione e' da considerarsi scaduta
     static private final int expire =  3600*24;
     
@@ -49,10 +51,6 @@ public class Config {
 
     public static String getTable_utenti() {
         return table_utenti;
-    }
-
-    public static String getTable_instance() {
-        return table_instance;
     }
 
     public static int getExpire() {
