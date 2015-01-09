@@ -15,10 +15,11 @@
     </head>
     <body>
         <jsp:include page="part/navbar.jsp" />
-        
         <% if(request.getParameter("section")!=null) {
             if(request.getParameter("section").equals("studente")) {%>
+            <form action="/Modulistica" method="POST">
                 <jsp:include page="part/modulistica/modulistica_studente.jsp"/>
+            </form>
             <%} else if(request.getParameter("section").equals("azienda")) { %>
                 <jsp:include page="part/modulistica/modulistica_azienda.jsp"/>
             <%}
