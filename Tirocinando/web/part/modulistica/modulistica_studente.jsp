@@ -58,7 +58,7 @@
                     <span class="input-group-addon">
                         Nazionalita'
                     </span>
-                    <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalità>
+                    <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalità">
                 </div>
             </div>
         </div>
