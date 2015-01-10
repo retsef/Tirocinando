@@ -58,7 +58,7 @@
                     <span class="input-group-addon">
                         Nazionalita'
                     </span>
-                    <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalità">
+                    <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalità>
                 </div>
             </div>
         </div>
@@ -635,124 +635,124 @@
                         <tbody>
                             <tr>
                                 <td>Servizi alle imprese</td>
-                                <td><input type="radio" name="s_impresa" value="s_1_1" name="imprese_s_1_1"/></td>
-                                <td><input type="radio" name="s_impresa" value="s_1_2" name="imprese_s_1_2"/></td>
-                                <td><input type="radio" name="s_impresa" value="s_1_3" name="imprese_s_1_3"/></td>
-                                <td><input type="radio" name="s_impresa" value="s_1_4" name="imprese_s_1_4"/></td>
-                                <td><input type="radio" name="s_impresa" value="s_1_5" name="imprese_s_1_5"/></td>
-                                <td><input type="radio" name="s_impresa" value="s_1_6" name="imprese_s_1_6"/></td>
-                                <td><input type="radio" name="s_impresa" value="s_1_7" name="imprese_s_1_7"/></td>
-                                <td><input type="radio" name="s_impresa" value="s_1_8" name="imprese_s_1_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.0" value="1"/></td>
+                                <td><input type="radio" name="Casella combinata5.0" value="2"/></td>
+                                <td><input type="radio" name="Casella combinata5.0" value="3"/></td>
+                                <td><input type="radio" name="Casella combinata5.0" value="4"/></td>
+                                <td><input type="radio" name="Casella combinata5.0" value="5"/></td>
+                                <td><input type="radio" name="Casella combinata5.0" value="6"/></td>
+                                <td><input type="radio" name="Casella combinata5.0" value="7"/></td>
+                                <td><input type="radio" name="Casella combinata5.0" value="8"/></td>
                             </tr>
                             <tr>
                                 <td>Servizi alle persone</td>
-                                <td><input type="radio" name="s_persone" value="s_2_1" name="persone_s_2_1"/></td>
-                                <td><input type="radio" name="s_persone" value="s_2_2" name="persone_s_2_2"/></td>
-                                <td><input type="radio" name="s_persone" value="s_2_3" name="persone_s_2_3"/></td>
-                                <td><input type="radio" name="s_persone" value="s_2_4" name="persone_s_2_4"/></td>
-                                <td><input type="radio" name="s_persone" value="s_2_5" name="persone_s_2_5"/></td>
-                                <td><input type="radio" name="s_persone" value="s_2_6" name="persone_s_2_6"/></td>
-                                <td><input type="radio" name="s_persone" value="s_2_7" name="persone_s_2_7"/></td>
-                                <td><input type="radio" name="s_persone" value="s_2_8" name="persone_s_2_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.1" value="1"/></td>
+                                <td><input type="radio" name="Casella combinata5.1" value="2"/></td>
+                                <td><input type="radio" name="Casella combinata5.1" value="3"/></td>
+                                <td><input type="radio" name="Casella combinata5.1" value="4"/></td>
+                                <td><input type="radio" name="Casella combinata5.1" value="5"/></td>
+                                <td><input type="radio" name="Casella combinata5.1" value="6"/></td>
+                                <td><input type="radio" name="Casella combinata5.1" value="7"/></td>
+                                <td><input type="radio" name="Casella combinata5.1" value="8"/></td>
                             </tr>
                             <tr>
                                 <td>Settore industriale</td>
-                                <td><input type="radio" name="s_industriale" value="s_3_1" name="industriale_s_3_1"/></td>
-                                <td><input type="radio" name="s_industriale" value="s_3_2" name="industriale_s_3_2"/></td>
-                                <td><input type="radio" name="s_industriale" value="s_3_3" name="industriale_s_3_3"/></td>
-                                <td><input type="radio" name="s_industriale" value="s_3_4" name="industriale_s_3_4"/></td>
-                                <td><input type="radio" name="s_industriale" value="s_3_5" name="industriale_s_3_5"/></td>
-                                <td><input type="radio" name="s_industriale" value="s_3_6" name="industriale_s_3_6"/></td>
-                                <td><input type="radio" name="s_industriale" value="s_3_7" name="industriale_s_3_7"/></td>
-                                <td><input type="radio" name="s_industriale" value="s_3_8" name="industriale_s_3_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.2" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.2" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.2" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.2" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.2" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.2" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.2" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.2" value="8" /></td>
                             </tr>
                             <tr>
                                 <td>Settore Agro - alimentare</td>
-                                <td><input type="radio" name="s_alimentare" value="s_4_1" name="agro_s_4_1"/></td>
-                                <td><input type="radio" name="s_alimentare" value="s_4_2" name="agro_s_4_2"/></td>
-                                <td><input type="radio" name="s_alimentare" value="s_4_3" name="agro_s_4_3"/></td>
-                                <td><input type="radio" name="s_alimentare" value="s_4_4" name="agro_s_4_4"/></td>
-                                <td><input type="radio" name="s_alimentare" value="s_4_5" name="agro_s_4_5"/></td>
-                                <td><input type="radio" name="s_alimentare" value="s_4_6" name="agro_s_4_6"/></td>
-                                <td><input type="radio" name="s_alimentare" value="s_4_7" name="agro_s_4_7"/></td>
-                                <td><input type="radio" name="s_alimentare" value="s_4_8" name="agro_s_4_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.3" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.3" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.3" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.3" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.3" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.3" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.3" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.3" value="8" /></td>
                             </tr>
                             <tr>
                                 <td>Settore pubblico</td>
-                                <td><input type="radio" name="s_pubblico" value="s_5_1" name="pubblico_s_5_1"/></td>
-                                <td><input type="radio" name="s_pubblico" value="s_5_2" name="pubblico_s_5_2"/></td>
-                                <td><input type="radio" name="s_pubblico" value="s_5_3" name="pubblico_s_5_3"/></td>
-                                <td><input type="radio" name="s_pubblico" value="s_5_4" name="pubblico_s_5_4"/></td>
-                                <td><input type="radio" name="s_pubblico" value="s_5_5" name="pubblico_s_5_5"/></td>
-                                <td><input type="radio" name="s_pubblico" value="s_5_6" name="pubblico_s_5_6"/></td>
-                                <td><input type="radio" name="s_pubblico" value="s_5_7" name="pubblico_s_5_7"/></td>
-                                <td><input type="radio" name="s_pubblico" value="s_5_8" name="pubblico_s_5_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.4" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.4" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.4" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.4" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.4" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.4" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.4" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.4" value="8" /></td>
                             </tr>
                             <tr>
                                 <td>Mercati finanziari</td>
-                                <td><input type="radio" name="s_finanziari" value="s_6_1" name="finanza_s_6_1"/></td>
-                                <td><input type="radio" name="s_finanziari" value="s_6_2" name="finanza_s_6_2"/></td>
-                                <td><input type="radio" name="s_finanziari" value="s_6_3" name="finanza_s_6_3"/></td>
-                                <td><input type="radio" name="s_finanziari" value="s_6_4" name="finanza_s_6_4"/></td>
-                                <td><input type="radio" name="s_finanziari" value="s_6_5" name="finanza_s_6_5"/></td>
-                                <td><input type="radio" name="s_finanziari" value="s_6_6" name="finanza_s_6_6"/></td>
-                                <td><input type="radio" name="s_finanziari" value="s_6_7" name="finanza_s_6_7"/></td>
-                                <td><input type="radio" name="s_finanziari" value="s_6_8" name="finanza_s_6_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.0" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.0" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.0" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.0" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.0" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.0" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.0" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.0" value="8" /></td>
                             </tr>
                             <tr>
                                 <td>Settore educativo</td>
-                                <td><input type="radio" name="s_educativo" value="s_7_1" name="edu_s_7_1"/></td>
-                                <td><input type="radio" name="s_educativo" value="s_7_2" name="edu_s_7_2"/></td>
-                                <td><input type="radio" name="s_educativo" value="s_7_3" name="edu_s_7_3"/></td>
-                                <td><input type="radio" name="s_educativo" value="s_7_4" name="edu_s_7_4"/></td>
-                                <td><input type="radio" name="s_educativo" value="s_7_5" name="edu_s_7_5"/></td>
-                                <td><input type="radio" name="s_educativo" value="s_7_6" name="edu_s_7_6"/></td>
-                                <td><input type="radio" name="s_educativo" value="s_7_7" name="edu_s_7_7"/></td>
-                                <td><input type="radio" name="s_educativo" value="s_7_8" name="edu_s_7_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.1" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.1" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.1" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.1" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.1" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.1" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.1" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.1" value="8" /></td>
                             </tr>
                             <tr>
                                 <td>Settore riabilitativo</td>
-                                <td><input type="radio" name="s_riabilitativo" value="s_8_1" name="riabilitativo_s_8_1"/></td>
-                                <td><input type="radio" name="s_riabilitativo" value="s_8_2" name="riabilitativo_s_8_2"/></td>
-                                <td><input type="radio" name="s_riabilitativo" value="s_8_3" name="riabilitativo_s_8_3"/></td>
-                                <td><input type="radio" name="s_riabilitativo" value="s_8_4" name="riabilitativo_s_8_4"/></td>
-                                <td><input type="radio" name="s_riabilitativo" value="s_8_5" name="riabilitativo_s_8_5"/></td>
-                                <td><input type="radio" name="s_riabilitativo" value="s_8_6" name="riabilitativo_s_8_6"/></td>
-                                <td><input type="radio" name="s_riabilitativo" value="s_8_7" name="riabilitativo_s_8_7"/></td>
-                                <td><input type="radio" name="s_riabilitativo" value="s_8_8" name="riabilitativo_s_8_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.3" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.3" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.3" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.3" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.3" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.3" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.3" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.3" value="8" /></td>
                             </tr>
                             <tr>
                                 <td>Settore ludico</td>
-                                <td><input type="radio" name="s_ludico" value="s_9_1" name="ludico_s_9_1"/></td>
-                                <td><input type="radio" name="s_ludico" value="s_9_2" name="ludico_s_9_2"/></td>
-                                <td><input type="radio" name="s_ludico" value="s_9_3" name="ludico_s_9_3"/></td>
-                                <td><input type="radio" name="s_ludico" value="s_9_4" name="ludico_s_9_4"/></td>
-                                <td><input type="radio" name="s_ludico" value="s_9_5" name="ludico_s_9_5"/></td>
-                                <td><input type="radio" name="s_ludico" value="s_9_6" name="ludico_s_9_6"/></td>
-                                <td><input type="radio" name="s_ludico" value="s_9_7" name="ludico_s_9_7"/></td>
-                                <td><input type="radio" name="s_ludico" value="s_9_8" name="ludico_s_9_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.0" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.0" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.0" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.0" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.0" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.0" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.0" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.0" value="8" /></td>
                             </tr>
                             <tr>
                                 <td>Settore sportivo</td>
-                                <td><input type="radio" name="s_sportivo" value="s_10_1" name="sportivo_s_10_1"/></td>
-                                <td><input type="radio" name="s_sportivo" value="s_10_2" name="sportivo_s_10_2"/></td>
-                                <td><input type="radio" name="s_sportivo" value="s_10_3" name="sportivo_s_10_3"/></td>
-                                <td><input type="radio" name="s_sportivo" value="s_10_4" name="sportivo_s_10_4"/></td>
-                                <td><input type="radio" name="s_sportivo" value="s_10_5" name="sportivo_s_10_5"/></td>
-                                <td><input type="radio" name="s_sportivo" value="s_10_6" name="sportivo_s_10_6"/></td>
-                                <td><input type="radio" name="s_sportivo" value="s_10_7" name="sportivo_s_10_7"/></td>
-                                <td><input type="radio" name="s_sportivo" value="s_10_8" name="sportivo_s_10_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.1" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.1" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.1" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.1" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.1" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.1" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.1" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.1" value="8" /></td>
                             </tr>
                             <tr>
                                 <td><input type="text" class="form-control" placeholder="Altro (da specificare)" name="altro_s_11_0"></td>
-                                <td><input type="radio" name="s_altro" value="s_11_1" name="altro_s_11_1"/></td>
-                                <td><input type="radio" name="s_altro" value="s_11_2" name="altro_s_11_2"/></td>
-                                <td><input type="radio" name="s_altro" value="s_11_3" name="altro_s_11_3"/></td>
-                                <td><input type="radio" name="s_altro" value="s_11_4" name="altro_s_11_4"/></td>
-                                <td><input type="radio" name="s_altro" value="s_11_5" name="altro_s_11_5"/></td>
-                                <td><input type="radio" name="s_altro" value="s_11_6" name="altro_s_11_6"/></td>
-                                <td><input type="radio" name="s_altro" value="s_11_7" name="altro_s_11_7"/></td>
-                                <td><input type="radio" name="s_altro" value="s_11_8" name="altro_s_11_8"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="6" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="7" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="8" s/></td>
                             </tr>
                             
                         </tbody>
@@ -780,93 +780,93 @@
                         <tbody>
                             <tr>
                                 <td>Finanza</td>
-                                <td><input type="radio" name="f_finanza" value="f_1_1" name="finanza_f_1_1"/></td>
-                                <td><input type="radio" name="f_finanza" value="f_1_2" name="finanza_f_1_2"/></td>
-                                <td><input type="radio" name="f_finanza" value="f_1_3" name="finanza_f_1_3"/></td>
-                                <td><input type="radio" name="f_finanza" value="f_1_4" name="finanza_f_1_4"/></td>
-                                <td><input type="radio" name="f_finanza" value="f_1_5" name="finanza_f_1_5"/></td>
-                                <td><input type="radio" name="f_finanza" value="f_1_6" name="finanza_f_1_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.1" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.1" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.1" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.1" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.1" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.1" value="6" /></td>
                             </tr>
                             <tr>
                                 <td>Marketing</td>
-                                <td><input type="radio" name="f_marketing" value="f_2_1" name="marketing_f_2_1"/></td>
-                                <td><input type="radio" name="f_marketing" value="f_2_2" name="marketing_f_2_2"/></td>
-                                <td><input type="radio" name="f_marketing" value="f_2_3" name="marketing_f_2_3"/></td>
-                                <td><input type="radio" name="f_marketing" value="f_2_4" name="marketing_f_2_4"/></td>
-                                <td><input type="radio" name="f_marketing" value="f_2_5" name="marketing_f_2_5"/></td>
-                                <td><input type="radio" name="f_marketing" value="f_2_6" name="marketing_f_2_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.2" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.2" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.2" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.2" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.2" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.2" value="6" /></td>
                             </tr>
                             <tr>
                                 <td>Produzione</td>
-                                <td><input type="radio" name="f_produzione" value="f_3_1" name="produzione_f_3_1"/></td>
-                                <td><input type="radio" name="f_produzione" value="f_3_2" name="produzione_f_3_2"/></td>
-                                <td><input type="radio" name="f_produzione" value="f_3_3" name="produzione_f_3_3"/></td>
-                                <td><input type="radio" name="f_produzione" value="f_3_4" name="produzione_f_3_4"/></td>
-                                <td><input type="radio" name="f_produzione" value="f_3_5" name="produzione_f_3_5"/></td>
-                                <td><input type="radio" name="f_produzione" value="f_3_6" name="produzione_f_3_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.3" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.3" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.3" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.3" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.3" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.3" value="6" /></td>
                             </tr>
                             <tr>
                                 <td>Amministrazione</td>
-                                <td><input type="radio" name="f_amministrazione" value="f_4_1" name="amministrazione_f_4_1"/></td>
-                                <td><input type="radio" name="f_amministrazione" value="f_4_2" name="amministrazione_f_4_2"/></td>
-                                <td><input type="radio" name="f_amministrazione" value="f_4_3" name="amministrazione_f_4_3"/></td>
-                                <td><input type="radio" name="f_amministrazione" value="f_4_4" name="amministrazione_f_4_4"/></td>
-                                <td><input type="radio" name="f_amministrazione" value="f_4_5" name="amministrazione_f_4_5"/></td>
-                                <td><input type="radio" name="f_amministrazione" value="f_4_6" name="amministrazione_f_4_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.4" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.4" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.4" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.4" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.4" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.4" value="6" /></td>
                             </tr>
                             <tr>
                                 <td>Risorse umane</td>
-                                <td><input type="radio" name="f_risorse" value="f_5_1" name="umane_f_5_1"/></td>
-                                <td><input type="radio" name="f_risorse" value="f_5_2" name="umane_f_5_2"/></td>
-                                <td><input type="radio" name="f_risorse" value="f_5_3" name="umane_f_5_3"/></td>
-                                <td><input type="radio" name="f_risorse" value="f_5_4" name="umane_f_5_4"/></td>
-                                <td><input type="radio" name="f_risorse" value="f_5_5" name="umane_f_5_5"/></td>
-                                <td><input type="radio" name="f_risorse" value="f_5_6" name="umane_f_5_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.5" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.5" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.5" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.5" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.5" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.5" value="6" /></td>
                             </tr>
                             <tr>
                                 <td>Dnameattico - educativa</td>
-                                <td><input type="radio" name="f_dnameattico" value="f_6_1" name="dnameattico_f_6_1"/></td>
-                                <td><input type="radio" name="f_dnameattico" value="f_6_2" name="dnameattico_f_6_2"/></td>
-                                <td><input type="radio" name="f_dnameattico" value="f_6_3" name="dnameattico_f_6_3"/></td>
-                                <td><input type="radio" name="f_dnameattico" value="f_6_4" name="dnameattico_f_6_4"/></td>
-                                <td><input type="radio" name="f_dnameattico" value="f_6_5" name="dnameattico_f_6_5"/></td>
-                                <td><input type="radio" name="f_dnameattico" value="f_6_6" name="dnameattico_f_6_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.6" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.6" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.6" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.6" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.6" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.6" value="6" /></td>
                             </tr>
                             <tr>
                                 <td>Prevenzione e educazione motoria per disabili e per soggetti in età diversa</td>
-                                <td><input type="radio" name="f_prevenzione" value="f_7_1" name="motoria_f_7_1"/></td>
-                                <td><input type="radio" name="f_prevenzione" value="f_7_2" name="motoria_f_7_2"/></td>
-                                <td><input type="radio" name="f_prevenzione" value="f_7_3" name="motoria_f_7_3"/></td>
-                                <td><input type="radio" name="f_prevenzione" value="f_7_4" name="motoria_f_7_4"/></td>
-                                <td><input type="radio" name="f_prevenzione" value="f_7_5" name="motoria_f_7_5"/></td>
-                                <td><input type="radio" name="f_prevenzione" value="f_7_6" name="motoria_f_7_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.7" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.7" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.7" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.7" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.7" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.7" value="6" /></td>
                             </tr>
                             <tr>
                                 <td>Tecnico - Sportiva</td>
-                                <td><input type="radio" name="f_tecnico" value="f_8_1" name="sport_f_8_1"/></td>
-                                <td><input type="radio" name="f_tecnico" value="f_8_2" name="sport_f_8_2"/></td>
-                                <td><input type="radio" name="f_tecnico" value="f_8_3" name="sport_f_8_3"/></td>
-                                <td><input type="radio" name="f_tecnico" value="f_8_4" name="sport_f_8_4"/></td>
-                                <td><input type="radio" name="f_tecnico" value="f_8_5" name="sport_f_8_5"/></td>
-                                <td><input type="radio" name="f_tecnico" value="f_8_6" name="sport_f_8_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.8" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.8" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.8" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.8" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.8" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.8" value="6" /></td>
                             </tr>
                             <tr>
                                 <td>Manageriale</td>
-                                <td><input type="radio" name="f_manageriale" value="f_9_1" name="manager_f_9_1"/></td>
-                                <td><input type="radio" name="f_manageriale" value="f_9_2" name="manager_f_9_2"/></td>
-                                <td><input type="radio" name="f_manageriale" value="f_9_3" name="manager_f_9_3"/></td>
-                                <td><input type="radio" name="f_manageriale" value="f_9_4" name="manager_f_9_4"/></td>
-                                <td><input type="radio" name="f_manageriale" value="f_9_5" name="manager_f_9_5"/></td>
-                                <td><input type="radio" name="f_manageriale" value="f_9_6" name="manager_f_9_6"/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.9" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.9" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.9" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.9" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.9" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.9" value="6" /></td>
                             </tr>
                             <tr>
-                                <td><input name="altro" type="text" class="form-control" placeholder="Altro (da specificare)" name="altro_f_10_0"></td>
-                                <td><input type="radio" name="f_altro" value="f_10_1" name="altro_f_10_1"/></td>
-                                <td><input type="radio" name="f_altro" value="f_10_2" name="altro_f_10_2"/></td>
-                                <td><input type="radio" name="f_altro" value="f_10_3" name="altro_f_10_3"/></td>
-                                <td><input type="radio" name="f_altro" value="f_10_4" name="altro_f_10_4"/></td>
-                                <td><input type="radio" name="f_altro" value="f_10_5" name="altro_f_10_5"/></td>
-                                <td><input type="radio" name="f_altro" value="f_10_6" name="altro_f_10_6"/></td>
+                                <td><input name="altro" type="text" class="form-control" placeholder="Altro (da specificare)" name="altro_0"></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.10" value="1" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.10" value="2" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.10" value="3" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.10" value="4" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.10" value="5" /></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.10" value="6" /></td>
                             </tr>
                     </table>
                 </div>
@@ -904,7 +904,7 @@
                                 <span class="input-group-addon">
                                     <input type="checkbox">
                                 </span>
-                                    <input type="text" class="form-control" placeholder="Nell'ambito Regionale" readonly name="Nellambito Regionale">
+                                    <input type="text" class="form-control" placeholder="Nell'ambito Regionale" readonly name="Casella di controllo6.0">
                                 </div>
                             </div>
                             <div class="col-lg-3">
@@ -912,7 +912,7 @@
                                     <span class="input-group-addon">
                                         <input type="checkbox">
                                     </span>
-                                    <input type="text" class="form-control" placeholder="In Italia" readonly name="In Italia">
+                                    <input type="text" class="form-control" placeholder="In Italia" readonly name="Casella di controllo6.1">
                                 </div>
                             </div>
                             <div class="col-lg-3">
@@ -920,7 +920,7 @@
                                     <span class="input-group-addon">
                                         <input type="checkbox">
                                     </span>
-                                    <input type="text" class="form-control" placeholder="All'Estero" readonly  name="AllEstero">
+                                    <input type="text" class="form-control" placeholder="All'Estero" readonly  name="Casella di controllo6.2">
                                 </div>
                             </div>
                         </div>
@@ -956,7 +956,7 @@
                                         <span class="input-group-addon">
                                             <input type="checkbox">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Certificato degli Studi effettuati" readonly name="certificato_studi">
+                                        <input type="text" class="form-control" placeholder="Certificato degli Studi effettuati" readonly name="Casella di controllo7.0">
                                     </div>
                                 </div>
                             </div>
@@ -966,7 +966,7 @@
                                         <span class="input-group-addon">
                                             <input type="checkbox">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in italiano" readonly name="cv_ita">
+                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in italiano" readonly name="Casella di controllo7.1">
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
@@ -974,7 +974,7 @@
                                         <span class="input-group-addon">
                                             <input type="checkbox">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in inglese" readonly name="cv_ing">
+                                        <input type="text" class="form-control" placeholder="Curriculum Vitae in inglese" readonly name="Casella di controllo7.2">
                                     </div>
                                 </div>
                             </div>
@@ -984,7 +984,7 @@
                                         <span class="input-group-addon">
                                             <input type="checkbox">
                                         </span>
-                                        <input type="text" class="form-control" placeholder="Eventuale altra documentazione ritenuta utile per la valutazione della domanda" readonly name="doc_domanda">
+                                        <input type="text" class="form-control" placeholder="Eventuale altra documentazione ritenuta utile per la valutazione della domanda" readonly name="Casella di controllo7.3">
                                     </div>
                                 </div>
                             </div>
