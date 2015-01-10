@@ -20,9 +20,10 @@ import javax.servlet.http.HttpServletResponse;
  * @author Roberto
  */
 public class Servlet_auth extends HttpServlet {
-
-    private static HttpServletRequest request;
-    private static HttpServletResponse response;
+    
+    private HttpServletRequest request;
+    private HttpServletResponse response;
+    
     
     private Manager manager;
 
@@ -37,29 +38,42 @@ public class Servlet_auth extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest pRequest, HttpServletResponse pResponse)
             throws ServletException, IOException {
-        request = pRequest;
-        response = pResponse;
+        this.request = pRequest;
+        this.response = pResponse;
 
-        this.manager = new Manager(request, response);
+        this.manager = new Manager(this.request, this.response);
         Abstract_user user;
         
-        String Username = request.getParameter("username");
-        String Password = request.getParameter("password");
+        String Username = this.request.getParameter("username");
+        String Password = this.request.getParameter("password");
 
         
         try {
             user = this.manager.check();
         } catch (Exception_auth ex) {
-            response.sendRedirect("/Tirocinando/index.jsp?error=true");
-            //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
+            this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
         }
+        
         
         try {
             user = this.manager.login(Username, Password);
+            switch(user.getUserType()){
+                case STUDENTE:
+                    this.response.sendRedirect("/Tirocinando/home.jsp?section=studente");
+                    break;
+                case AZIENDA:
+                    this.response.sendRedirect("/Tirocinando/home.jsp?section=azienda");
+                    break;
+                case TUTOR:
+                    this.response.sendRedirect("/Tirocinando/home.jsp?section=tutor");
+                    break;
+            }
         } catch (Exception_user ex) {
-            Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
+            this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
+            //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
         }
-            
+        
+        
             
     }
 

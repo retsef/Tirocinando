@@ -33,7 +33,7 @@ public abstract class Abstract {
     /**
      * Cancella Sessioni scadute
      */
-    abstract public void clean_expired();
+    abstract public void clean_expired() throws Exception_auth;
     
     /**
      * Restituisce lo status della sessione

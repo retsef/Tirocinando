@@ -92,7 +92,7 @@ public class Adapter {
         String query = "INSERT INTO "+table;
         if(rows!=null)
             query += " ("+rows+") ";
-        query += " VALUES (\'"+implode("\',\'", values)+"\')";
+        query += " VALUES ("+implodeValues(",", values)+")";
         if(this.TableExist(table)){
             this.db_manager.execUpdate(query);
         } else
@@ -148,7 +148,7 @@ public class Adapter {
             for (String key : rows.keySet()) {
                 temp_listwhere.add(""+key+"='"+rows.get(key)+"'");
             }
-            query += implode(",", (String[]) temp_listwhere.toArray());
+            query += implodeValues(",", (String[]) temp_listwhere.toArray());
             
             //query
             this.db_manager.execUpdate(query);
@@ -173,11 +173,22 @@ public class Adapter {
      * @throws Exception_db 
      */
     private boolean TableExist(String table) throws SQLException, Exception_db{
-        String query = "SHOW TABLES FROM "+Config.getDb_name()+" LIKE \'"+table+"\'";
+        String query = "SHOW TABLES FROM "+Config.getDb_name()+" LIKE '"+table+"'";
         this.db_manager.execQuery(query);
         
         this.getResult().last();
         return this.getResult().getRow()==1;
+    }
+    
+    private static String implodeValues(String glue, String[] strArray) {
+        String ret = "'";
+        for(int i=0;i<strArray.length;i++){
+            if(strArray[i].equals("NULL")){ //NULL non deve avere le virgolette come valore
+                ret += strArray[i]+glue;
+            } else 
+            ret += (i == strArray.length - 1) ? strArray[i] : strArray[i] + "'"+glue+"'";
+        }
+        return ret;
     }
     
     private static String implode(String glue, String[] strArray) {

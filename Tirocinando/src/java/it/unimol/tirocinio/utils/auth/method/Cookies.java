@@ -3,7 +3,6 @@ package it.unimol.tirocinio.utils.auth.method;
 import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.user.Config.User_Type;
 import it.unimol.tirocinio.user.Exception_user;
-import it.unimol.tirocinio.user.Permission;
 import it.unimol.tirocinio.user.azienda.Azienda;
 import it.unimol.tirocinio.user.studente.Studente;
 import it.unimol.tirocinio.user.tutor.Tutor;
@@ -40,9 +39,10 @@ public class Cookies extends Abstract {
     
     //BUG!!!
     @Override
-    public void clean_expired() {
+    public void clean_expired() throws Exception_auth {
         try {
-            this.conn.select(Config.getTable_sessioni(), "creation_date", "uid='"+this.get_uid()+"'");
+            String t_uid = this.get_uid();
+            this.conn.select(Config.getTable_sessioni(), "creation_date", "uid='"+t_uid+"'");
             if(this.conn.getNumResult()==1){
                 ResultSet rs = this.conn.getResult();
                 while(rs.next()){
@@ -57,13 +57,13 @@ public class Cookies extends Abstract {
                 }
             } else 
                 throw new Exception_auth("Errore: Chiave di autenticazione univoca non trovata");
-        } catch (SQLException | Exception_db | Exception_auth ex) {
+        } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     @Override
-    public String get_uid() throws Exception_auth{
+    public String get_uid() {
         Cookie[] cookies = request.getCookies();
 
         this.uid = "";
@@ -74,13 +74,17 @@ public class Cookies extends Abstract {
             } 
         }
         
-        throw new Exception_auth("Chiave univoca non trovata");
+        return this.uid;
     }
 
     @Override
     public HashMap<STATISTICS, UUID> get_status() {
         try {
             this.clean_expired();
+        } catch (Exception_auth ex) {
+            //Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
             String temp_uid = this.get_uid();
             this.state = new HashMap<>();
             if(temp_uid==null || temp_uid.equals("")) {
@@ -97,7 +101,7 @@ public class Cookies extends Abstract {
                 this.state.put(STATISTICS.AUTH_LOGGED, UUID.fromString(temp_uid));
                 return this.state;
             }
-        } catch (SQLException | Exception_db | Exception_auth ex) {
+        } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Abstract.class.getName()).log(Level.SEVERE, null, ex);
         }
         
@@ -123,21 +127,51 @@ public class Cookies extends Abstract {
                     break;
             }
             user.setIstance(rs);
+            this.register_session(user);
             return user;
             
         } catch (Exception_db ex) {
-            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+            throw new Exception_user("Impossibile effettuare il Login!");
         }
-        return null;
     }
 
     @Override
     public void register_session(Abstract_user pUser) throws Exception_user {
         this.uid = this.generate_uid().toString();
         int time = (int) System.currentTimeMillis();
-        String[] temp_value = { this.uid, pUser.getParameter("id"), Integer.toString(time) };
+        
+        String[] value = {};
+        switch(pUser.getUserType()){
+            case STUDENTE:
+                String[] temp_S = { 
+                this.uid, 
+                pUser.getParameter("Matricola"), 
+                "NULL",
+                "NULL",
+                Integer.toString(time) };
+                value = temp_S;
+                break;
+            case AZIENDA:
+                String[] temp_A = { 
+                this.uid, 
+                "NULL",
+                pUser.getParameter("idAzienda"),
+                "NULL",
+                Integer.toString(time) };
+                value = temp_A;
+                break;
+            case TUTOR:
+                String[] temp_T = { 
+                this.uid, 
+                "NULL",
+                "NULL",
+                pUser.getParameter("idTutor"), 
+                Integer.toString(time) };
+                value = temp_T;
+                break;
+        }
         try {
-            this.conn.insert(Config.getTable_sessioni(), temp_value);
+            this.conn.insert(Config.getTable_sessioni(), value);
             
             this.cookie = new Cookie("uid",this.uid);
             this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
@@ -157,7 +191,7 @@ public class Cookies extends Abstract {
                 this.cookie = new Cookie("uid","");
                 this.response.addCookie(this.cookie);
         
-        } catch (SQLException | Exception_db | Exception_auth ex) {
+        } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

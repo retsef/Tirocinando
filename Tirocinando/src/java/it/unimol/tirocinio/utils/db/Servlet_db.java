@@ -1,7 +1,6 @@
 package it.unimol.tirocinio.utils.db;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -29,52 +28,18 @@ public class Servlet_db extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
+        
+        try {
             Adapter adapt = new Adapter();
-            out.println("<h1>Adapter istanziato</h1>");
-            /*
-            String[] array = new String[3];
-            array[0] = request.getParameter("uid");
-            array[1] = request.getParameter("user_id");
-            array[2] = request.getParameter("time");
-            out.println("<h1>Valori form ricevuti</h1>");
-            try {
-                boolean insert = adapt.insert("sessioni", array);
-                out.println("<h1>Valori database inseriti</h1>");
-            } catch (SQLException ex) {
-                out.println("<h1>Errore inserimento database</h1>");
-                ex.printStackTrace();
-            } catch (Exception_db ex) {
-                Logger.getLogger(Servlet_db.class.getName()).log(Level.SEVERE, null, ex);
+            adapt.select("sessioni");
+            ResultSet rs = adapt.getResult();
+            while(rs.next()){
+                String uid = rs.getString("uid");
             }
-            */
-            try {
-                out.println("<h1>Valori database</h1>");
-                adapt.select("Tutor");
-                ResultSet rs = adapt.getResult();
-                while(rs.next()){
-                    String uid = rs.getString("nome");
-                    out.println("<h1>"+uid+"</h1>");
-                }
-            } catch (SQLException ex) {
-                out.println("<h1>Errore select</h1>");
-                Logger.getLogger(Servlet_db.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (Exception_db ex) {
-                Logger.getLogger(Servlet_db.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-            out.println("</body>");
-            out.println("</html>");
+        } catch (SQLException | Exception_db ex) {
+            Logger.getLogger(Servlet_db.class.getName()).log(Level.SEVERE, null, ex);
         }
+            
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
