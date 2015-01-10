@@ -48,7 +48,7 @@ public class Manager extends Abstract {
     }
 
     @Override
-    public void clean_expired() {
+    public void clean_expired() throws Exception_auth {
         switch(this.method){
             case AUTH_USE_COOKIE:
                 this.cookie.clean_expired();

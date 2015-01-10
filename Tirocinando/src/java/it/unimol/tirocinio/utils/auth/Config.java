@@ -6,11 +6,10 @@ package it.unimol.tirocinio.utils.auth;
 public class Config {
     
     //Nome Database in cui sono contenuti come tripla UID, id user e data_init_sessione
-    static private final String db_name = "accessi";
+    static private final String db_name = "tirocinando";
     
     //Nome Tabella Database in cui sono contenuti come tripla UID, id user e data_init_sessione
     static private final String table_sessioni = "sessioni";
-    static private final String table_utenti = "utenti";
     //Vista in SQL che unisce in una join la tabella utenti con quella delle sessioni
     static private final String table_instance_student = "sessioni_Studente";
     static private final String table_instance_azienda = "sessioni_Azienda";
@@ -47,10 +46,6 @@ public class Config {
 
     public static String getTable_sessioni() {
         return table_sessioni;
-    }
-
-    public static String getTable_utenti() {
-        return table_utenti;
     }
 
     public static String getTable_instance_student() {

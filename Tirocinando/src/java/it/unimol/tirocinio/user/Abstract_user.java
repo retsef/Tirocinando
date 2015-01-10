@@ -19,11 +19,14 @@ public abstract class Abstract_user {
     
     public Abstract_user(User_Type ptype) {
         ptype = this.type;
-        UserData = new HashMap<>();
+        this.UserData = new HashMap<>();
     }
     
     abstract public void setIstance(ResultSet rs) throws Exception_user;
     
+    public User_Type getUserType() {
+        return this.type;
+    }
     /**
      * Restituisce un Parametro
      * @param key chiave con cui il dato e' rintracciabile nella collezione

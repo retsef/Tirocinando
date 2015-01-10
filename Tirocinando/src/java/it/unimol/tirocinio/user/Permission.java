@@ -16,21 +16,25 @@ public class Permission  {
     
     private Adapter conn;
     
+    public Permission() {
+        conn = new Adapter();
+    }
+    
     public Permission(Adapter adapt) {
         conn = adapt;
     }
     
     public User_Type getUserType(String Username, String Password) throws Exception_user, Exception_db {
         try {
-            this.conn.select("Studenti","*", "username='"+Username+"' and password='"+Password+"'");
+            this.conn.select("Studente","*", "Username='"+Username+"' and Password='"+Password+"'");
             if(this.conn.getNumResult()==1){
                 return User_Type.STUDENTE;
             }
-            this.conn.select("Azienda","*", "username='"+Username+"' and password='"+Password+"'");
+            this.conn.select("Azienda","*", "Username='"+Username+"' and Password='"+Password+"'");
             if(this.conn.getNumResult()==1){
                 return User_Type.AZIENDA;
             }
-            this.conn.select("Tutor","*", "username='"+Username+"' and password='"+Password+"'");
+            this.conn.select("Tutor","*", "Username='"+Username+"' and Password='"+Password+"'");
             if(this.conn.getNumResult()==1){
                 return User_Type.TUTOR;
             }
