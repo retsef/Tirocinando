@@ -1,6 +1,7 @@
 package it.unimol.tirocinio.utils.db;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -29,12 +30,13 @@ public class Servlet_db extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        try {
+        try (PrintWriter out = response.getWriter()){
             Adapter adapt = new Adapter();
-            adapt.select("sessioni");
+            adapt.select("Tutor");
             ResultSet rs = adapt.getResult();
             while(rs.next()){
-                String uid = rs.getString("uid");
+                String nome = rs.getString("Nome");
+                out.println("<h1>"+nome+"</h1>");
             }
         } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Servlet_db.class.getName()).log(Level.SEVERE, null, ex);

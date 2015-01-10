@@ -20,11 +20,10 @@ public class Tutor extends Abstract_user {
     @Override
     public void setIstance(ResultSet rs) throws Exception_user {
         try {
-            while(rs.next()){
-                this.setParameter("Nome",rs.getString("Nome"));
-                this.setParameter("Cognome",rs.getString("Cognome"));
-                this.setParameter("Email Istituzionale",rs.getString("Email Istituzionale"));
-            }
+            this.UserData.put("idTutor", rs.getString("idTutor"));
+            this.UserData.put("Nome", rs.getString("Nome"));
+            this.UserData.put("Cognome", rs.getString("Cognome"));
+            this.UserData.put("Email Istituzionale", rs.getString("Email Istituzionale"));
         } catch (SQLException ex) {
             Logger.getLogger(Tutor.class.getName()).log(Level.SEVERE, null, ex);
         }

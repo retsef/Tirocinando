@@ -4,8 +4,6 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Questa classe formalizza l'esecuzione delle query SQL:
@@ -25,11 +23,13 @@ public class Adapter {
                                         Config.getDb_user(), 
                                         Config.getDb_pswd(), 
                                         Config.getDb_name());
+        /*
         try {
             this.db_manager.connect();
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException | Exception_db ex) {
+        } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Adapter.class.getName()).log(Level.SEVERE, null, ex);
         }
+        */
     }
     
     public Adapter(String db){
@@ -37,11 +37,6 @@ public class Adapter {
                                         Config.getDb_user(), 
                                         Config.getDb_pswd(), 
                                         db);
-        try {
-            this.db_manager.connect();
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException | Exception_db ex) {
-            Logger.getLogger(Adapter.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
     
     /**
@@ -63,6 +58,10 @@ public class Adapter {
         if(order!=null)
             query += " ORDER BY "+order;
         if(this.TableExist(table)){
+            if(this.db_manager.isConnect()){
+                this.db_manager.disconnect();
+            }
+            this.db_manager.connect();
             this.db_manager.execQuery(query);
         } else
             throw new Exception_db("La tabella inclusa nella query non Esiste");
@@ -94,6 +93,10 @@ public class Adapter {
             query += " ("+rows+") ";
         query += " VALUES ("+implodeValues(",", values)+")";
         if(this.TableExist(table)){
+            if(this.db_manager.isConnect()){
+                this.db_manager.disconnect();
+            }
+            this.db_manager.connect();
             this.db_manager.execUpdate(query);
         } else
             throw new Exception_db("La tabella inclusa nella query non Esiste");
@@ -105,11 +108,15 @@ public class Adapter {
     
     public void delete(String table,String where) throws SQLException, Exception_db{
         String query;
+        if(where == null) 
+            query = "DELETE "+table;
+        else 
+            query = "DELETE FROM "+table+" WHERE "+where;
         if(this.TableExist(table)) {
-            if(where == null) 
-                query = "DELETE "+table;
-            else 
-                query = "DELETE FROM "+table+" WHERE "+where;
+            if(this.db_manager.isConnect()){
+                this.db_manager.disconnect();
+            }
+            this.db_manager.connect();
             this.db_manager.execUpdate(query);
         } else 
             throw new Exception_db("La tabella inclusa nella query non Esiste");
@@ -151,6 +158,10 @@ public class Adapter {
             query += implodeValues(",", (String[]) temp_listwhere.toArray());
             
             //query
+            if(this.db_manager.isConnect()){
+                this.db_manager.disconnect();
+            }
+            this.db_manager.connect();
             this.db_manager.execUpdate(query);
         }else 
             throw new Exception_db("La tabella inclusa nella query non Esiste");
@@ -174,6 +185,11 @@ public class Adapter {
      */
     private boolean TableExist(String table) throws SQLException, Exception_db{
         String query = "SHOW TABLES FROM "+Config.getDb_name()+" LIKE '"+table+"'";
+        
+        if(this.db_manager.isConnect()){
+            this.db_manager.disconnect();
+        }
+        this.db_manager.connect();
         this.db_manager.execQuery(query);
         
         this.getResult().last();

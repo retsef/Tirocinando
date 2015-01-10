@@ -5,6 +5,8 @@ package it.unimol.tirocinio.utils.db;
  */
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Connector {
     
@@ -36,21 +38,29 @@ public class Connector {
         this.db_name = db;
     }
     
+    public boolean isConnect() {
+        return this.status_conn;
+    }
+    
     /**
      * Connessione al database
      * 
-     * @throws java.lang.ClassNotFoundException
-     * @throws java.lang.InstantiationException
-     * @throws java.lang.IllegalAccessException
      * @throws java.sql.SQLException Dipendendo da jdbc e' vincolato da ogni sua eccezione
      * @throws it.unimol.tirocinio.utils.db.Exception_db Nel caso la connessione fosse gia' istaurata
      */
-    public void connect() throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException, Exception_db{
+    public void connect() throws SQLException, Exception_db{
         if(!this.status_conn){
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-            String url = "jdbc:mysql://"+this.db_host+"/"+this.db_name;
-            conn = DriverManager.getConnection(url, this.db_user, this.db_pswd);
-            this.status_conn = true;
+            try {
+                Class.forName("com.mysql.jdbc.Driver").newInstance();
+                String url = "jdbc:mysql://"+this.db_host+"/"+this.db_name;
+                conn = DriverManager.getConnection(url, this.db_user, this.db_pswd);
+                this.status_conn = true;
+                
+                this.statement = this.conn.createStatement();
+                
+            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+                Logger.getLogger(Connector.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } else 
             throw new Exception_db("La connessione al Database e' gia' attiva");
     }
@@ -63,7 +73,10 @@ public class Connector {
      */
     public void disconnect() throws SQLException, Exception_db{
         if(this.status_conn){
-            conn.close();
+            this.conn.close();
+            this.statement.close();
+            this.result.close();
+            
             this.status_conn = false;
         } else 
             throw new Exception_db("La connessione al Database e' gia' disattivata");
@@ -78,7 +91,6 @@ public class Connector {
      */
     public void execQuery(String query) throws SQLException, Exception_db{
         if(this.status_conn){
-            this.statement = conn.createStatement();
             this.result = this.statement.executeQuery(query);
         } else 
             throw new Exception_db("La connessione al Database non e' attiva");
@@ -93,7 +105,6 @@ public class Connector {
      */
     public void execUpdate(String query) throws SQLException, Exception_db{
         if(this.status_conn){
-            this.statement = conn.createStatement();
             this.statement.executeUpdate(query);
         } else 
             throw new Exception_db("La connessione al Database non e' attiva");

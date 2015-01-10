@@ -3,7 +3,6 @@ package it.unimol.tirocinio.user;
 import it.unimol.tirocinio.user.Config.User_Type;
 import it.unimol.tirocinio.utils.db.Adapter;
 import it.unimol.tirocinio.utils.db.Exception_db;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.UUID;
 import java.util.logging.Level;
@@ -43,7 +42,7 @@ public class Permission  {
         } catch (SQLException ex) {
             Logger.getLogger(Permission.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        throw new Exception_user("Nessun utente trovato!");
     }
     
     //Salvarsi il result set prima del retrun
@@ -66,7 +65,7 @@ public class Permission  {
         } catch (SQLException ex) {
             Logger.getLogger(Permission.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        throw new Exception_user("Nessun utente trovato!");
     }
     
 }

@@ -13,18 +13,18 @@ import java.util.HashMap;
 public abstract class Abstract_user {
     
     //identificatore di tipo di utente connesso
-    private User_Type type;
+    public User_Type type;
     //Collezione di coppie di dati corredati da nome identificativo
-    private HashMap<String, String> UserData;
+    public HashMap<String, String> UserData;
     
     public Abstract_user(User_Type ptype) {
-        ptype = this.type;
+        this.type = ptype;
         this.UserData = new HashMap<>();
     }
     
     abstract public void setIstance(ResultSet rs) throws Exception_user;
     
-    public User_Type getUserType() {
+    public User_Type getUserType()  {
         return this.type;
     }
     /**

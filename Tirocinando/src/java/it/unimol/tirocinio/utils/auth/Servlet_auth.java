@@ -8,15 +8,12 @@ package it.unimol.tirocinio.utils.auth;
 import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.user.Exception_user;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
  * @author Roberto
  */
 public class Servlet_auth extends HttpServlet {
@@ -40,6 +37,9 @@ public class Servlet_auth extends HttpServlet {
             throws ServletException, IOException {
         this.request = pRequest;
         this.response = pResponse;
+        
+        //this.response.setBufferSize(2000000);
+        
 
         this.manager = new Manager(this.request, this.response);
         Abstract_user user;
@@ -49,9 +49,10 @@ public class Servlet_auth extends HttpServlet {
 
         
         try {
-            user = this.manager.check();
+            user =  this.manager.check();
         } catch (Exception_auth ex) {
-            this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
+            //this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
+            
         }
         
         
@@ -72,9 +73,7 @@ public class Servlet_auth extends HttpServlet {
             this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
             //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-            
+          
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

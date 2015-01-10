@@ -46,7 +46,7 @@ public class Cookies extends Abstract {
             if(this.conn.getNumResult()==1){
                 ResultSet rs = this.conn.getResult();
                 while(rs.next()){
-                    int creation_date = Integer.getInteger(rs.getString("creation_date"));
+                    int creation_date = rs.getInt("creation_date");
                     if( creation_date + Config.getExpire() < System.currentTimeMillis()) {
                         this.cookie = new Cookie("uid","");
                         this.response.addCookie(this.cookie);
@@ -87,7 +87,7 @@ public class Cookies extends Abstract {
         try {
             String temp_uid = this.get_uid();
             this.state = new HashMap<>();
-            if(temp_uid==null || temp_uid.equals("")) {
+            if(temp_uid.equals("")) {
                 this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
                 return this.state;
             }
@@ -126,9 +126,12 @@ public class Cookies extends Abstract {
                     user = new Tutor();
                     break;
             }
-            user.setIstance(rs);
-            this.register_session(user);
-            return user;
+            if(user!=null){
+                user.setIstance(rs);
+                this.register_session(user);
+                return user;
+            } else 
+                throw new Exception_user("Impossibile effettuare il Login!");
             
         } catch (Exception_db ex) {
             throw new Exception_user("Impossibile effettuare il Login!");
@@ -145,33 +148,34 @@ public class Cookies extends Abstract {
             case STUDENTE:
                 String[] temp_S = { 
                 this.uid, 
+                Integer.toString(time),
                 pUser.getParameter("Matricola"), 
                 "NULL",
-                "NULL",
-                Integer.toString(time) };
+                "NULL"};
                 value = temp_S;
                 break;
             case AZIENDA:
                 String[] temp_A = { 
-                this.uid, 
+                this.uid,
+                Integer.toString(time), 
                 "NULL",
                 pUser.getParameter("idAzienda"),
-                "NULL",
-                Integer.toString(time) };
+                "NULL" };
                 value = temp_A;
                 break;
             case TUTOR:
                 String[] temp_T = { 
                 this.uid, 
+                Integer.toString(time), 
                 "NULL",
                 "NULL",
-                pUser.getParameter("idTutor"), 
-                Integer.toString(time) };
+                pUser.getParameter("idTutor") };
                 value = temp_T;
                 break;
         }
         try {
-            this.conn.insert(Config.getTable_sessioni(), value);
+            if(value.length!=0)
+                this.conn.insert(Config.getTable_sessioni(), value);
             
             this.cookie = new Cookie("uid",this.uid);
             this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
@@ -226,7 +230,7 @@ public class Cookies extends Abstract {
                 Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else 
-            throw new Exception_auth("Non esiste una sessione valida pre esistente");
+            throw new Exception_auth("Non esiste una sessione valida per esistente");
         return null;
     }
 
