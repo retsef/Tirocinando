@@ -59,7 +59,7 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
             Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        request.getSession().setAttribute("Doc_Finale", absoluteDiskPath_dest);
+        request.getSession().setAttribute("Doc_Finale", "/Tirocinando/"+relativeWebPath_dest);
         response.sendRedirect("/Tirocinando/Download_Modulo_Compilato.jsp");
         
     }
