@@ -5,6 +5,7 @@ import com.itextpdf.text.pdf.AcroFields;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import com.itextpdf.text.pdf.TextField;
+import com.itextpdf.text.pdf.PdfString;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
@@ -37,6 +38,7 @@ public class CompilazionePDF {
         
         for (String key : pContenuto.keySet()) {
             //System.out.println(key);
+            //PdfString str = new PdfString(pContenuto.get(key), "UTF-8");
             form.setField(key, pContenuto.get(key));
         }
         
