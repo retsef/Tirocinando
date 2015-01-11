@@ -1,4 +1,4 @@
-package it.unimol.tirocinio.database.profilo;
+package it.unimol.tirocinio.webpage;
 
 import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.user.Exception_user;
@@ -29,55 +29,71 @@ public class Profilo extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+            
         try {
-            //Commento per poter compilare il progetto
-
+                
             Manager auth = new Manager(request, response);
-            Abstract_user tempUser = null;
+            Abstract_user user = null;
             try {
-                tempUser = auth.check();
+                user = auth.check();
             } catch (Exception_auth ex) {
-                Logger.getLogger(Profilo.class.getName()).log(Level.SEVERE, null, ex);
+                //pagina di errore se non si e' nella sessione giusta
+                response.sendRedirect("/Tirocinando/index.jsp?error=true");
             }
-            
-            String Nome = tempUser.getParameter("Nome");
-            String Cognome = tempUser.getParameter("Cognome");
-            String Matricola = tempUser.getParameter("Matricola");
-            String Sesso = tempUser.getParameter("Sesso");
-            String Anno_di_Immatricolazione = tempUser.getParameter("Anno di Immatricolazione");
-            String Media_Voti = tempUser.getParameter("Media Voti");
-            String Data_di_Nascita = tempUser.getParameter("Data di Nascita");
-            String Cittadinanza = tempUser.getParameter("Cittadinanza");
-            String Comune_di_Nascita = tempUser.getParameter("Comune di Nascita");
-            String Provincia_di_Nascita = tempUser.getParameter("Provincia di Nascita");
-            String Email = tempUser.getParameter("Email");
-            String Codice_Fiscale = tempUser.getParameter("Codice Fiscale");
-            String N_Telefonico = tempUser.getParameter("N.Telefonico");
-            String Residenza_Indirizzo_NCivico = tempUser.getParameter("Residenza(Indirizzo-N.Civico)");
-            String Residenza_Città_CAP_Comune = tempUser.getParameter("Residenza(Città-CAP-Comune)");
-            String Status = tempUser.getParameter("Status Tirocinio");
-            String Ore_Fatte = tempUser.getParameter("Ore Fatte");
-            String Ore_Mancanti = tempUser.getParameter("Ore Mancanti");
-            String Status_Libretto = tempUser.getParameter("Status Libretto");
-            
-            String Email_Istituzionale = tempUser.getParameter("Email Istituzionale");
-            String Codice_Fiscale_PIva = tempUser.getParameter("Codice fiscale o P.iva");
-            String Descrizione = tempUser.getParameter("Descrizione");
-            String Sito_Web = tempUser.getParameter("Sito Web");
-            String Tutor_Accademico = tempUser.getParameter("Tutor Accademico");
-            String Numero_Dipendenti = tempUser.getParameter("Numero Dipendenti");
-            String Posizione_Ricoperta = tempUser.getParameter("Posizione Ricoperta");
-            String Nominativo_Abbilitato_Firma = tempUser.getParameter("Nominativo abbilitato firma");
-            
-            
-            
-            
+
+            if(user!=null){
+                switch(user.getUserType()){
+                    case STUDENTE:
+
+                        break;
+                    case AZIENDA:
+
+                        break;
+                    case TUTOR:
+                        request.getSession().setAttribute("Nome", user.getParameter("Nome"));
+                        request.getSession().setAttribute("Cognome", user.getParameter("Cognome"));
+                        request.getSession().setAttribute("Email Istituzionale", user.getParameter("Email Istituzionale"));
+                        response.sendRedirect("/Tirocinando/home.jsp?section=tutor");
+                        break;
+                }
+            }
+                
+                
         } catch (Exception_user ex) {
             Logger.getLogger(Profilo.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-            
+                
+                /*
+                String Nome = tempUser.getParameter("Nome");
+                String Cognome = tempUser.getParameter("Cognome");
+                String Matricola = tempUser.getParameter("Matricola");
+                String Sesso = tempUser.getParameter("Sesso");
+                String Anno_di_Immatricolazione = tempUser.getParameter("Anno di Immatricolazione");
+                String Media_Voti = tempUser.getParameter("Media Voti");
+                String Data_di_Nascita = tempUser.getParameter("Data di Nascita");
+                String Cittadinanza = tempUser.getParameter("Cittadinanza");
+                String Comune_di_Nascita = tempUser.getParameter("Comune di Nascita");
+                String Provincia_di_Nascita = tempUser.getParameter("Provincia di Nascita");
+                String Email = tempUser.getParameter("Email");
+                String Codice_Fiscale = tempUser.getParameter("Codice Fiscale");
+                String N_Telefonico = tempUser.getParameter("N.Telefonico");
+                String Residenza_Indirizzo_NCivico = tempUser.getParameter("Residenza(Indirizzo-N.Civico)");
+                String Residenza_Città_CAP_Comune = tempUser.getParameter("Residenza(Città-CAP-Comune)");
+                String Status = tempUser.getParameter("Status Tirocinio");
+                String Ore_Fatte = tempUser.getParameter("Ore Fatte");
+                String Ore_Mancanti = tempUser.getParameter("Ore Mancanti");
+                String Status_Libretto = tempUser.getParameter("Status Libretto");
+                
+                String Email_Istituzionale = tempUser.getParameter("Email Istituzionale");
+                String Codice_Fiscale_PIva = tempUser.getParameter("Codice fiscale o P.iva");
+                String Descrizione = tempUser.getParameter("Descrizione");
+                String Sito_Web = tempUser.getParameter("Sito Web");
+                String Tutor_Accademico = tempUser.getParameter("Tutor Accademico");
+                String Numero_Dipendenti = tempUser.getParameter("Numero Dipendenti");
+                String Posizione_Ricoperta = tempUser.getParameter("Posizione Ricoperta");
+                String Nominativo_Abbilitato_Firma = tempUser.getParameter("Nominativo abbilitato firma");
+                */
+                
      
     }
 

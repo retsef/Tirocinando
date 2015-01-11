@@ -38,6 +38,8 @@ public class Servlet_db extends HttpServlet {
                 String nome = rs.getString("Nome");
                 out.println("<h1>"+nome+"</h1>");
             }
+            int seconds = (int)(System.currentTimeMillis() / 1000l);
+            out.println("<h1>"+seconds+"</h1>");
         } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Servlet_db.class.getName()).log(Level.SEVERE, null, ex);
         }

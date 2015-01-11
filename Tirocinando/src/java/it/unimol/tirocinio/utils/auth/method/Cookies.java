@@ -47,7 +47,8 @@ public class Cookies extends Abstract {
                 ResultSet rs = this.conn.getResult();
                 while(rs.next()){
                     int creation_date = rs.getInt("creation_date");
-                    if( creation_date + Config.getExpire() < System.currentTimeMillis()) {
+                    int seconds = (int)(System.currentTimeMillis() / 1000l);
+                    if( creation_date + Config.getExpire() < seconds) {
                         this.cookie = new Cookie("uid","");
                         this.response.addCookie(this.cookie);
                     } else {
@@ -141,7 +142,7 @@ public class Cookies extends Abstract {
     @Override
     public void register_session(Abstract_user pUser) throws Exception_user {
         this.uid = this.generate_uid().toString();
-        int time = (int) System.currentTimeMillis();
+        int time = (int)(System.currentTimeMillis() / 1000l);
         
         String[] value = {};
         switch(pUser.getUserType()){
@@ -176,9 +177,9 @@ public class Cookies extends Abstract {
         try {
             if(value.length!=0)
                 this.conn.insert(Config.getTable_sessioni(), value);
-            
+            int seconds = (int)(System.currentTimeMillis() / 1000l);
             this.cookie = new Cookie("uid",this.uid);
-            this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
+            this.cookie.setMaxAge(seconds + Config.getExpire());
             this.response.addCookie(this.cookie);
             
         } catch (SQLException | Exception_db ex) {
@@ -206,8 +207,6 @@ public class Cookies extends Abstract {
         
         if(temp_status.containsKey(STATISTICS.AUTH_LOGGED)) {
             try {
-                Abstract_user temp_user = null;
-                
                 User_Type type = this.guard.getUserType(temp_status.get(STATISTICS.AUTH_LOGGED));
                 ResultSet rs = this.conn.getResult();
                 
@@ -224,8 +223,7 @@ public class Cookies extends Abstract {
                         break;
                 }
                 user.setIstance(rs);
-                
-                return temp_user;
+                return user;
             } catch (Exception_user | Exception_db ex) {
                 Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
             }

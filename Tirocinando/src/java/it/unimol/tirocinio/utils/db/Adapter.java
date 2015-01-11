@@ -197,12 +197,12 @@ public class Adapter {
     }
     
     private static String implodeValues(String glue, String[] strArray) {
-        String ret = "'";
+        String ret = "";
         for(int i=0;i<strArray.length;i++){
             if(strArray[i].equals("NULL")){ //NULL non deve avere le virgolette come valore
                 ret += strArray[i]+glue;
             } else 
-            ret += (i == strArray.length - 1) ? strArray[i] : strArray[i] + "'"+glue+"'";
+            ret += (i == strArray.length - 1) ? "'"+strArray[i]+"'" : "'"+strArray[i]+"'"+glue;
         }
         return ret;
     }

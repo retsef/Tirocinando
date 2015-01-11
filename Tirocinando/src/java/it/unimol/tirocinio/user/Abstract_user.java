@@ -46,8 +46,8 @@ public abstract class Abstract_user {
      * @throws Exception_user Nel caso non esita un dato con quella chiave
      */
     public void setParameter(String key, String value) throws Exception_user {
-        if(!this.UserData.containsKey(key))
-            throw new Exception_user("Campo Utente inesistente");
+        //if(!this.UserData.containsKey(key))
+        //    throw new Exception_user("Campo Utente inesistente");
         this.UserData.put(key, value);
     }
     

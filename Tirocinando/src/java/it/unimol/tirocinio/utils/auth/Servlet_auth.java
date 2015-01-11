@@ -58,17 +58,7 @@ public class Servlet_auth extends HttpServlet {
         
         try {
             user = this.manager.login(Username, Password);
-            switch(user.getUserType()){
-                case STUDENTE:
-                    this.response.sendRedirect("/Tirocinando/home.jsp?section=studente");
-                    break;
-                case AZIENDA:
-                    this.response.sendRedirect("/Tirocinando/home.jsp?section=azienda");
-                    break;
-                case TUTOR:
-                    this.response.sendRedirect("/Tirocinando/home.jsp?section=tutor");
-                    break;
-            }
+            this.response.sendRedirect("/Tirocinando/Profilo");
         } catch (Exception_user ex) {
             this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
             //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);

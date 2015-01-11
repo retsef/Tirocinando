@@ -12,6 +12,10 @@
         <servlet-name>Modulistica</servlet-name>
         <servlet-class>it.unimol.tirocinio.utils.document.Servlet_Compilazione_Modulistica</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Profilo</servlet-name>
+        <servlet-class>it.unimol.tirocinio.webpage.Profilo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Autenticazione</servlet-name>
         <url-pattern>/Autenticazione</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>Modulistica</servlet-name>
         <url-pattern>/Modulistica</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Profilo</servlet-name>
+        <url-pattern>/Profilo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
