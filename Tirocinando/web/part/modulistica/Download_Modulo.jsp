@@ -7,7 +7,7 @@
 <div class="container" style="padding-top: 70px">
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading">Download_Moduli</div>
+        <div class="panel-heading">Download Moduli</div>
         <div class="panel-body">
             <table class="table" >
                 <thead>
@@ -35,7 +35,9 @@
                            Proposta modulo di candidatura
                         </td>
                         <td>
-                            <span class="glyphicon glyphicon-save"></span>
+                            <form method="get" action="absoluteDiskPath_dest">
+                                <button type="submit" class="btn btn-primary">Download</button> <%= request.getAttribute("Doc_Finale")%>
+                            </form>
                         </td>
                         <td>
                             <span class="glyphicon glyphicon-open"></span>

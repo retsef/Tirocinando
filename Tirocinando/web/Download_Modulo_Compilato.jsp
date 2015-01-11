@@ -10,7 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <title>Contatti</title>
+        <title>Modulistica Studente</title>
         <link rel="shortcut icon" href="img/Logo_mini.png">
     </head>
     <body>
