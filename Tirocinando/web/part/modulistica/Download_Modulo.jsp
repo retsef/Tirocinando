@@ -38,12 +38,16 @@
                             <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale")%>">
                                 <button type="submit" class="btn btn-primary">
                                     <span class="glyphicon glyphicon-save"></span>
-                                    Download
+                                    
                                 </button> 
                             </form>
                         </td>
                         <td>
-                            <span class="glyphicon glyphicon-open"></span>
+                            <form method="get" action="">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-open"></span>
+                                </button> 
+                            </form>
                         </td>
                     </tr>
                     <tr>
@@ -51,10 +55,18 @@
                            Modulo privacy
                         </td>
                         <td>
-                            <span class="glyphicon glyphicon-save"></span>
+                            <form method="get" action="">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-save"></span>
+                                </button> 
+                            </form>
                         </td>
                         <td>
-                            <span class="glyphicon glyphicon-open"></span>
+                            <form method="get" action="">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-open"></span>
+                                </button> 
+                            </form>
                         </td>
                     </tr>
                 </tbody>
