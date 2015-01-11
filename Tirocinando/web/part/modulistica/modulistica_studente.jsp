@@ -877,7 +877,7 @@
                         <span class="input-group-addon">
                             Preferenza relativa al periodo dello Stage dal
                         </span>
-                        <input type="date" class="form-control" name="Preferenza relativa al Periodo dello Stage dal">
+                        <input type="text" class="form-control" name="Preferenza relativa al Periodo dello Stage dal">
                     </div>
                 </div>
 
@@ -886,7 +886,7 @@
                         <span class="input-group-addon">
                             al
                         </span>
-                        <input type="date" class="form-control" name="al_5">
+                        <input type="text" class="form-control" name="al_5">
                     </div>
                 </div>
             </div>
