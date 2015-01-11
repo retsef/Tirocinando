@@ -14,7 +14,7 @@
                     <tr>
                         <td>
                             <b>
-                                Descrizione
+                                Moduli
                             </b>
                         </td>
                         <td>
@@ -36,7 +36,9 @@
                         </td>
                         <td>
                             <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale")%>">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" title="Il modulo di candidatura debitamente compilato e sottoscritto deve essere consegnato:
+                                                                                    - alla segreteria didattica del Dipartimento di appartenenza, per il tirocinio obbligatorio;
+                                                                                    - al Settore Protocollo per il tirocinio curriculare o extra-curriculare corredato da lettera di accompagnamento.">
                                     <span class="glyphicon glyphicon-save"></span>
                                     
                                 </button> 
@@ -56,7 +58,26 @@
                         </td>
                         <td>
                             <form method="get" action="">
+                                <button type="submit" class="btn btn-primary" title="Il modulo, redatto a cura del tirocinante e debitamente firmato, deve essere allegato al progetto formativo.">
+                                    <span class="glyphicon glyphicon-save"></span>
+                                </button> 
+                            </form>
+                        </td>
+                        <td>
+                            <form method="get" action="">
                                 <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-open"></span>
+                                </button> 
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           Progetto Formativo e di Orientamento
+                        </td>
+                        <td>
+                            <form method="get" action="">
+                                <button type="submit" class="btn btn-primary" title="Per il tirocinio obbligatorio, il progetto formativo e di orientamento, compilato in duplice originale dal Dipartimento, deve essere riconsegnato, debitamente firmato dal legale rappresentante del soggetto ospitante, alla segreteria didattica del Dipartimento di appartenenza.">
                                     <span class="glyphicon glyphicon-save"></span>
                                 </button> 
                             </form>
