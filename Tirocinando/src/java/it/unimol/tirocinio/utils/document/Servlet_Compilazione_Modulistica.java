@@ -45,14 +45,23 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
             ); 
         }
         
+        String relativeWebPath_src = "doc/studente/proposta_modulo_di_candidatura.pdf";
+        String relativeWebPath_dest = "doc/studente/proposta_modulo_di_candidatura_mod.pdf";
+        String absoluteDiskPath_src = getServletContext().getRealPath(relativeWebPath_src);
+        String absoluteDiskPath_dest = getServletContext().getRealPath(relativeWebPath_dest);
+        
         try {
-            CompilazionePDF.manipulatePdf(
-                    "/Users/VittorioBarile/NetBeansProjects/Tirocinando/Tirocinando/web/doc/studente/proposta_modulo_di_candidatura.pdf", 
-                    "/Users/VittorioBarile/NetBeansProjects/Tirocinando/Tirocinando/web/doc/studente/proposta_modulo_di_candidatura_mod.pdf", 
+            CompilazionePDF.manipulatePdf( 
+                    absoluteDiskPath_src,
+                    absoluteDiskPath_dest,
                     new HashMap<String,TextField>(), temp_UserData);
         } catch (DocumentException ex) {
             Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        //request.setAttribute("Doc_Finale", absoluteDiskPath_dest);
+        //response.sendRedirect("");
+        
     }
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
