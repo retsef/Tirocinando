@@ -29,8 +29,6 @@ public class Profilo extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            
-        try {
                 
             Manager auth = new Manager(request, response);
             Abstract_user user = null;
@@ -42,26 +40,19 @@ public class Profilo extends HttpServlet {
             }
 
             if(user!=null){
+                user.setAttribute(request);
                 switch(user.getUserType()){
                     case STUDENTE:
-
+                        response.sendRedirect("/Tirocinando/home.jsp?section=studente");
                         break;
                     case AZIENDA:
-
+                        response.sendRedirect("/Tirocinando/home.jsp?section=azienda");
                         break;
                     case TUTOR:
-                        request.getSession().setAttribute("Nome", user.getParameter("Nome"));
-                        request.getSession().setAttribute("Cognome", user.getParameter("Cognome"));
-                        request.getSession().setAttribute("Email Istituzionale", user.getParameter("Email Istituzionale"));
                         response.sendRedirect("/Tirocinando/home.jsp?section=tutor");
                         break;
                 }
             }
-                
-                
-        } catch (Exception_user ex) {
-            Logger.getLogger(Profilo.class.getName()).log(Level.SEVERE, null, ex);
-        }
                 
                 /*
                 String Nome = tempUser.getParameter("Nome");

@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author roberto
@@ -25,6 +26,17 @@ public class Tutor extends Abstract_user {
             this.setParameter("Cognome", rs.getString("Cognome"));
             this.setParameter("Email Istituzionale", rs.getString("Email Istituzionale"));
         } catch (SQLException ex) {
+            Logger.getLogger(Tutor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void setAttribute(HttpServletRequest request) {
+        try {
+            request.getSession().setAttribute("Nome", this.getParameter("Nome"));
+            request.getSession().setAttribute("Cognome", this.getParameter("Cognome"));
+            request.getSession().setAttribute("Email Istituzionale", this.getParameter("Email Istituzionale"));
+        } catch (Exception_user ex) {
             Logger.getLogger(Tutor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

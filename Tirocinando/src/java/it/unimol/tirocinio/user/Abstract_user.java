@@ -3,6 +3,7 @@ package it.unimol.tirocinio.user;
 import it.unimol.tirocinio.user.Config.*;
 import java.sql.ResultSet;
 import java.util.HashMap;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Definisce l'istanza dell'utente immagazzinando i suoi attributi
@@ -13,9 +14,9 @@ import java.util.HashMap;
 public abstract class Abstract_user {
     
     //identificatore di tipo di utente connesso
-    public User_Type type;
+    private User_Type type;
     //Collezione di coppie di dati corredati da nome identificativo
-    public HashMap<String, String> UserData;
+    private HashMap<String, String> UserData;
     
     public Abstract_user(User_Type ptype) {
         this.type = ptype;
@@ -23,6 +24,8 @@ public abstract class Abstract_user {
     }
     
     abstract public void setIstance(ResultSet rs) throws Exception_user;
+    
+    abstract public void setAttribute(HttpServletRequest request);
     
     public User_Type getUserType()  {
         return this.type;

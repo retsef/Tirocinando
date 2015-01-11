@@ -37,7 +37,6 @@ public class Cookies extends Abstract {
         this.response = pResponse; 
     }
     
-    //BUG!!!
     @Override
     public void clean_expired() throws Exception_auth {
         try {

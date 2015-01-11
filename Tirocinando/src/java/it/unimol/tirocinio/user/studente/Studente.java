@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author roberto
@@ -39,6 +40,30 @@ public class Studente extends Abstract_user {
             this.setParameter("Crediti",""+rs.getInt("Crediti"));
         } catch (SQLException ex) {
             Logger.getLogger(Tutor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void setAttribute(HttpServletRequest request) {
+        try {
+            request.getSession().setAttribute("Matricola",this.getParameter("Matricola"));
+            request.getSession().setAttribute("Nome",this.getParameter("Nome"));
+            request.getSession().setAttribute("Cognome",this.getParameter("Cognome"));
+            request.getSession().setAttribute("Data nascita",this.getParameter("Data nascita"));
+            request.getSession().setAttribute("Sesso",this.getParameter("Sesso"));
+            request.getSession().setAttribute("Comune nascita",this.getParameter("Comune nascita"));
+            request.getSession().setAttribute("Provincia nascita",this.getParameter("Provincia nascita"));
+            request.getSession().setAttribute("Codice Fiscale",this.getParameter("Codice Fiscale"));
+            request.getSession().setAttribute("Provincia residenza",this.getParameter("Provincia residenza"));
+            request.getSession().setAttribute("Comune residenza",this.getParameter("Comune residenza"));
+            request.getSession().setAttribute("C.A.P.",this.getParameter("C.A.P."));
+            request.getSession().setAttribute("Indirizzo",this.getParameter("Indirizzo"));
+            request.getSession().setAttribute("N°Civico",this.getParameter("N°Civico"));
+            request.getSession().setAttribute("Recapito Telefonico",this.getParameter("Recapito Telefonico"));
+            request.getSession().setAttribute("Email",this.getParameter("Email"));
+            request.getSession().setAttribute("Crediti",this.getParameter("Crediti"));
+        } catch (Exception_user ex) {
+            Logger.getLogger(Studente.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
