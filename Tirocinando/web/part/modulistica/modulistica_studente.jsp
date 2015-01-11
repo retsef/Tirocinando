@@ -56,9 +56,9 @@
             <div class="col-lg-3">
                 <div class="input-group">
                     <span class="input-group-addon">
-                        Nazionalita'
+                        Nazionalita
                     </span>
-                    <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalità">
+                    <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalita">
                 </div>
             </div>
         </div>
@@ -365,9 +365,9 @@
                 <div class="col-lg-12">
                     <div class="input-group">
                         <span class="input-group-addon">
-                            Attività svolta
+                            Attivita svolta
                         </span>
-                        <input type="text" class="form-control" name="Attività svolta">
+                        <input type="text" class="form-control" name="Attivita svolta">
                     </div>
                 </div>
             </div>
@@ -426,9 +426,9 @@
                     <div class="col-lg-12">
                         <div class="input-group">
                             <span class="input-group-addon">
-                                Attività svolta
+                                Attivita svolta
                             </span>
-                            <input type="text" class="form-control" name="Attività svolta_2">
+                            <input type="text" class="form-control" name="Attivita svolta_2">
                         </div>
                     </div>
                 </div>
@@ -485,9 +485,9 @@
                     <div class="col-lg-12">
                         <div class="input-group">
                             <span class="input-group-addon">
-                                Attività svolta
+                                Attivita svolta
                             </span>
-                            <input type="text" class="form-control" name="Attività svolta_3">
+                            <input type="text" class="form-control" name="Attivita svolta_3">
                         </div>
                     </div>
                 </div>
@@ -534,9 +534,9 @@
                     <div class="col-lg-12">
                         <div class="input-group">
                             <span class="input-group-addon">
-                                Attività svolta
+                                Attivita svolta
                             </span>
-                            <input type="text" class="form-control" name="Attività svolta_4">
+                            <input type="text" class="form-control" name="Attivita svolta_4">
                         </div>
                     </div>
                 </div>
