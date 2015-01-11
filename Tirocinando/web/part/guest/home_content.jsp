@@ -45,11 +45,11 @@
                         <p>Di' pure addio ad inferni burocratici come documenti, segreterie e timbri</p>
                         <h2 class="page-header">Integrato</h2>
                         <p>Scarica il plugin per Esse3
-                            <button type="button" class="btn btn-primary">
-                                <span class="glyphicon glyphicon-cloud-download" aria-hidden="true">
-                                    Studente
-                                </span>
+                        <form method="GET" action="/Tirocinando/plugin/tirocinio_tutor.user.js">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"> Studente</span>
                             </button>
+                        </form>
                         </p>
                     </div>
                 </div>
@@ -79,9 +79,11 @@
                         <p>Tieni traccia delle attivita' dei tuoi studenti</p>
                         <h2 class="page-header">Integrato</h2>
                         <p>Scarica il plugin per Esse3 
-                            <button type="button" class="btn btn-primary">
+                        <form method="GET" action="/Tirocinando/plugin/tirocinio_tutor.user.js">
+                            <button type="submit" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"> Tutor</span>
                             </button>
+                        </form>
                         </p>
                     </div>
                 </div>
