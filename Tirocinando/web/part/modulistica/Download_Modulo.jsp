@@ -35,10 +35,11 @@
                            Proposta modulo di candidatura
                         </td>
                         <td>
-                            <form method="get" action="absoluteDiskPath_dest">
+                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale")%>">
                                 <button type="submit" class="btn btn-primary">
                                     <span class="glyphicon glyphicon-save"></span>
-                                    Download</button> <%= request.getSession().getAttribute("Doc_Finale")%>
+                                    Download
+                                </button> 
                             </form>
                         </td>
                         <td>
