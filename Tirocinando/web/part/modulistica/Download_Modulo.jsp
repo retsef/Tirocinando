@@ -36,7 +36,9 @@
                         </td>
                         <td>
                             <form method="get" action="absoluteDiskPath_dest">
-                                <button type="submit" class="btn btn-primary">Download</button> <%= request.getAttribute("Doc_Finale")%>
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-save"></span>
+                                    Download</button> <%= request.getSession().getAttribute("Doc_Finale")%>
                             </form>
                         </td>
                         <td>
@@ -58,5 +60,5 @@
             </table>   
         </div>      
     </div>
-
+</div>
 
