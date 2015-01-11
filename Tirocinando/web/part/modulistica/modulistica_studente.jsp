@@ -56,7 +56,7 @@
             <div class="col-lg-3">
                 <div class="input-group">
                     <span class="input-group-addon">
-                        Nazionalita
+                        Nazionalità
                     </span>
                     <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalita">
                 </div>
@@ -365,7 +365,7 @@
                 <div class="col-lg-12">
                     <div class="input-group">
                         <span class="input-group-addon">
-                            Attivita svolta
+                            Attività svolta
                         </span>
                         <input type="text" class="form-control" name="Attivita svolta">
                     </div>
@@ -426,7 +426,7 @@
                     <div class="col-lg-12">
                         <div class="input-group">
                             <span class="input-group-addon">
-                                Attivita svolta
+                                Attività svolta
                             </span>
                             <input type="text" class="form-control" name="Attivita svolta_2">
                         </div>
@@ -485,7 +485,7 @@
                     <div class="col-lg-12">
                         <div class="input-group">
                             <span class="input-group-addon">
-                                Attivita svolta
+                                Attività svolta
                             </span>
                             <input type="text" class="form-control" name="Attivita svolta_3">
                         </div>
@@ -534,7 +534,7 @@
                     <div class="col-lg-12">
                         <div class="input-group">
                             <span class="input-group-addon">
-                                Attivita svolta
+                                Attività svolta
                             </span>
                             <input type="text" class="form-control" name="Attivita svolta_4">
                         </div>
