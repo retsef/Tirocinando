@@ -88,12 +88,20 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="input-group">
                             <span class="input-group-addon">
                                 Codice Fiscale o Partita IVA
                             </span>
                             <input type="text" name="cf_a" class="form-control" value="<%=request.getSession().getAttribute("codice fiscale")%>" readonly>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Codice Fiscale o Partita IVA
+                            </span>
+                            <input type="text" name="ateco_a" class="form-control">
                         </div>
                     </div>
                 </div>   
@@ -125,10 +133,28 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Numero di tirocinanti possibili
+                            </span>
+                            <input class="form-control" name="n_tirocinanti_a" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Numero di anni di convenzione
+                            </span>
+                            <input class="form-control" name="n_anni_a" type="text">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-                            
+        </div>           
         <div class="panel panel-default">
             <div class="panel-heading">Tutor Aziendale</div>
             <div class="panel-body">
@@ -147,6 +173,24 @@
                                 Posizione ricoperta
                             </span>
                             <input class="form-control" type="text" name="posizione_ref_a">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Nato/a a
+                            </span>
+                            <input class="form-control" type="text" name="ref_nato_a">
+                        </div>    
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                il
+                            </span>
+                            <input class="form-control" type="text" name="ref_nato_il_a">
                         </div>
                     </div>
                 </div>
