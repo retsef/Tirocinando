@@ -10,7 +10,7 @@
     </servlet>
     <servlet>
         <servlet-name>Compilazione_Modulistica</servlet-name>
-        <servlet-class>it.unimol.tirocinio.utils.document.ServletModulisticaStudente</servlet-class>
+        <servlet-class>it.unimol.tirocinio.utils.document.ServletModulistica</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Modulistica</servlet-name>

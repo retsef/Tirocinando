@@ -22,7 +22,9 @@
             </form>
             <%} else if(request.getParameter("section").equals("azienda")) { %>
                 <jsp:include page="part/user/navbar/navbar_azienda.jsp" />
+            <form action="Compilazione_Modulistica" method="POST">
                 <jsp:include page="part/modulistica/modulistica_azienda.jsp"/>
+            </form>
             <%}
         }%>
         

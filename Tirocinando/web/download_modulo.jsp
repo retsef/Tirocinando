@@ -14,12 +14,15 @@
         <link rel="shortcut icon" href="img/Logo_mini.png">
     </head>
     <body>
-        <jsp:include page="part/navbar.jsp" />
-        
-        <jsp:include page="part/modulistica/Download_Modulo.jsp"/>
-            
+        <% if(request.getParameter("section")!=null) {
+            if(request.getParameter("section").equals("studente")) {%>
+            <jsp:include page="part/user/navbar/navbar_studente.jsp" />
+            <jsp:include page="part/modulistica/download/download_modulo_studente.jsp"/>
+        <%} else if(request.getParameter("section").equals("azienda")) { %>
+            <jsp:include page="part/user/navbar/navbar_azienda.jsp" />
+            <jsp:include page="part/modulistica/download/download_modulo_azienda.jsp"/>
+        <% } }%>
         <jsp:include page="part/footer.jsp" />
-        
         
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

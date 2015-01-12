@@ -1017,7 +1017,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Allegati
-                        </div>
+                        </div>fo
 
                         <div class="panel-body">
                             <div class="row">
