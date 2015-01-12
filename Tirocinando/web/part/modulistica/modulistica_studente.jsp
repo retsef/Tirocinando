@@ -16,7 +16,6 @@
 <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">Informazioni Personali</div>
-    <input style="visibility: hidden" type="text" value="Informatica" readonly name="Corso di laurea in">
     <div class="panel-body">
         <div class="row">
             <div class="col-lg-6">
