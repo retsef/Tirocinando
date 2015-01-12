@@ -7,12 +7,6 @@ package it.unimol.tirocinio.utils.document;
 
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.TextField;
-import com.mysql.jdbc.Util;
-import it.unimol.tirocinio.user.Abstract_user;
-import it.unimol.tirocinio.user.Exception_user;
-import it.unimol.tirocinio.utils.auth.Exception_auth;
-import it.unimol.tirocinio.utils.auth.Manager;
-import it.unimol.tirocinio.utils.db.Adapter;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -29,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 
 
-public class Servlet_Compilazione_Modulistica extends HttpServlet {
+public class ServletModulisticaStudente extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -56,7 +50,7 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
                     absoluteDiskPath_dest_1,
                     new HashMap<String,TextField>(), temp_UserData);
         } catch (DocumentException ex) {
-            Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServletModulisticaStudente.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
@@ -71,7 +65,7 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
                     absoluteDiskPath_dest_2,
                     new HashMap<String,TextField>(), temp_UserData);
         } catch (DocumentException ex) {
-            Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServletModulisticaStudente.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         String relativeWebPath_src_3 = "doc/studente/progetto_formativo.pdf";
@@ -85,7 +79,7 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
                     absoluteDiskPath_dest_3,
                     new HashMap<String,TextField>(), temp_UserData);
         } catch (DocumentException ex) {
-            Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServletModulisticaStudente.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
@@ -100,7 +94,7 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
                     absoluteDiskPath_dest_4,
                     new HashMap<String,TextField>(), temp_UserData);
         } catch (DocumentException ex) {
-            Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServletModulisticaStudente.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         String relativeWebPath_src_5 = "doc/studente/modulo_richiesta_attestato.pdf";
@@ -114,7 +108,7 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
                     absoluteDiskPath_dest_5,
                     new HashMap<String,TextField>(), temp_UserData);
         } catch (DocumentException ex) {
-            Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServletModulisticaStudente.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
