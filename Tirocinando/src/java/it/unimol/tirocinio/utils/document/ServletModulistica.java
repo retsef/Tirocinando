@@ -20,11 +20,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author VittorioBarile
- */
-
 
 public class ServletModulistica extends HttpServlet {
     
@@ -148,7 +143,39 @@ public class ServletModulistica extends HttpServlet {
                 } catch (DocumentException ex) {
                     Logger.getLogger(ServletModulistica.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                
+                String relativeWebPath_azienda_src_2 = "doc/azienda/convenzione_tirocinio.pdf";
+                String relativeWebPath_azienda_dest_2 = "doc/azienda/convenzione_tirocinio_mod.pdf";
+                String absoluteDiskPath_azienda_src_2 = getServletContext().getRealPath(relativeWebPath_azienda_src_2);
+                String absoluteDiskPath_azienda_dest_2 = getServletContext().getRealPath(relativeWebPath_azienda_dest_2);
+
+                try {
+                    CompilazionePDF.manipulatePdf( 
+                            absoluteDiskPath_azienda_src_2,
+                            absoluteDiskPath_azienda_dest_2,
+                            new HashMap<String,TextField>(), temp_UserData);
+                } catch (DocumentException ex) {
+                    Logger.getLogger(ServletModulistica.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                String relativeWebPath_azienda_src_3 = "doc/azienda/autorizzazione_azienda.pdf";
+                String relativeWebPath_azienda_dest_3 = "doc/azienda/autorizzazione_azienda_mod.pdf";
+                String absoluteDiskPath_azienda_src_3 = getServletContext().getRealPath(relativeWebPath_azienda_src_3);
+                String absoluteDiskPath_azienda_dest_3 = getServletContext().getRealPath(relativeWebPath_azienda_dest_3);
+
+                try {
+                    CompilazionePDF.manipulatePdf( 
+                            absoluteDiskPath_azienda_src_3,
+                            absoluteDiskPath_azienda_dest_3,
+                            new HashMap<String,TextField>(), temp_UserData);
+                } catch (DocumentException ex) {
+                    Logger.getLogger(ServletModulistica.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
                 request.getSession().setAttribute("Doc_Finale_1", "/Tirocinando/"+relativeWebPath_azienda_dest_1);
+                request.getSession().setAttribute("Doc_Finale_2", "/Tirocinando/"+relativeWebPath_azienda_dest_2);
+                request.getSession().setAttribute("Doc_Finale_3", "/Tirocinando/"+relativeWebPath_azienda_dest_3);
+                
                 response.sendRedirect("/Tirocinando/download_modulo.jsp?section=azienda");
                 break;
         }

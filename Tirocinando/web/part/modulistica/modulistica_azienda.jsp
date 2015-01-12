@@ -137,16 +137,6 @@
                     <div class="col-lg-6">
                         <div class="input-group">
                             <span class="input-group-addon">
-                                Numero di tirocinanti possibili
-                            </span>
-                            <input class="form-control" name="n_tirocinanti_a" type="text">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">
                                 Numero di anni di convenzione
                             </span>
                             <input class="form-control" name="n_anni_a" type="text">

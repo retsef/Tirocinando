@@ -58,7 +58,7 @@
                            Convenzione
                         </td>
                         <td>
-                            <form method="get" action="<%= request.getSession().getAttribute("")%>">
+                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale_2")%>">
                                 <button type="submit" class="btn btn-primary" title="Per attivare un tirocinio è necessario che il soggetto ospitante sottoscriva, in duplice originale, una convenzione con la quale verranno regolati i rapporti tra Università e Azienda/Ente che dovrà essere consegnata:
                                                                                     - alla segreteria didattica del Dipartimento di appartenenza, per il tirocinio obbligatorio;
                                                                                     - al Settore Protocollo, corredata da lettera di accompagnamento.">
@@ -79,7 +79,7 @@
                            Modulo Autorizzazione accoglienza per tesi
                         </td>
                         <td>
-                            <form method="get" action="<%= request.getSession().getAttribute("")%>">
+                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale_3")%>">
                                 <button type="submit" class="btn btn-primary" title="L'Azienda/Ente, accolta la richiesta ad ospitare lo studente per approfondire le conoscenze inerenti la tesi di laurea in elaborazione, deve trasmettere questo modulo -debitamente compilato- alla Segreteria del Dipartimento che le ha inviato la Richiesta di Accoglienza per la tesi.">
                                     <span class="glyphicon glyphicon-save"></span>
                                 </button> 
@@ -93,7 +93,6 @@
                             </form>
                         </td>
                     </tr>
-                    
                 </tbody>
             </table>   
         </div>      
