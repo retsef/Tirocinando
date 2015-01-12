@@ -238,7 +238,7 @@
                     <span class="input-group-addon">
                         Tipologia Tirocinio
                     </span>
-                    <select name="tipologia tirocinio" class="form-control">
+                    <select name="tipologia di tirocinio" class="form-control">
                         <option value="Tirocinio obbligatorio">Tirocinio obbligatorio</option>
                         <option value="Tirocinio facoltativo">Tirocinio facoltativo</option>
                         <option value="Stage">Stage</option>

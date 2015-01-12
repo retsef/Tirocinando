@@ -76,7 +76,7 @@
                            Progetto Formativo e di Orientamento
                         </td>
                         <td>
-                            <form method="get" action="">
+                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale_3")%>">
                                 <button type="submit" class="btn btn-primary" title="Per il tirocinio obbligatorio, il progetto formativo e di orientamento, compilato in duplice originale dal Dipartimento, deve essere riconsegnato, debitamente firmato dal legale rappresentante del soggetto ospitante, alla segreteria didattica del Dipartimento di appartenenza.">
                                     <span class="glyphicon glyphicon-save"></span>
                                 </button> 

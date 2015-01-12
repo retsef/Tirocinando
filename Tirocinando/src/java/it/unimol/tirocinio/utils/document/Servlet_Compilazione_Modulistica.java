@@ -74,6 +74,20 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
             Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        String relativeWebPath_src_3 = "doc/studente/progetto_formativo.pdf";
+        String relativeWebPath_dest_3 = "doc/studente/progetto_formativo_mod.pdf";
+        String absoluteDiskPath_src_3 = getServletContext().getRealPath(relativeWebPath_src_3);
+        String absoluteDiskPath_dest_3 = getServletContext().getRealPath(relativeWebPath_dest_3);
+        
+        try {
+            CompilazionePDF.manipulatePdf( 
+                    absoluteDiskPath_src_3,
+                    absoluteDiskPath_dest_3,
+                    new HashMap<String,TextField>(), temp_UserData);
+        } catch (DocumentException ex) {
+            Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         
         String relativeWebPath_src_4 = "doc/studente/lettera_trasmissione_documenti.pdf";
         String relativeWebPath_dest_4 = "doc/studente/lettera_trasmissione_documenti_mod.pdf";
@@ -106,6 +120,7 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
         
         request.getSession().setAttribute("Doc_Finale_1", "/Tirocinando/"+relativeWebPath_dest_1);
         request.getSession().setAttribute("Doc_Finale_2", "/Tirocinando/"+relativeWebPath_dest_2);
+        request.getSession().setAttribute("Doc_Finale_3", "/Tirocinando/"+relativeWebPath_dest_3);
         request.getSession().setAttribute("Doc_Finale_4", "/Tirocinando/"+relativeWebPath_dest_4);
         request.getSession().setAttribute("Doc_Finale_5", "/Tirocinando/"+relativeWebPath_dest_5);
         response.sendRedirect("/Tirocinando/Download_Modulo_Compilato.jsp");
