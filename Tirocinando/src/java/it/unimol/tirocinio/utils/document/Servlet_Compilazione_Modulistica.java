@@ -60,8 +60,8 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
         }
         
         
-        String relativeWebPath_src_2 = "doc/studente/modulo privacy.pdf";
-        String relativeWebPath_dest_2 = "doc/studente/modulo privacy_mod.pdf";
+        String relativeWebPath_src_2 = "doc/studente/modulo_privacy.pdf";
+        String relativeWebPath_dest_2 = "doc/studente/modulo_privacy_mod.pdf";
         String absoluteDiskPath_src_2 = getServletContext().getRealPath(relativeWebPath_src_2);
         String absoluteDiskPath_dest_2 = getServletContext().getRealPath(relativeWebPath_dest_2);
         
