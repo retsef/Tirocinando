@@ -30,6 +30,7 @@
                     <%}%>
                 </ul>
                 <%@include file="popup_login.jsp" %>
+                <%@include file="popup_registrazione.jsp" %>
             </div><!-- /.navbar-collapse --> 
 	</div>	
 </nav>

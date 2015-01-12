@@ -36,10 +36,10 @@
     </div>
   </div>
 </div>
-          <% if(request.getParameter("error")!=null) { 
-              if(request.getParameter("error").equals("true")) { %>
-                <script type="text/javascript"> 
-                    $('#LoginModal').modal('show');
-                </script>
-                <% } } %>
+<% if(request.getParameter("error")!=null) { 
+    if(request.getParameter("error").equals("true")) { %>
+    <script type="text/javascript"> 
+        $('#LoginModal').modal('show');
+    </script>
+<% } } %>
 </form>

@@ -4,12 +4,12 @@
 // @include        https://unimol.esse3.cineca.it/*
 // @copyright      Roberto Scinocca
 // @grant          none
-// @version        0.1.6
+// @version        0.1.7b
 // ==/UserScript==
 
 //Variabili varie
 //Link Tirocinio
-var linkTirocinio = 'http://www.google.it';
+var linkTirocinio = 'http://localhost:8080/Tirocinando/Profilo';
 // 0- positivo, 1- in corso; 2- negativo
 var imgEsito = [
   'images/stato_esito_a.gif',

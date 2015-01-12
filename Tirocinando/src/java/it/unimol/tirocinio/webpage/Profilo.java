@@ -1,12 +1,9 @@
 package it.unimol.tirocinio.webpage;
 
 import it.unimol.tirocinio.user.Abstract_user;
-import it.unimol.tirocinio.user.Exception_user;
 import it.unimol.tirocinio.utils.auth.Exception_auth;
 import it.unimol.tirocinio.utils.auth.Manager;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

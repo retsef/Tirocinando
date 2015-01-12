@@ -32,7 +32,7 @@
                 
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-                    <a class="btn btn-danger btn-sm navbar-btn" href="#">Logout</a>
+                    <a class="btn btn-danger btn-sm navbar-btn" href="/Tirocinando/Autenticazione?logout=true">Logout</a>
                 </ul>
             </div><!-- /.navbar-collapse --> 
 	</div>	

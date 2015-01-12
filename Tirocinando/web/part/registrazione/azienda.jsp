@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <div class="input-group 
                      <% if(request.getParameter("error")!=null) { 
                         if(request.getParameter("error").equals("true")) { %>
@@ -42,16 +42,28 @@
                     <input type="text" name="Indirizzo" class="form-control">
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="input-group 
                      <% if(request.getParameter("error")!=null) { 
                         if(request.getParameter("error").equals("true")) { %>
                         has-error
                         <% } } %>">
                     <span class="input-group-addon">
-                        Cap/Citta'
+                        Citta'
                     </span>
-                    <input type="text" name="Cap_Citta" class="form-control">
+                    <input type="text" name="Citta" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
+                    <span class="input-group-addon">
+                        C.A.P.
+                    </span>
+                    <input type="text" name="C.A.P." class="form-control">
                 </div>
             </div>
         </div>
@@ -93,9 +105,9 @@
             <div class="col-lg-6">
                 <div class="input-group">
                     <span class="input-group-addon">
-                        www
+                        Sito Web
                     </span>
-                    <input type="text" name="Sito_internet" class="form-control">
+                    <input type="text" name="Sito Web" class="form-control">
                 </div>
             </div>
         </div>
@@ -109,10 +121,52 @@
                     <span class="input-group-addon">
                         Codice Fiscale o Partita IVA
                     </span>
-                    <input type="text" name="CF_PIVA" class="form-control">
+                    <input type="text" name="C.F/P.IVA" class="form-control">
                 </div>
             </div>
         </div>
     </div>
 </div>
+                    
+<div class="panel panel-default">
+    <div class="panel-heading">Informazini Autenticazione</div>
+    <div class="panel-body">
+        <div class='row'>
+            <div class="col-lg-6">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
+                    <span class="input-group-addon">
+                        Username
+                    </span>
+                    <input type="text" name="Username" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
+                    <span class="input-group-addon">
+                        Password
+                    </span>
+                    <input type="text" name="Password" class="form-control">
+                </div>
+            </div>        
+        </div>
+    </div> 
+</div>
+                    
+<div class="row">
+    <div class="col-lg-11"></div>
+    <div class="col-md-1">
+        <div class="btn-group right">
+            <button type="submit" class="btn btn-primary" >Avanti</button>
+        </div>
+    </div>
+</div>
+                    
 </form>

@@ -1,8 +1,13 @@
 package it.unimol.tirocinio.user;
 
+import it.unimol.tirocinio.utils.db.Adapter;
+import it.unimol.tirocinio.utils.db.Exception_db;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,13 +31,14 @@ public class Servlet_registrazione extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        try {
         if(request.getParameter("selection")!=null && !request.getParameter("selection").equals("") ) {
             switch (request.getParameter("selection")) {
                 case "studente":
                     try {
                         this.UserData = this.ChekStudenteForm(request, response);
                         this.SetStudenteForm(this.UserData);
+                        response.sendRedirect("/Tirocinando/index.jsp?success=true");
                     } catch(Exception_user ex) {
                         response.sendRedirect("/Tirocinando/registrazione.jsp?selection=studente&error=true");
                     }
@@ -41,6 +47,7 @@ public class Servlet_registrazione extends HttpServlet {
                     try {
                         this.UserData = this.ChekAziendaForm(request, response);
                         this.SetAziendaForm(this.UserData);
+                        response.sendRedirect("/Tirocinando/index.jsp?success=true");
                     } catch(Exception_user ex) {
                         response.sendRedirect("/Tirocinando/registrazione.jsp?selection=azienda&error=true");
                     }
@@ -49,12 +56,17 @@ public class Servlet_registrazione extends HttpServlet {
                     try {
                         this.UserData = this.ChekTutorForm(request, response);
                         this.SetTutorForm(this.UserData);
+                        response.sendRedirect("/Tirocinando/index.jsp?success=true");
                     } catch(Exception_user ex) {
                         response.sendRedirect("/Tirocinando/registrazione.jsp?selection=tutor&error=true");
                     }
                     break;
             }
         } else {
+            response.sendRedirect("/Tirocinando/registrazione.jsp");
+        }
+        }catch(SQLException | Exception_db ex){
+            Logger.getLogger(Permission.class.getName()).log(Level.SEVERE, null, ex);
             response.sendRedirect("/Tirocinando/registrazione.jsp?error=true");
         }
     }
@@ -69,9 +81,19 @@ public class Servlet_registrazione extends HttpServlet {
         HashMap<String, String> temp_UserData = new HashMap<>();
         Enumeration<String> enumeration = request.getParameterNames();
         
+        String date = "";
         while(enumeration.hasMoreElements()){
             String parameterName = (String) enumeration.nextElement();
-            if(!request.getParameter(parameterName).equals("")) {
+            if(parameterName.equals("il_anno") || parameterName.equals("il_mese") || parameterName.equals("il_giorno")){
+                date += request.getParameter(parameterName);
+                if(parameterName.equals("il_giorno"))
+                    temp_UserData.put("Data nascita", date);
+            }else if(parameterName.equals("Email")) {
+                temp_UserData.put(
+                        parameterName,
+                        request.getParameter(parameterName)+"@studenti.unimol.it"
+                );
+            }else if(!request.getParameter(parameterName).equals("")) {
                 
                 temp_UserData.put(
                         parameterName,
@@ -92,12 +114,17 @@ public class Servlet_registrazione extends HttpServlet {
         
         while(enumeration.hasMoreElements()){
             String parameterName = (String) enumeration.nextElement();
-            if(!request.getParameter(parameterName).equals("")) {
-                
-                temp_UserData.put(
+            if(parameterName.equals("Fax") || parameterName.equals("Sito Web") || !request.getParameter(parameterName).equals("")) {
+                if(parameterName.equals("Fax"))
+                    temp_UserData.put(
+                            parameterName,
+                            "0"
+                    );
+                else
+                    temp_UserData.put(
                         parameterName,
                         request.getParameter(parameterName)
-                );
+                    );
                 
             } else {
                 throw new Exception_user("Campi nella pagina di registrazione non validi");
@@ -113,7 +140,12 @@ public class Servlet_registrazione extends HttpServlet {
         
         while(enumeration.hasMoreElements()){
             String parameterName = (String) enumeration.nextElement();
-            if(!request.getParameter(parameterName).equals("")) {
+            if(parameterName.equals("Email Istituzionale")) {
+                temp_UserData.put(
+                        parameterName,
+                        request.getParameter(parameterName)+"@unimol.it"
+                );
+            }else if(!request.getParameter(parameterName).equals("")) {
                 
                 temp_UserData.put(
                         parameterName,
@@ -128,16 +160,58 @@ public class Servlet_registrazione extends HttpServlet {
         return temp_UserData;
     }
     
-    private void SetStudenteForm(HashMap<String, String> UserData) {
-        
+    private void SetStudenteForm(HashMap<String, String> UserData) throws SQLException, Exception_db {
+        String[] values = {
+            UserData.get("Matricola"),
+            UserData.get("Nome"),
+            UserData.get("Cognome"),
+            UserData.get("Data nascita"),
+            UserData.get("Comune nascita"),
+            UserData.get("Provincia nascita"),
+            UserData.get("Nazionalita"),
+            UserData.get("Codice Fiscale"),
+            UserData.get("Provincia residenza"),
+            UserData.get("Comune residenza"),
+            UserData.get("C.A.P."),
+            UserData.get("Indirizzo"),
+            UserData.get("N_Civico"),
+            UserData.get("Recapito Telefonico"),
+            UserData.get("Email"),
+            UserData.get("Username"),
+            UserData.get("Password")
+        };
+        Adapter adapt = new Adapter();
+        adapt.insert("Studente", values);
     }
     
-    private void SetAziendaForm(HashMap<String, String> UserData) {
-        
+    private void SetAziendaForm(HashMap<String, String> UserData) throws SQLException, Exception_db {
+        String[] values = {
+            UserData.get("Denominazione"),
+            UserData.get("Indirizzo"),
+            UserData.get("Citta"),
+            UserData.get("C.A.P."),
+            UserData.get("Telefono"),
+            UserData.get("Fax"),
+            UserData.get("C.F/P.IVA"),
+            UserData.get("Email"),
+            UserData.get("Sito Web"),
+            UserData.get("Username"),
+            UserData.get("Password")
+        };
+        Adapter adapt = new Adapter();
+        adapt.insert("Azienda", values, "`Denominazione`,`Indirizzo`,`Citta`,`C.A.P.`,`Telefono`,`Fax`,`C.F/P.IVA`,`Email`,`Sito Web`,`Username`,`Password`");
     }
     
-    private void SetTutorForm(HashMap<String, String> UserData) {
-        
+    private void SetTutorForm(HashMap<String, String> UserData) throws SQLException, Exception_db {
+        String[] values = {
+            UserData.get("Nome"),
+            UserData.get("Cognome"),
+            UserData.get("Email Istituzionale"),
+            UserData.get("Username"),
+            UserData.get("Password")
+        };
+        Adapter adapt = new Adapter();
+        adapt.insert("Tutor", values, "`Nome`,`Cognome`,`Email Istituzionale`,`Username`,`Password`");
     }
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
