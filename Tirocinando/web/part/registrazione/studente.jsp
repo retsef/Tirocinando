@@ -85,7 +85,7 @@
                     <span class="input-group-addon">
                         /
                     </span>
-                    <input type="text" name="il_giorno" placeholder="MM" maxlength="2" class="form-control">
+                    <input type="text" name="il_giorno" placeholder="GG" maxlength="2" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -209,7 +209,7 @@
     </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading">Informazini Accademiche</div>
+    <div class="panel-heading">Informazioni Accademiche</div>
     <div class="panel-body">
         <div class='row'>
             <div class="col-lg-12">
@@ -264,7 +264,7 @@
     </div> 
 </div>         
 <div class="panel panel-default">
-    <div class="panel-heading">Informazini Autenticazione</div>
+    <div class="panel-heading">Informazioni Autenticazione</div>
     <div class="panel-body">
         <div class='row'>
             <div class="col-lg-6">
