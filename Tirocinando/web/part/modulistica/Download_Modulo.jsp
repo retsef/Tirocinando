@@ -90,6 +90,44 @@
                             </form>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                           Lettera per trasmissione documenti
+                        </td>
+                        <td>
+                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale_4")%>">
+                                <button type="submit" class="btn btn-primary" title="I documenti da trasmettere al Settore ILO e Placement devono essere accompagnati da una lettera di trasmissione come da format allegato.">
+                                    <span class="glyphicon glyphicon-save"></span>
+                                </button> 
+                            </form>
+                        </td>
+                        <td>
+                            <form method="get" action="">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-open"></span>
+                                </button> 
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           Modulo richiesta attestato
+                        </td>
+                        <td>
+                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale_5")%>">
+                                <button type="submit" class="btn btn-primary" title="La richiesta di attestato di fine tirocinio deve essere trasmessa al Settore ILO e Placement utilizzando il format allegato.">
+                                    <span class="glyphicon glyphicon-save"></span>
+                                </button> 
+                            </form>
+                        </td>
+                        <td>
+                            <form method="get" action="">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-open"></span>
+                                </button> 
+                            </form>
+                        </td>
+                    </tr>
                 </tbody>
             </table>   
         </div>      
