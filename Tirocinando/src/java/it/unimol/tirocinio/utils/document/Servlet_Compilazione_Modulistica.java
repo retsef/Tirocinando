@@ -45,21 +45,38 @@ public class Servlet_Compilazione_Modulistica extends HttpServlet {
             ); 
         }
         
-        String relativeWebPath_src = "doc/studente/proposta_modulo_di_candidatura.pdf";
-        String relativeWebPath_dest = "doc/studente/proposta_modulo_di_candidatura_mod.pdf";
-        String absoluteDiskPath_src = getServletContext().getRealPath(relativeWebPath_src);
-        String absoluteDiskPath_dest = getServletContext().getRealPath(relativeWebPath_dest);
+        String relativeWebPath_src_1 = "doc/studente/proposta_modulo_di_candidatura.pdf";
+        String relativeWebPath_dest_1 = "doc/studente/proposta_modulo_di_candidatura_mod.pdf";
+        String absoluteDiskPath_src_1 = getServletContext().getRealPath(relativeWebPath_src_1);
+        String absoluteDiskPath_dest_1 = getServletContext().getRealPath(relativeWebPath_dest_1);
         
         try {
             CompilazionePDF.manipulatePdf( 
-                    absoluteDiskPath_src,
-                    absoluteDiskPath_dest,
+                    absoluteDiskPath_src_1,
+                    absoluteDiskPath_dest_1,
                     new HashMap<String,TextField>(), temp_UserData);
         } catch (DocumentException ex) {
             Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        request.getSession().setAttribute("Doc_Finale", "/Tirocinando/"+relativeWebPath_dest);
+        
+        String relativeWebPath_src_2 = "doc/studente/modulo privacy.pdf";
+        String relativeWebPath_dest_2 = "doc/studente/modulo privacy_mod.pdf";
+        String absoluteDiskPath_src_2 = getServletContext().getRealPath(relativeWebPath_src_2);
+        String absoluteDiskPath_dest_2 = getServletContext().getRealPath(relativeWebPath_dest_2);
+        
+        try {
+            CompilazionePDF.manipulatePdf( 
+                    absoluteDiskPath_src_2,
+                    absoluteDiskPath_dest_2,
+                    new HashMap<String,TextField>(), temp_UserData);
+        } catch (DocumentException ex) {
+            Logger.getLogger(Servlet_Compilazione_Modulistica.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        request.getSession().setAttribute("Doc_Finale_1", "/Tirocinando/"+relativeWebPath_dest_1);
+        request.getSession().setAttribute("Doc_Finale_2", "/Tirocinando/"+relativeWebPath_dest_2);
         response.sendRedirect("/Tirocinando/Download_Modulo_Compilato.jsp");
         
     }

@@ -35,7 +35,7 @@
                            Proposta modulo di candidatura
                         </td>
                         <td>
-                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale")%>">
+                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale_1")%>">
                                 <button type="submit" class="btn btn-primary" title="Il modulo di candidatura debitamente compilato e sottoscritto deve essere consegnato:
                                                                                     - alla segreteria didattica del Dipartimento di appartenenza, per il tirocinio obbligatorio;
                                                                                     - al Settore Protocollo per il tirocinio curriculare o extra-curriculare corredato da lettera di accompagnamento.">
@@ -57,7 +57,7 @@
                            Modulo privacy
                         </td>
                         <td>
-                            <form method="get" action="">
+                            <form method="get" action="<%= request.getSession().getAttribute("Doc_Finale_2")%>">
                                 <button type="submit" class="btn btn-primary" title="Il modulo, redatto a cura del tirocinante e debitamente firmato, deve essere allegato al progetto formativo.">
                                     <span class="glyphicon glyphicon-save"></span>
                                 </button> 

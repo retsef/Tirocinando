@@ -152,6 +152,24 @@
             <div class="col-lg-6">
                 <div class="input-group">
                     <span class="input-group-addon">
+                        Matricola
+                    </span>
+                    <input class="form-control" value="148360" readonly type="text" name="Matricola">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        Anno di immatricolazione
+                    </span>
+                    <input class="form-control" type="text" name="AA Immatricolazione">
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
                         Dipartimento di
                     </span>
                     <select name="Dipartimento" class="form-control" name="readonlySelector" readonly>
@@ -172,6 +190,51 @@
                         Corso di laurea in
                     </span>
                     <input class="form-control" type="text" value="Informatica" readonly name="Corso di Laurea in">
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        Laureato?
+                    </span>
+                    <select name="laureato" class="form-control">
+                        <option value="Laureato">Laureato</option>
+                        <option value="Laureando">Laureando</option>
+                        <option value="Dottorando">Dottorando</option>
+                        <option value="Studente Master">Studente Master</option>
+                        <option value="Specializzando">Specializzando</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        Tipologia di Corso
+                    </span>
+                    <select name="tipologia di corso" class="form-control">
+                        <option value="corso di laurea triennale">Corso di Laurea Triennale</option>
+                        <option value="corso di laurea specialistica/magistrale">Corso di Laurea Specialistica/Magistrale</option>
+                        <option value="corso di laurea a ciclo unico">Corso di Laurea a Ciclo Unico</option>
+                        <option value="scuola di specializzazione">Scuola di Specializzazione</option>
+                        <option value="master I livello">Master di I° Livello</option>
+                        <option value="master II livello">Master di II° Livello</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        Tipologia Tirocinio
+                    </span>
+                    <select name="tipologia tirocinio" class="form-control">
+                        <option value="Tirocinio obbligatorio">Tirocinio obbligatorio</option>
+                        <option value="Tirocinio facoltativo">Tirocinio facoltativo</option>
+                        <option value="Stage">Stage</option>
+                    </select>
                 </div>
             </div>
         </div>
