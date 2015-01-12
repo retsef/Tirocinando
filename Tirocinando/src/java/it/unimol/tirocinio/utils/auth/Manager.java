@@ -52,10 +52,13 @@ public class Manager extends Abstract {
         switch(this.method){
             case AUTH_USE_COOKIE:
                 this.cookie.clean_expired();
+                break;
             case AUTH_USE_LINK:
                 this.link.clean_expired();
+                break;
             case AUTH_USE_SESSION:
                 this.session.clean_expired();
+                break;
         }
     }
 
@@ -111,10 +114,13 @@ public class Manager extends Abstract {
         switch(this.method){
             case AUTH_USE_COOKIE:
                 this.cookie.register_session(pUser);
+                break;
             case AUTH_USE_LINK:
                 this.link.register_session(pUser);
+                break;
             case AUTH_USE_SESSION:
                 this.session.register_session(pUser);
+                break;
         }
     }
 
@@ -123,10 +129,13 @@ public class Manager extends Abstract {
         switch(this.method){
             case AUTH_USE_COOKIE:
                 this.cookie.logout();
+                break;
             case AUTH_USE_LINK:
                 this.link.logout();
+                break;
             case AUTH_USE_SESSION:
                 this.session.logout();
+                break;
         }
     }
 

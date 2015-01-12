@@ -15,13 +15,13 @@
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/modulistica.jsp")) {%> class="active" <%}%> >
-                        <a href="#">Modulistica</a>
+                        <a href="/Tirocinando/Modulistica">Modulistica</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/tirocinanti.jsp")) {%> class="active" <%}%> >
                         <a href="/Tirocinando/tirocinanti.jsp?section=azienda">Tirocinanti</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
-                        <a href="/Tirocinando/home.jsp?section=azienda">Profilo</a>
+                        <a href="/Tirocinando/Profilo">Profilo</a>
                     </li>
                 
 		</ul>

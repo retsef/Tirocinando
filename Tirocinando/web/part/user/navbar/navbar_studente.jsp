@@ -15,7 +15,7 @@
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/modulistica.jsp")) {%> class="active" <%}%> >
-                        <a href="#">Modulistica</a>
+                        <a href="/Tirocinando/Modulistica">Modulistica</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/ente.jsp")) {%> class="active" <%}%> >
                         <a href="#">Ente</a>
@@ -24,7 +24,7 @@
                         <a href="#">Libretto</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
-                        <a href="/Tirocinando/home.jsp?section=studente">Profilo</a>
+                        <a href="/Tirocinando/Profilo">Profilo</a>
                     </li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">

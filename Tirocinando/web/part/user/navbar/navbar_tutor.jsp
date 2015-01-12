@@ -27,7 +27,7 @@
                         <a href="/Tirocinando/richieste.jsp?section=tutor">Richieste</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
-                        <a href="/Tirocinando/home.jsp?section=tutor">Profilo</a>
+                        <a href="/Tirocinando/Profilo">Profilo</a>
                     </li>
                 
 		</ul>

@@ -24,7 +24,7 @@
                     <span class="input-group-addon">
                         Nome
                     </span>
-                    <input class="form-control" type="text" value="Vittorio" readonly name="Nome">
+                    <input class="form-control" type="text" value="<%=request.getSession().getAttribute("Nome")%>" readonly name="Nome">
                 </div>
      </div>
             <div class="col-lg-6">
@@ -32,7 +32,7 @@
                     <span class="input-group-addon">
                         Cognome
                     </span>
-                    <input class="form-control" type="text" value="Barile" readonly name="Cognome">
+                    <input class="form-control" type="text" value="<%=request.getSession().getAttribute("Cognome")%>" readonly name="Cognome">
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
                     <span class="input-group-addon">
                         Nato/a a
                     </span>
-                    <input class="form-control"  type="text" value="Campobasso" readonly name="Natoa a">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Comune nascita")%>" readonly name="Natoa a">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -50,7 +50,7 @@
                     <span class="input-group-addon">
                         il
                     </span>
-                    <input class="form-control"  type="text" value="29/07/1991" readonly name="il">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Data nascita")%>" readonly name="il">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -58,7 +58,7 @@
                     <span class="input-group-addon">
                         Nazionalità
                     </span>
-                    <input class="form-control"  type="text" value="Italiana" readonly name="Nazionalita">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Nazionalita")%>" readonly name="Nazionalita">
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                     <span class="input-group-addon">
                         Residente in
                     </span>
-                    <input class="form-control"  type="text" value="Sepino" readonly name="Residente in">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Comune residenza")%>" readonly name="Residente in">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -84,7 +84,7 @@
                     <span class="input-group-addon">
                         Cap
                     </span>
-                    <input class="form-control"  type="text" value="86017" readonly name="Cap">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("C.A.P.")%>" readonly name="Cap">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -92,7 +92,7 @@
                     <span class="input-group-addon">
                         Prov.
                     </span>
-                    <input class="form-control"  type="text" value="CB" readonly name="Prov">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Provincia residenza")%>" readonly name="Prov">
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
                     <span class="input-group-addon">
                         Via/C.da
                     </span>
-                    <input class="form-control"  type="text" value="Roma" readonly name="Via">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Indirizzo")%>" readonly name="Via">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -110,7 +110,7 @@
                     <span class="input-group-addon">
                         N.
                     </span>
-                    <input class="form-control"  type="text" value="6" readonly name="N">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("N_Civico")%>" readonly name="N">
                 </div>
             </div>
         </div>
@@ -128,7 +128,7 @@
                     <span class="input-group-addon">
                         Cellulare
                     </span>
-                    <input class="form-control"  type="text" value="3276897089" readonly name="Cellulare">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Recapito Telefonico")%>" readonly name="Cellulare">
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@
                     <span class="input-group-addon">
                         Email
                     </span>
-                    <input class="form-control"  type="text" value="v.barile@studenti.unimol.it" readonly name="email">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Email")%>" readonly name="email">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -146,7 +146,7 @@
                     <span class="input-group-addon">
                         Codice fiscale
                     </span>
-                    <input class="form-control"  type="text" value="BRLVTR91L29B519C" readonly name="Codice fiscale">
+                    <input class="form-control"  type="text" value="<%=request.getSession().getAttribute("Codice Fiscale")%>" readonly name="Codice fiscale">
                 </div>
             </div>
         </div>
@@ -162,7 +162,7 @@
                     <span class="input-group-addon">
                         Matricola
                     </span>
-                    <input class="form-control" value="148360" readonly type="text" name="Matricola">
+                    <input class="form-control" value="<%=request.getSession().getAttribute("Matricola")%>" readonly type="text" name="Matricola">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -1066,12 +1066,12 @@
             </div>
             
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="input-group">
                         <span class="input-group-addon">
                             Data
                         </span>
-                        <input type="text" class="form-control" name="Data">
+                        <input type="text" class="form-control"  value="<%=new java.util.Date()%>" name="Data">
                     </div>
                 </div>
             </div>

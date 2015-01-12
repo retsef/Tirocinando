@@ -26,18 +26,17 @@ public class Studente extends Abstract_user {
             this.setParameter("Nome",rs.getString("Nome"));
             this.setParameter("Cognome",rs.getString("Cognome"));
             this.setParameter("Data nascita",rs.getDate("Data nascita").toString());
-            this.setParameter("Sesso",rs.getString("Sesso"));
             this.setParameter("Comune nascita",rs.getString("Comune nascita"));
             this.setParameter("Provincia nascita",rs.getString("Provincia nascita"));
+            this.setParameter("Nazionalita",rs.getString("Nazionalita"));
             this.setParameter("Codice Fiscale",rs.getString("Codice Fiscale"));
             this.setParameter("Provincia residenza",rs.getString("Provincia residenza"));
             this.setParameter("Comune residenza",rs.getString("Comune residenza"));
             this.setParameter("C.A.P.",""+rs.getInt("C.A.P."));
             this.setParameter("Indirizzo",rs.getString("Indirizzo"));
-            this.setParameter("N°Civico",rs.getString("N°Civico"));
-            this.setParameter("Recapito Telefonico",""+rs.getInt("Recapito Telefonico"));
+            this.setParameter("N_Civico",rs.getString("N_Civico"));
+            this.setParameter("Recapito Telefonico",""+rs.getLong("Recapito Telefonico"));
             this.setParameter("Email",rs.getString("Email"));
-            this.setParameter("Crediti",""+rs.getInt("Crediti"));
         } catch (SQLException ex) {
             Logger.getLogger(Tutor.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -50,7 +49,6 @@ public class Studente extends Abstract_user {
             request.getSession().setAttribute("Nome",this.getParameter("Nome"));
             request.getSession().setAttribute("Cognome",this.getParameter("Cognome"));
             request.getSession().setAttribute("Data nascita",this.getParameter("Data nascita"));
-            request.getSession().setAttribute("Sesso",this.getParameter("Sesso"));
             request.getSession().setAttribute("Comune nascita",this.getParameter("Comune nascita"));
             request.getSession().setAttribute("Provincia nascita",this.getParameter("Provincia nascita"));
             request.getSession().setAttribute("Codice Fiscale",this.getParameter("Codice Fiscale"));
@@ -58,10 +56,9 @@ public class Studente extends Abstract_user {
             request.getSession().setAttribute("Comune residenza",this.getParameter("Comune residenza"));
             request.getSession().setAttribute("C.A.P.",this.getParameter("C.A.P."));
             request.getSession().setAttribute("Indirizzo",this.getParameter("Indirizzo"));
-            request.getSession().setAttribute("N°Civico",this.getParameter("N°Civico"));
+            request.getSession().setAttribute("N_Civico",this.getParameter("N_Civico"));
             request.getSession().setAttribute("Recapito Telefonico",this.getParameter("Recapito Telefonico"));
             request.getSession().setAttribute("Email",this.getParameter("Email"));
-            request.getSession().setAttribute("Crediti",this.getParameter("Crediti"));
         } catch (Exception_user ex) {
             Logger.getLogger(Studente.class.getName()).log(Level.SEVERE, null, ex);
         }

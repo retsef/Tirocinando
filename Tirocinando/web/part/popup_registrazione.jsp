@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
                 <div class="alert alert-success">
-                    <span class='glyphicon glyphicon-ok'></span>
+                    <span class='glyphicon glyphicon-ok-sign'></span>
                     Registrazione effettuata con successo!<br>
                 </div>
             </div>

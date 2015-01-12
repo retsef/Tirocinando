@@ -27,8 +27,8 @@ public class Azienda extends Abstract_user {
             this.setParameter("Indirizzo",rs.getString("Indirizzo"));
             this.setParameter("Citta",rs.getString("Citta"));
             this.setParameter("C.A.P.",""+rs.getInt("C.A.P."));
-            this.setParameter("Telefono",""+rs.getInt("Telefono"));
-            this.setParameter("Fax",""+rs.getInt("Fax"));
+            this.setParameter("Telefono",""+rs.getLong("Telefono"));
+            this.setParameter("Fax",""+rs.getLong("Fax"));
             this.setParameter("C.F/P.IVA",rs.getString("C.F/P.IVA"));
             this.setParameter("Email",rs.getString("Email"));
             this.setParameter("Sito Web",rs.getString("Sito Web"));
