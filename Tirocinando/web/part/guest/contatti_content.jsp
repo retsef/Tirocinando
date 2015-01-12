@@ -18,7 +18,7 @@
                     <div class="media-body">
                         <h4 class="media-heading">Russo Giuseppe</h4>
                         <span class="glyphicon glyphicon-briefcase"></span> Manager <br> 
-                        <span class="glyphicon glyphicon-envelope"></span> bro@email.com
+                        <span class="glyphicon glyphicon-envelope"></span> giuseppe.smoked89@live.it
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                     <div class="media-body">
                         <h4 class="media-heading">Scopinaro Nicola</h4>
                         <span class="glyphicon glyphicon-briefcase"></span> Manager <br> 
-                        <span class="glyphicon glyphicon-envelope"></span> scopy@email.com
+                        <span class="glyphicon glyphicon-envelope"></span> scopinaro91@gmail.com
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <div class="media-body">
                         <h4 class="media-heading">Vittorio Barile</h4>
                         <span class="glyphicon glyphicon-user"></span> Team Member <br> 
-                        <span class="glyphicon glyphicon-envelope"></span> exist@email.com
+                        <span class="glyphicon glyphicon-envelope"></span> v.barile@studenti.unimol.it
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <div class="media-body">
                         <h4 class="media-heading">Michele Russo</h4>
                         <span class="glyphicon glyphicon-user"></span> Team Member <br> 
-                        <span class="glyphicon glyphicon-envelope"></span> querela@email.com
+                        <span class="glyphicon glyphicon-envelope"></span> Ginflash@hotmail.com
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                     <div class="media-body">
                         <h4 class="media-heading">Cristian Calabrese</h4>
                         <span class="glyphicon glyphicon-user"></span> Team Member <br> 
-                        <span class="glyphicon glyphicon-envelope"></span> InviaSoldi@email.com
+                        <span class="glyphicon glyphicon-envelope"></span> Cri_.93@live.it
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                     <div class="media-body">
                         <h4 class="media-heading">Federico Crisetti</h4>
                         <span class="glyphicon glyphicon-user"></span> Team Member <br> 
-                        <span class="glyphicon glyphicon-envelope"></span> exist@email.com
+                        <span class="glyphicon glyphicon-envelope"></span> f.crisetti@studenti.unimol.it
                     </div>
                 </div>
             </div>
