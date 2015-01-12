@@ -47,21 +47,28 @@ public class Servlet_auth extends HttpServlet {
         String Username = this.request.getParameter("username");
         String Password = this.request.getParameter("password");
 
+        if(request.getParameter("logout")!=null && 
+                request.getParameter("logout").equals("true") ) {
+            this.manager.logout();
+            this.response.sendRedirect("/Tirocinando/index.jsp");
+        } else {
         
-        try {
-            user =  this.manager.check();
-        } catch (Exception_auth ex) {
-            //this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
-            
-        }
+            try {
+                user =  this.manager.check();
+            } catch (Exception_auth ex) {
+                //this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
+
+            }
+
+
+            try {
+                user = this.manager.login(Username, Password);
+                this.response.sendRedirect("/Tirocinando/Profilo");
+            } catch (Exception_user ex) {
+                this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
+                //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
+            }
         
-        
-        try {
-            user = this.manager.login(Username, Password);
-            this.response.sendRedirect("/Tirocinando/Profilo");
-        } catch (Exception_user ex) {
-            this.response.sendRedirect("/Tirocinando/index.jsp?error=true");
-            //Logger.getLogger(Servlet_auth.class.getName()).log(Level.SEVERE, null, ex);
         }
           
     }

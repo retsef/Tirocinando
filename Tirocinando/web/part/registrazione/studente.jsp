@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-3">
                 <div class="input-group 
                      <% if(request.getParameter("error")!=null) { 
                         if(request.getParameter("error").equals("true")) { %>
@@ -53,7 +53,19 @@
                     <span class="input-group-addon">
                         Nato/a a
                     </span>
-                    <input type="text" name="Nato_a" class="form-control">
+                    <input type="text" name="Comune nascita" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
+                    <span class="input-group-addon">
+                        Prov.
+                    </span>
+                    <input type="text" name="Provincia nascita" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -65,7 +77,15 @@
                     <span class="input-group-addon">
                         il
                     </span>
-                    <input type="text" name="Il" class="form-control">
+                    <input type="text" name="il_anno" placeholder="AAAA" maxlength="4" class="form-control">
+                    <span class="input-group-addon">
+                        /
+                    </span>
+                    <input type="text" name="il_mese" placeholder="MM" maxlength="2" class="form-control">
+                    <span class="input-group-addon">
+                        /
+                    </span>
+                    <input type="text" name="il_giorno" placeholder="MM" maxlength="2" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -91,7 +111,7 @@
                     <span class="input-group-addon">
                         Residente in
                     </span>
-                    <input type="text" name="Residente_in" class="form-control">
+                    <input type="text" name="Comune residenza" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -103,7 +123,7 @@
                     <span class="input-group-addon">
                         Cap
                     </span>
-                    <input type="text" name="Cap" class="form-control">
+                    <input type="text" name="C.A.P." class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -115,7 +135,7 @@
                     <span class="input-group-addon">
                         Prov.
                     </span>
-                    <input type="text" name="Provincia" class="form-control">
+                    <input type="text" name="Provincia residenza" class="form-control">
                 </div>
             </div>
         </div>
@@ -127,9 +147,9 @@
                         has-error
                         <% } } %>">
                     <span class="input-group-addon">
-                        Via
+                        Via/C.da
                     </span>
-                    <input type="text" name="Via" class="form-control">
+                    <input type="text" name="Indirizzo" class="form-control">
                 </div>
             </div>
             <div class="col-lg-3">
@@ -141,25 +161,21 @@
                     <span class="input-group-addon">
                         N.
                     </span>
-                    <input type="text" name="Via_n" class="form-control">
+                    <input type="text" name="N_Civico" class="form-control">
                 </div>
             </div>
         </div>
         <div class='row'>
-            <div class="col-lg-6">
-                <div class="input-group">
+            <div class="col-lg-12">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
                     <span class="input-group-addon">
                         Telefono
                     </span>
-                    <input type="text" name="Telefono" class="form-control">
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        Cellulare
-                    </span>
-                    <input type="text" name="Cellulare" class="form-control">
+                    <input type="text" name="Recapito Telefonico" class="form-control">
                 </div>
             </div>
         </div>
@@ -186,16 +202,30 @@
                     <span class="input-group-addon">
                         Codice fiscale
                     </span>
-                    <input type="text" name="CF" class="form-control">
+                    <input type="text" name="Codice Fiscale" class="form-control">
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="panel panel-default">
     <div class="panel-heading">Informazini Accademiche</div>
     <div class="panel-body">
+        <div class='row'>
+            <div class="col-lg-12">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
+                    <span class="input-group-addon">
+                        Matricola
+                    </span>
+                    <input type="text" name="Matricola" class="form-control">
+                </div>
+            </div>
+        </div>
+        <!-- Non Esiste ancora un campo nel Database per il Corso di Studi-->
         <div class='row'>
             <div class="col-lg-6">
                 <div class="input-group 
@@ -232,14 +262,45 @@
             </div>
         </div>
     </div> 
+</div>         
+<div class="panel panel-default">
+    <div class="panel-heading">Informazini Autenticazione</div>
+    <div class="panel-body">
+        <div class='row'>
+            <div class="col-lg-6">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
+                    <span class="input-group-addon">
+                        Username
+                    </span>
+                    <input type="text" name="Username" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group 
+                     <% if(request.getParameter("error")!=null) { 
+                        if(request.getParameter("error").equals("true")) { %>
+                        has-error
+                        <% } } %>">
+                    <span class="input-group-addon">
+                        Password
+                    </span>
+                    <input type="text" name="Password" class="form-control">
+                </div>
+            </div>        
+        </div>
+    </div> 
 </div>
 
-    <div class="row">
-        <div class="col-lg-11"></div>
-        <div class="col-md-1">
-            <div class="btn-group right">
-                <button type="submit" class="btn btn-primary" >Avanti</button>
-            </div>
+<div class="row">
+    <div class="col-lg-11"></div>
+    <div class="col-md-1">
+        <div class="btn-group right">
+            <button type="submit" class="btn btn-primary" >Avanti</button>
         </div>
     </div>
+</div>
 </form>

@@ -44,16 +44,14 @@ public class Cookies extends Abstract {
             this.conn.select(Config.getTable_sessioni(), "creation_date", "uid='"+t_uid+"'");
             if(this.conn.getNumResult()==1){
                 ResultSet rs = this.conn.getResult();
-                while(rs.next()){
-                    int creation_date = rs.getInt("creation_date");
-                    int seconds = (int)(System.currentTimeMillis() / 1000l);
-                    if( creation_date + Config.getExpire() < seconds) {
-                        this.cookie = new Cookie("uid","");
-                        this.response.addCookie(this.cookie);
-                    } else {
-                        //this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
-                        //this.response.addCookie(this.cookie);
-                    }
+                int creation_date = rs.getInt("creation_date");
+                int seconds = (int)(System.currentTimeMillis() / 1000l);
+                if( creation_date + Config.getExpire() < seconds) {
+                    this.cookie = new Cookie("uid","");
+                    this.response.addCookie(this.cookie);
+                } else {
+                    //this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
+                    //this.response.addCookie(this.cookie);
                 }
             } else 
                 throw new Exception_auth("Errore: Chiave di autenticazione univoca non trovata");
