@@ -7,6 +7,8 @@
     <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">Tirocinanti</div>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <div class="panel-body">
             <table class="table" >
                 <thead>
@@ -62,6 +64,7 @@
                             <span class="glyphicon glyphicon-list-alt"></span>
                         </td>
                     </tr>
+
                 </tbody>
             </table>   
         </div>      
