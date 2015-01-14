@@ -17,6 +17,9 @@
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/modulistica.jsp")) {%> class="active" <%}%> >
                         <a href="/Tirocinando/Modulistica">Modulistica</a>
                     </li>
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/download.jsp")) {%> class="active" <%}%> >
+                        <a href="/Tirocinando/Modulistica">Download</a>
+                    </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/ente.jsp")) {%> class="active" <%}%> >
                         <a href="#">Ente</a>
                     </li>
