@@ -179,8 +179,8 @@
                     <span class="input-group-addon">
                         Dipartimento di
                     </span>
-                    <select name="Dipartimento" class="form-control" name="readonlySelector" readonly>
-                        <option value="Bioscienze e Territorio">Bioscienze e Territorio</option>
+                    <select name="Dipartimento" class="form-control" disabled>
+                        <option value="Bioscienze e Territorio" selected>Bioscienze e Territorio</option>
                         <option value="Agraria">Agricoltura, Ambiente e Alimenti</option>
                         <option value="BioTer">Bioscienze e Territorio</option>
                         <option value="Economia">Economia, Gestione, Societa' e Istituzioni</option>
@@ -250,7 +250,7 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">Informazioni curriculari</div>
-        <ul class="nav nav-tabs" name="informazioni_curriculari" role="tablist">
+        <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active">
               <a href="#Studente_form" role="tab" data-toggle="tab" aria-controls="Studente_form" aria-expanded="true">Se studente</a>
           </li>
@@ -360,7 +360,7 @@
                             Titolo/Argomento della Tesi di Laurea
                         </div>
                         <div class="panel-body">
-                            <textarea class="form-control" name="laureato_tesi" rows="3" style="resize: none" name="Testo1.0"></textarea>
+                            <textarea class="form-control" name="laureato_tesi" rows="3" style="resize: none"></textarea>
                         </div>
                     </div>
                 </div>
@@ -372,7 +372,7 @@
                             Eventuali borse di studio/Pubblicazioni/Premi/titoli sportivi certificati
                         </div>
                         <div class="panel-body">
-                            <textarea class="form-control" name="laureato_borse" rows="3" style="resize: none" name="Testo1.1"></textarea>
+                            <textarea class="form-control" name="laureato_borse" rows="3" style="resize: none"></textarea>
                         </div>
                     </div>
                 </div>
@@ -384,7 +384,7 @@
                             Eventuali corsi di perfezionamento o specializzazione (specificare)
                         </div>
                         <div class="panel-body">
-                            <textarea class="form-control" name="laureato_corsi" rows="3" style="resize: none" name="Testo1.2"></textarea>
+                            <textarea class="form-control" name="laureato_corsi" rows="3" style="resize: none"></textarea>
                         </div>
                     </div>
                 </div>
@@ -395,10 +395,10 @@
         
         
 <div class="panel panel-default">
-    <div class="panel-heading" name="esperienze_professionali">Esperienze Professionali (Attuali e precedenti)</div>
+    <div class="panel-heading">Esperienze Professionali (Attuali e precedenti)</div>
     <div class="panel-body">
         <div class="panel panel-default">
-        <div class="panel-heading" name="stage_1">Stage 1</div>
+        <div class="panel-heading">Stage 1</div>
             <div class="panel-body">
                 
             <div class="row">
@@ -458,7 +458,7 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading" name="stage_2">Stage 2</div>
+            <div class="panel-heading">Stage 2</div>
             <div class="panel-body">
         
                 <div class="row">
@@ -518,7 +518,7 @@
         </div>
     
         <div class="panel panel-default">
-        <div class="panel-heading" name="attivita_1">Attività Lavorativa 1</div>
+        <div class="panel-heading">Attività Lavorativa 1</div>
             <div class="panel-body">
                 
                 <div class="row">
@@ -566,7 +566,7 @@
         </div>
 
         <div class="panel panel-default">
-            <div class="panel-heading" name="attivita_2">Attività Lavorativa 2</div>
+            <div class="panel-heading">Attività Lavorativa 2</div>
             <div class="panel-body">
         
                 <div class="row">
@@ -682,7 +682,7 @@
     </div>
     
     <div class="panel panel-default">
-        <div class="panel-heading" name="info_stage">Informazioni relative allo Stage</div>
+        <div class="panel-heading">Informazioni relative allo Stage</div>
         <div class="panel-body">
             <div class="panel panel-default">
                 <div class="panel-heading">Settore</div>
@@ -822,7 +822,7 @@
                                 <td><input type="radio" name="Casella combinata5.5.2.2.0" value="5" /></td>
                                 <td><input type="radio" name="Casella combinata5.5.2.2.0" value="6" /></td>
                                 <td><input type="radio" name="Casella combinata5.5.2.2.0" value="7" /></td>
-                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="8" s/></td>
+                                <td><input type="radio" name="Casella combinata5.5.2.2.0" value="8" /></td>
                             </tr>
                             
                         </tbody>
@@ -930,7 +930,7 @@
                                 <td><input type="radio" name="Casella combinata5.5.2.2.9" value="6" /></td>
                             </tr>
                             <tr>
-                                <td><input name="altro" type="text" class="form-control" placeholder="Altro (da specificare)" name="altro_0"></td>
+                                <td><input name="altro" type="text" class="form-control" placeholder="Altro (da specificare)"></td>
                                 <td><input type="radio" name="Casella combinata5.5.2.2.10" value="1" /></td>
                                 <td><input type="radio" name="Casella combinata5.5.2.2.10" value="2" /></td>
                                 <td><input type="radio" name="Casella combinata5.5.2.2.10" value="3" /></td>

@@ -18,10 +18,10 @@
         <% if(request.getParameter("section")!=null) {
             if(request.getParameter("section").equals("azienda")){%>
                 <jsp:include page="part/user/navbar/navbar_azienda.jsp" />
-                <jsp:include page="part/user/tirocinanti/azienda.jsp" />
+                <jsp:include page="part/tirocinanti/azienda.jsp" />
             <%} else if(request.getParameter("section").equals("tutor")) {%>
                 <jsp:include page="part/user/navbar/navbar_tutor.jsp" />
-                <jsp:include page="part/user/tirocinanti/tutor.jsp" />
+                <jsp:include page="part/tirocinanti/tutor.jsp" />
             <%}
         } %>
         

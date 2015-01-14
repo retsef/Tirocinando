@@ -5,10 +5,6 @@
 --%>
 <div class="container" style="padding-top: 70px">
     <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Tirocinanti</div>
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
         <div class="panel-body">
             <table class="table" >
                 <thead>

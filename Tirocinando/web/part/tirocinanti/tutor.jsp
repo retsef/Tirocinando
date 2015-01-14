@@ -5,8 +5,6 @@
 --%>
 <div class="container" style="padding-top: 70px">
     <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Tirocinanti</div>
         <div class="panel-body">
             <table class="table" >
                 <thead>

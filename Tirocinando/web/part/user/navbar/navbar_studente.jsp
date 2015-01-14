@@ -20,7 +20,7 @@
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/ente.jsp")) {%> class="active" <%}%> >
                         <a href="#">Ente</a>
                     </li>
-                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/libretto.jsp")) {%> class="active" <%}%> >
+                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/librettodiario.jsp")) {%> class="active" <%}%> >
                         <a href="#">Libretto</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
