@@ -14,8 +14,16 @@
 	  <!-- Collect the nav links, forms, and other content for toggling -->
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
-                    <li <%if(request.getRequestURI().toString().equals("/Tirocinando/modulistica.jsp")) {%> class="active" <%}%> >
-                        <a href="/Tirocinando/Modulistica">Modulistica</a>
+                    <li class="dropdown<%if(request.getRequestURI().toString().equals("/Tirocinando/modulistica.jsp")) {%> active <%}%>">
+                        <a href="#" class="dropdown-toggle"
+                           data-toggle="dropdown" role="button" aria-expanded="false">Modulistica 
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="/Tirocinando/Modulistica">Compilazione</a></li>
+                          <li><a href="/Tirocinando/Modulistica">Download</a></li>
+                        </ul>
+                    </li>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/tirocinanti.jsp")) {%> class="active" <%}%> >
                         <a href="/Tirocinando/tirocinanti.jsp?section=azienda">Tirocinanti</a>
