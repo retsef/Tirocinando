@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author roberto
  */
-public class Modulistica extends HttpServlet {
-    
+public class ModulisticaDownload extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -25,32 +25,25 @@ public class Modulistica extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                
-            Manager auth = new Manager(request, response);
-            Abstract_user user = null;
-            try {
-                user = auth.check();
-            } catch (Exception_auth ex) {
-                //pagina di errore se non si e' nella sessione giusta
-                response.sendRedirect("/Tirocinando/index.jsp?session=false");
-            }
-
-            if(user!=null){
-                user.setAttribute(request);
-                switch(user.getUserType()){
-                    case STUDENTE:
-                        response.sendRedirect("/Tirocinando/modulistica.jsp?section=studente");
-                        break;
-                    case AZIENDA:
-                        response.sendRedirect("/Tirocinando/modulistica.jsp?section=azienda");
-                        break;
-                    case TUTOR:
-                        response.sendRedirect("/Tirocinando/modulistica.jsp?section=tutor");
-                        break;
-                }
-            }
-                
-     
+        
+        Manager auth = new Manager(request, response);
+        Abstract_user user = null;
+        
+        try {
+            user = auth.check();
+        } catch (Exception_auth ex) {
+            response.sendRedirect("/Tirocinando/index.jsp?session=false");
+        }
+        
+        switch(user.getUserType()){
+            case STUDENTE:
+                response.sendRedirect("/Tirocinando/modulistica_download.jsp?section=studente");
+                break;
+            case AZIENDA:
+                response.sendRedirect("/Tirocinando/modulistica_download.jsp?section=azienda");
+                break;
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -92,5 +85,4 @@ public class Modulistica extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    
 }

@@ -32,7 +32,7 @@ public class ServletModulistica extends HttpServlet {
         try {
             user = auth.check();
         } catch (Exception_auth ex) {
-            response.sendRedirect("/Tirocinando/index.jsp?error=true");
+            response.sendRedirect("/Tirocinando/index.jsp?session=false");
         }
         
         HashMap<String, String> temp_UserData = new HashMap<>();

@@ -33,7 +33,7 @@ public class Profilo extends HttpServlet {
                 user = auth.check();
             } catch (Exception_auth ex) {
                 //pagina di errore se non si e' nella sessione giusta
-                response.sendRedirect("/Tirocinando/index.jsp?error=true");
+                response.sendRedirect("/Tirocinando/index.jsp?session=false");
             }
 
             if(user!=null){
