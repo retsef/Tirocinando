@@ -139,7 +139,7 @@ public class ServletModulistica extends HttpServlet {
         request.getSession().setAttribute("Doc_Finale_4", "/Tirocinando/"+relativeWebPath_dest_4);
         request.getSession().setAttribute("Doc_Finale_5", "/Tirocinando/"+relativeWebPath_dest_5);
         response.sendRedirect("/Tirocinando/download_modulo.jsp?section=studente");
-
+        
         
     }
     
