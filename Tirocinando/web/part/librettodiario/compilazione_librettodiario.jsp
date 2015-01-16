@@ -75,7 +75,7 @@
                         <span class="input-group-addon">
                             Corso di laurea in
                         </span>
-                        <input type="text" name="Corso_laurea" value="Informatica" class="form-control" readonly>
+                        <input type="text" name="Corso di Laurea in" value="Informatica" class="form-control" readonly>
                     </div>
                 </div>
             </div>
