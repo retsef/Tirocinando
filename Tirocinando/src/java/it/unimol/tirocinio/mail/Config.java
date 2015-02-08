@@ -6,7 +6,7 @@ package it.unimol.tirocinio.mail;
 public class Config {
 
     // Sender's email ID needs to be mentioned
-    private static String from = "web@gmail.com";
+    private static String from = "support@tirocinando.it";
 
     // Assuming you are sending email from localhost
     private static String host = "localhost";

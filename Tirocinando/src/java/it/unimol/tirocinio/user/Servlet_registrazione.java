@@ -1,5 +1,6 @@
 package it.unimol.tirocinio.user;
 
+import it.unimol.tirocinio.mail.Manager;
 import it.unimol.tirocinio.utils.db.Adapter;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.mail.MessagingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -210,6 +212,20 @@ public class Servlet_registrazione extends HttpServlet {
             UserData.get("Username"),
             UserData.get("Password")
         };
+        
+        /**
+         * Invia una mail di prova!
+         */
+        Manager mail = new Manager();
+        try {
+            mail.SendMessage(
+                    UserData.get("Email Istituzionale"), 
+                    "Registazione", 
+                    "Resgistrazione dell'account sul sito Tirocinando avvenuta con successo!");
+        } catch (MessagingException ex) {
+            Logger.getLogger(Servlet_registrazione.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         Adapter adapt = new Adapter();
         adapt.insert("Tutor", values, "`Nome`,`Cognome`,`Email Istituzionale`,`Username`,`Password`");
     }

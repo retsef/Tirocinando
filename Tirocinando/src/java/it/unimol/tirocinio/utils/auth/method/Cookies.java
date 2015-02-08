@@ -45,7 +45,7 @@ public class Cookies extends Abstract {
             if(this.conn.getNumResult()==1){
                 ResultSet rs = this.conn.getResult();
                 int creation_date = rs.getInt("creation_date");
-                int seconds = (int)(System.currentTimeMillis() / 1000l);
+                int seconds = (int)(System.currentTimeMillis() / 1000);
                 if( creation_date + Config.getExpire() < seconds) {
                     this.cookie = new Cookie("uid","");
                     this.response.addCookie(this.cookie);

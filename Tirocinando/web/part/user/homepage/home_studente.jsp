@@ -1,3 +1,12 @@
+<style>
+    @media (max-width: 768px) {
+        .img-responsive {
+            margin: 0 auto;
+        }
+    }
+    
+</style>
+
 <section id="main">
     <div class="container" style="padding-top: 70px;">
         <div class="row">
@@ -7,7 +16,7 @@
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <img src="./img/blank_avatar_round.jpg">
+                <img class="img-responsive" alt="Responsive image" src="./img/blank_avatar_round.jpg">
             </div>
             <div class="col-lg-8">
                 <h3><%=request.getSession().getAttribute("Nome")%> <%=request.getSession().getAttribute("Cognome")%></h3>
