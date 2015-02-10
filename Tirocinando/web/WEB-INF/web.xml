@@ -24,6 +24,14 @@
         <servlet-name>ModulisticaDownload</servlet-name>
         <servlet-class>it.unimol.tirocinio.webpage.ModulisticaDownload</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LibrettoDiario</servlet-name>
+        <servlet-class>it.unimol.tirocinio.webpage.LibrettoDiario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Tirocinanti</servlet-name>
+        <servlet-class>it.unimol.tirocinio.webpage.Tirocinanti</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Autenticazione</servlet-name>
         <url-pattern>/Autenticazione</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>ModulisticaDownload</servlet-name>
         <url-pattern>/ModulisticaDownload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LibrettoDiario</servlet-name>
+        <url-pattern>/LibrettoDiario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Tirocinanti</servlet-name>
+        <url-pattern>/Tirocinanti</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
