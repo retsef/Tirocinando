@@ -28,7 +28,7 @@
                         </tr>
                         <%
                             Adapter ad = new Adapter();
-                            ad.select("Studente");
+                            ad.select("Studente_tampone");
                             ResultSet rS = ad.getResult();
                             while (rS.next()) {
                                 String matricola = rS.getString("matricola");
@@ -41,10 +41,19 @@
                             <td><%= nome%></td>
                             <td><%= cognome%></td>
                             <td>
-                                <form action="la servlet che approva">
+                                <form name="Servlet_accettazione" action="Servlet_accettazione.java" method="POST" enctype="multipart/form-data">
+                                 <input type="hidden" name="matricola" value="<%= matricola%>">
+                                    <input type="submit" value="APPROVA">
+                                </form>
+                               <%-- <form name="Accettazione" action="Servlet_accettazione" method="POST" enctype="multipart/form-data">
                                     <input type="hidden" name="matricola" value="<%= matricola%>">
                                     <input type="submit" value="APPROVA">
                                 </form>
+                                <%--  <form action="Servlet_accettazione">
+                                    <input type="hidden" name="matricola" value="<%= matricola%>">
+                                    <input type="submit" value="APPROVA">
+                                </form>
+                                --%>
                             </td>
                         </tr>
                         <%
@@ -62,7 +71,7 @@
         <jsp:include page="part/footer.jsp" />
 
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
