@@ -13,7 +13,7 @@
 
                 </tr>
                 <%
-                    ArrayList<HashMap<String, String>> table = (ArrayList<HashMap<String, String>>) request.getAttribute("Studenti");
+                    ArrayList<HashMap<String, String>> table = (ArrayList<HashMap<String, String>>) request.getAttribute("List_Studenti_attesa");
                     for(HashMap<String, String> hashmap : table){
                 %>
                 <tr>
@@ -21,9 +21,8 @@
                     <td><%=hashmap.get("nome")%></td>
                     <td><%=hashmap.get("cognome")%></td>
                     <td>
-                        <form action="Servlet_accettazione" method="POST" enctype="multipart/form-data">
-                         <input type="hidden" name="matricola" value="<%=hashmap.get("matricola")%>">
-                            <input type="submit" value=<%=hashmap.get("matricola")%> >
+                        <form action="Servlet_accettazione" method="POST">
+                            <input type="submit" name="matricola" value=<%=hashmap.get("matricola")%> >
                         </form>
                        <%-- <form name="Accettazione" action="Servlet_accettazione" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="matricola" value="<%= matricola%>">

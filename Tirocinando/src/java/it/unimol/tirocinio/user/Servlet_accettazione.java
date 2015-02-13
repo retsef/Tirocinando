@@ -54,6 +54,7 @@ public class Servlet_accettazione extends HttpServlet {
             };
             ad.insert("Studenti", value);
             ad.delete("Studente_tampon", "matricola = "+matricola);
+            response.sendRedirect("/Tirocinando/Accettazione");
         } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Servlet_accettazione.class.getName()).log(Level.SEVERE, null, ex);
         }
