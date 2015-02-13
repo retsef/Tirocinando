@@ -1,8 +1,4 @@
 
-
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="it.unimol.tirocinio.utils.db.Adapter"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,62 +9,17 @@
         <link rel="shortcut icon" href="img/Logo_mini.png">
     </head>
     <body>
-        <jsp:include page="part/user/navbar/navbar_tutor.jsp" />
-
-        <section id="main">
-            <div class="container" style="padding-top: 70px;">
-                <div class="row">
-                    <!-- content here -->
-                    <table>
-                        <tr>
-                            <td>Matricola</td>
-                            <td>Nome</td>
-                            <td>Cognome</td>
-                            
-                        </tr>
-                        <%
-                            Adapter ad = new Adapter();
-                            ad.select("Studente_tampone");
-                            ResultSet rS = ad.getResult();
-                            while (rS.next()) {
-                                String matricola = rS.getString("matricola");
-                                String nome = rS.getString("nome");
-                                String cognome = rS.getString("cognome");
-
-                        %>
-                        <tr>
-                            <td><%= matricola%></td>
-                            <td><%= nome%></td>
-                            <td><%= cognome%></td>
-                            <td>
-                                <form name="Servlet_accettazione" action="Servlet_accettazione.java" method="POST" enctype="multipart/form-data">
-                                 <input type="hidden" name="matricola" value="<%= matricola%>">
-                                    <input type="submit" value="APPROVA">
-                                </form>
-                               <%-- <form name="Accettazione" action="Servlet_accettazione" method="POST" enctype="multipart/form-data">
-                                    <input type="hidden" name="matricola" value="<%= matricola%>">
-                                    <input type="submit" value="APPROVA">
-                                </form>
-                                <%--  <form action="Servlet_accettazione">
-                                    <input type="hidden" name="matricola" value="<%= matricola%>">
-                                    <input type="submit" value="APPROVA">
-                                </form>
-                                --%>
-                            </td>
-                        </tr>
-                        <%
-                            }
-                        %>
-
-                    </table>
-                </div>                
-
-            </div>
-        </section>
-
-
-
-        <jsp:include page="part/footer.jsp" />
+         <% if(request.getParameter("section")!=null) {
+            if(request.getParameter("section").equals("tutor")) {
+                %>
+                <!-- Il tutor vuole visionare il libretto diario dello studente -->
+                <jsp:include page="part/user/navbar/navbar_tutor.jsp" />
+                <jsp:include page="part/accettazione/tutor.jsp"/>
+        <%  }
+        } 
+        %>
+           
+           <jsp:include page="part/footer.jsp" />
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 

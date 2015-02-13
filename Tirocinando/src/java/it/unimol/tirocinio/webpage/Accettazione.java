@@ -3,29 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package it.unimol.tirocinio.webpage;
 
-package it.unimol.tirocinio.user;
-
-
+import it.unimol.tirocinio.user.Abstract_user;
 import it.unimol.tirocinio.utils.auth.Exception_auth;
 import it.unimol.tirocinio.utils.auth.Manager;
 import it.unimol.tirocinio.utils.db.Adapter;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
+import java.util.HashMap;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author giannidegregorio
+ * @author ciro
  */
-public class Servlet_accettazione extends HttpServlet {
+@WebServlet(name = "Accettazione", urlPatterns = {"/Accettazione"})
+public class Accettazione extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,24 +40,60 @@ public class Servlet_accettazione extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String matricola = request.getParameter("matricola");
-        Adapter ad = new Adapter();
+        Manager auth = new Manager(request, response);
+        Abstract_user user = null;
         try {
-            ad.select("Studenti_tampone", "*", "matricola = "+matricola);
-            
-            ResultSet rs = ad.getResult();
+            user = auth.check();
+        } catch (Exception_auth ex) {
+            //pagina di errore se non si e' nella sessione giusta
+            response.sendRedirect("/Tirocinando/index.jsp?session=false");
+        }
         
-            String[] value = {
-                rs.getString("id"),
-                rs.getString("nome"),
-                rs.getString("cognome"),
-                rs.getString("matricola")
-            };
-            ad.insert("Studenti", value);
-            ad.delete("Studente_tampon", "matricola = "+matricola);
-        } catch (SQLException | Exception_db ex) {
-            Logger.getLogger(Servlet_accettazione.class.getName()).log(Level.SEVERE, null, ex);
+        if(user!=null){
+            user.setAttribute(request);
+            switch(user.getUserType()){
+                case STUDENTE:
+                    
+                    response.sendRedirect("/Tirocinando/accettazione.jsp?section=studente");
+                    break;
+                case AZIENDA:
+                    response.sendRedirect("/Tirocinando/accettazione.jsp?section=azienda");
+                    break;
+                case TUTOR:
+                    response.sendRedirect("/Tirocinando/accettazione.jsp?section=tutor");
+                    break;
+            }
+        }
+    }
+    
+    private class Studenti_attesa {
+        private Adapter adapt;
+        private ResultSet rs;
+        private HttpServletRequest request;
+        private ArrayList<HashMap<String, String>> list;
+        
+        public Studenti_attesa(HttpServletRequest pRequest) {
+            request = pRequest;
+            adapt = new Adapter();
+            list = new ArrayList();
+            try { 
+                adapt.select("Studenti_tampone"); 
+            } catch (SQLException | Exception_db ex) { }
+            rs = adapt.getResult();
+        }
+        
+        public void setParameter() {
+            try {
+                HashMap<String, String> hashmap;
+                while(rs.next()) {
+                    hashmap = new HashMap();
+                    hashmap.put("nome", rs.getString("nome"));
+                    hashmap.put("cognome", rs.getString("cognome"));
+                    hashmap.put("matricola", rs.getString("matricola"));
+                    this.list.add(hashmap);
+                }
+                request.getSession().setAttribute("List_Studenti_attesa", this.list);
+            } catch (SQLException ex) { }
         }
     }
 
