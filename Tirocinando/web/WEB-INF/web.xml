@@ -32,6 +32,10 @@
         <servlet-name>Tirocinanti</servlet-name>
         <servlet-class>it.unimol.tirocinio.webpage.Tirocinanti</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Conferma</servlet-name>
+        <servlet-class>it.unimol.tirocinio.webpage.Conferma</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Autenticazione</servlet-name>
         <url-pattern>/Autenticazione</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>Tirocinanti</servlet-name>
         <url-pattern>/Tirocinanti</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Conferma</servlet-name>
+        <url-pattern>/Conferma</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

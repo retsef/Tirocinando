@@ -1,6 +1,8 @@
 package it.unimol.tirocinio.user;
 
 import it.unimol.tirocinio.mail.Manager;
+import it.unimol.tirocinio.user.tutor.Token;
+import it.unimol.tirocinio.user.tutor.Token_container;
 import it.unimol.tirocinio.utils.db.Adapter;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.io.IOException;
@@ -214,6 +216,12 @@ public class Servlet_registrazione extends HttpServlet {
         };
         
         /**
+         * Crea un token a scadenza per confermare la registrazione
+         */
+        Token_container container = new Token_container();
+        container.store_new_token();
+        Token token = container.get_Token();
+        /**
          * Invia una mail di prova!
          */
         Manager mail = new Manager();
@@ -221,7 +229,10 @@ public class Servlet_registrazione extends HttpServlet {
             mail.SendMessage(
                     UserData.get("Email Istituzionale"), 
                     "Registazione", 
-                    "Resgistrazione dell'account sul sito Tirocinando avvenuta con successo!");
+                    "<h1>Grazie per esserti iscritto al sito di Tirocinando!</h1>"
+                    + "Per completare l'iscrizione visita il sito"
+                    + "<a href=\"www.provvisorio.it/Tirocinando/Conferma?token"+token.get().toString()+"\">Completa Resgistazione</a>"
+                    + " Oppure copia il seguente link nel tuo browser www.provvisorio.it/Tirocinando/Conferma?token"+token.get().toString());
         } catch (MessagingException ex) {
             Logger.getLogger(Servlet_registrazione.class.getName()).log(Level.SEVERE, null, ex);
         }
