@@ -53,13 +53,14 @@ public class Accettazione extends HttpServlet {
             user.setAttribute(request);
             switch(user.getUserType()){
                 case STUDENTE:
-                    
                     response.sendRedirect("/Tirocinando/accettazione.jsp?section=studente");
                     break;
                 case AZIENDA:
                     response.sendRedirect("/Tirocinando/accettazione.jsp?section=azienda");
                     break;
                 case TUTOR:
+                    Studenti_attesa attesa = new Studenti_attesa(request);
+                    attesa.setParameter();
                     response.sendRedirect("/Tirocinando/accettazione.jsp?section=tutor");
                     break;
             }
