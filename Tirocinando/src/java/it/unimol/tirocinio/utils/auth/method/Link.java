@@ -8,6 +8,7 @@ import it.unimol.tirocinio.user.studente.Studente;
 import it.unimol.tirocinio.user.tutor.Tutor;
 import it.unimol.tirocinio.utils.auth.Abstract;
 import it.unimol.tirocinio.utils.auth.Config;
+import it.unimol.tirocinio.utils.auth.Config.STATISTICS;
 import it.unimol.tirocinio.utils.auth.Exception_auth;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.sql.ResultSet;
@@ -48,13 +49,12 @@ public class Link extends Abstract {
                     //Nel caso in cui e' scaduto
                     request.setAttribute(uid, "");
                 } else {
-                    //this.cookie.setMaxAge((int) (System.currentTimeMillis() + Config.getExpire()));
-                    //this.response.addCookie(this.cookie);
+                    //Robe Alternative
                 }
             } else 
                 throw new Exception_auth("Errore: Chiave di autenticazione univoca non trovata");
         } catch (SQLException | Exception_db ex) {
-            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Link.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -73,27 +73,27 @@ public class Link extends Abstract {
     }
 
     @Override
-    public HashMap<Config.STATISTICS, UUID> get_status() {
+    public HashMap<STATISTICS, UUID> get_status() {
         try {
             this.clean_expired();
         } catch (Exception_auth ex) {
-            //Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(Link.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             String temp_uid = this.get_uid();
             this.state = new HashMap<>();
             if(temp_uid.equals("")) {
-                this.state.put(Config.STATISTICS.AUTH_NOT_LOGGED, null);
+                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
                 return this.state;
             }
             
             this.conn.select(Config.getTable_sessioni(),"*","uid = '"+ temp_uid +"'");
             
             if(this.conn.getNumResult() !=1) {
-                this.state.put(Config.STATISTICS.AUTH_NOT_LOGGED, null);
+                this.state.put(STATISTICS.AUTH_NOT_LOGGED, null);
                 return this.state;
             } else {
-                this.state.put(Config.STATISTICS.AUTH_LOGGED, UUID.fromString(temp_uid));
+                this.state.put(STATISTICS.AUTH_LOGGED, UUID.fromString(temp_uid));
                 return this.state;
             }
         } catch (Exception_auth | SQLException | Exception_db ex) {
@@ -143,7 +143,7 @@ public class Link extends Abstract {
             request.setAttribute("uid", this.uid);
             
         } catch (SQLException | Exception_db ex) {
-            Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Link.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -176,7 +176,7 @@ public class Link extends Abstract {
                 user.setIstance(rs);
                 return user;
             } catch (Exception_user | Exception_db ex) {
-                Logger.getLogger(Cookies.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Link.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else 
             throw new Exception_auth("Non esiste una sessione valida per esistente");
