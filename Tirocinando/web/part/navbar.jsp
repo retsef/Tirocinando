@@ -29,9 +29,10 @@
                     <a class="btn btn-danger btn-sm navbar-btn" href="registrazione.jsp">Registrati</a>
                     <%}%>
                 </ul>
-                <%@include file="popup_login.jsp" %>
-                <%@include file="popup_registrazione.jsp" %>
-                <%@include file="popup_session.jsp" %>
             </div><!-- /.navbar-collapse --> 
 	</div>	
 </nav>
+                    
+<%@include file="popup_login.jsp" %>
+<%@include file="popup_registrazione.jsp" %>
+<%@include file="popup_session.jsp" %>
