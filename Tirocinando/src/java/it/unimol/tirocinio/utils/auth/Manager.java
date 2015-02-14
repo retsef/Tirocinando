@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Classe adetta al controllo dell'autenticazione
  * @author Roberto
  */
 public class Manager extends Abstract {
@@ -43,10 +44,18 @@ public class Manager extends Abstract {
         this.method = method;
     }
     
+    /**
+     * Restituisce il metodo attuale di autenticazione:
+     * @return Cookie, Link, Session
+     */
     public String get_method(){
         return this.method.toString();
     }
 
+    /**
+     * Controlla se un token di autenticazione e' scaduto e lo invalida
+     * @throws Exception_auth 
+     */
     @Override
     public void clean_expired() throws Exception_auth {
         switch(this.method){
@@ -62,6 +71,11 @@ public class Manager extends Abstract {
         }
     }
 
+    /**
+     * Restituisce il token in uso
+     * @return token dell'utente connesso
+     * @throws Exception_auth 
+     */
     @Override
     public String get_uid() throws Exception_auth{
         switch(this.method){
@@ -76,6 +90,10 @@ public class Manager extends Abstract {
         }
     }
 
+    /**
+     * Restituisce lo stato della sessione e le informazioni come il token e il tempo di creazione del suddetto
+     * @return 
+     */
     @Override
     public HashMap<STATISTICS, UUID> get_status() {
         switch(this.method){
@@ -90,6 +108,13 @@ public class Manager extends Abstract {
         }
     }
 
+    /**
+     * Funzione di login
+     * @param Username username dell'utente
+     * @param Password password dell'utente
+     * @return Restituisce un oggetto contenente la trasposizione delle informazioni del Database su oggetto (Quasi come un JavaBean)
+     * @throws Exception_user 
+     */
     @Override
     public Abstract_user login(String Username, String Password) throws Exception_user {
         switch(this.method){
@@ -104,11 +129,20 @@ public class Manager extends Abstract {
         }
     }
 
+    /**
+     * Genera un nuovo token
+     * @return 
+     */
     @Override
     public UUID generate_uid() {
         return super.generate_uid(); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * Resgistra token e tempo attuale
+     * @param pUser
+     * @throws Exception_user 
+     */
     @Override
     public void register_session(Abstract_user pUser) throws Exception_user {
         switch(this.method){
@@ -124,6 +158,9 @@ public class Manager extends Abstract {
         }
     }
 
+    /**
+     * Funzione di Logout
+     */
     @Override
     public void logout() {
         switch(this.method){
@@ -139,6 +176,11 @@ public class Manager extends Abstract {
         }
     }
 
+    /**
+     * Controlla se esiste un istanza di Abstract_user inerente alla sessione attuale
+     * @return Abstract_user specializzato
+     * @throws Exception_auth 
+     */
     @Override
     public Abstract_user check() throws Exception_auth {
         switch(this.method){
