@@ -27,7 +27,7 @@
 - [x] Modulistica
 
 ###Tutor
-- [x] Registrazione
+- [ ] Registrazione
 - [ ] Gestione Libretto Diario
 - [ ] Gestione Tirocinanti
 - [ ] Gestione Iscrizione Tirocinanti
