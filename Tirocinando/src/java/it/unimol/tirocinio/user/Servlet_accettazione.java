@@ -61,7 +61,7 @@ public class Servlet_accettazione extends HttpServlet {
                 rs.getString("Password")
             };
             
-            ad.insert("Studenti", value);
+            ad.insert("Studente", value);
             ad.delete("Studente_tampone", "Matricola = "+matricola);
             response.sendRedirect("/Tirocinando/Accettazione");
         } catch (SQLException | Exception_db ex) {
