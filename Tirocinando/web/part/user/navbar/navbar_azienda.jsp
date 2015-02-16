@@ -29,7 +29,7 @@
                     </li>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/tirocinanti.jsp")) {%> class="active" <%}%> >
-                        <a href="/Tirocinando/tirocinanti.jsp?section=azienda">Tirocinanti</a>
+                        <a href="/Tirocinando/Tirocinanti">Tirocinanti</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
                         <a href="/Tirocinando/Profilo">Profilo</a>

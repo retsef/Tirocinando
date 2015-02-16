@@ -6,6 +6,7 @@ import it.unimol.tirocinio.user.tutor.Token_container;
 import it.unimol.tirocinio.utils.db.Adapter;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -238,7 +239,16 @@ public class Servlet_registrazione extends HttpServlet {
         }
         
         Adapter adapt = new Adapter();
-        adapt.insert("Tutor", values, "`Nome`,`Cognome`,`Email Istituzionale`,`Username`,`Password`");
+        adapt.insert("Tutor_tampone", values, "`Nome`,`Cognome`,`Email Istituzionale`,`Username`,`Password`");
+        adapt.select("Tutor_tampone", "idTutor", "Username = "+UserData.get("Username")+" && Password = "+UserData.get("Password"));
+        ResultSet tampone = adapt.getResult();
+        int seconds = (int)(System.currentTimeMillis() / 1000);
+        String[] token_tamp = {
+            Integer.toString(tampone.getInt("idTutor")),
+            token.get().toString(),
+            Integer.toString(seconds)
+        };
+        adapt.insert("Tutor_token_assign", values);
     }
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

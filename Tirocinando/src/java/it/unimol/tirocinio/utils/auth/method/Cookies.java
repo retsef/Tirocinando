@@ -139,7 +139,7 @@ public class Cookies extends Abstract {
     @Override
     public void register_session(Abstract_user pUser) throws Exception_user {
         this.uid = this.generate_uid().toString();
-        int time = (int)(System.currentTimeMillis() / 1000l);
+        int time = (int)(System.currentTimeMillis() / 1000);
         
         String[] value = {};
         switch(pUser.getUserType()){
@@ -174,7 +174,7 @@ public class Cookies extends Abstract {
         try {
             if(value.length!=0)
                 this.conn.insert(Config.getTable_sessioni(), value);
-            int seconds = (int)(System.currentTimeMillis() / 1000l);
+            int seconds = (int)(System.currentTimeMillis() / 1000);
             this.cookie = new Cookie("uid",this.uid);
             this.cookie.setMaxAge(seconds + Config.getExpire());
             this.response.addCookie(this.cookie);

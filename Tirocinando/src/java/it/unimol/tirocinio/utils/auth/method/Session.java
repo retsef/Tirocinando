@@ -125,7 +125,7 @@ public class Session extends Abstract {
     @Override
     public void register_session(Abstract_user pUser) throws Exception_user {
         this.uid = this.generate_uid().toString();
-        int time = (int)(System.currentTimeMillis() / 1000l);
+        int time = (int)(System.currentTimeMillis() / 1000);
         
         String[] value = {};
         switch(pUser.getUserType()){
@@ -160,7 +160,7 @@ public class Session extends Abstract {
         try {
             if(value.length!=0)
                 this.conn.insert(Config.getTable_sessioni(), value);
-            int seconds = (int)(System.currentTimeMillis() / 1000l);
+            int seconds = (int)(System.currentTimeMillis() / 1000);
             this.session.setAttribute("uid", this.uid);
             this.session.setAttribute("creation_date", (int) (System.currentTimeMillis() + Config.getExpire()));
             

@@ -78,7 +78,7 @@ public class Accettazione extends HttpServlet {
             adapt = new Adapter();
             list = new ArrayList();
             try { 
-                adapt.select("Studenti_tampone"); 
+                adapt.select("Studente_tampone"); 
             } catch (SQLException | Exception_db ex) { }
             rs = adapt.getResult();
         }
@@ -88,9 +88,9 @@ public class Accettazione extends HttpServlet {
                 HashMap<String, String> hashmap;
                 while(rs.next()) {
                     hashmap = new HashMap();
-                    hashmap.put("nome", rs.getString("nome"));
-                    hashmap.put("cognome", rs.getString("cognome"));
-                    hashmap.put("matricola", rs.getString("matricola"));
+                    hashmap.put("nome", rs.getString("Nome"));
+                    hashmap.put("cognome", rs.getString("Cognome"));
+                    hashmap.put("matricola", rs.getString("Matricola"));
                     this.list.add(hashmap);
                 }
                 request.getSession().setAttribute("List_Studenti_attesa", this.list);

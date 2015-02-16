@@ -31,7 +31,7 @@
                         <a href="#">Ente</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/librettodiario.jsp")) {%> class="active" <%}%> >
-                        <a href="#">Libretto</a>
+                        <a href="/Tirocinando/LibrettoDiario">Libretto</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
                         <a href="/Tirocinando/Profilo">Profilo</a>

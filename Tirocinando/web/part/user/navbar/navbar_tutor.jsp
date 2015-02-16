@@ -21,10 +21,10 @@
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/tirocinanti.jsp")) {%> class="active" <%}%> >
-                        <a href="/Tirocinando/tirocinanti.jsp?section=tutor">Tirocinanti</a>
+                        <a href="/Tirocinando/Tirocinanti">Tirocinanti</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/richieste.jsp")) {%> class="active" <%}%> >
-                        <a href="/Tirocinando/richieste.jsp?section=tutor">Richieste</a>
+                        <a href="/Tirocinando/Accettazione">Richieste</a>
                     </li>
                     <li <%if(request.getRequestURI().toString().equals("/Tirocinando/home.jsp")) {%> class="active" <%}%> >
                         <a href="/Tirocinando/Profilo">Profilo</a>

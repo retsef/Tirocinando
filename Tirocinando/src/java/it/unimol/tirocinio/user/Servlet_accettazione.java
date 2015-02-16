@@ -6,9 +6,6 @@
 
 package it.unimol.tirocinio.user;
 
-
-import it.unimol.tirocinio.utils.auth.Exception_auth;
-import it.unimol.tirocinio.utils.auth.Manager;
 import it.unimol.tirocinio.utils.db.Adapter;
 import it.unimol.tirocinio.utils.db.Exception_db;
 import java.io.IOException;
@@ -22,7 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
  * @author giannidegregorio
  */
 public class Servlet_accettazione extends HttpServlet {
@@ -42,18 +38,31 @@ public class Servlet_accettazione extends HttpServlet {
         String matricola = request.getParameter("matricola");
         Adapter ad = new Adapter();
         try {
-            ad.select("Studenti_tampone", "*", "matricola = "+matricola);
-            
+            ad.select("Studente_tampone", "*", "Matricola = "+matricola);
             ResultSet rs = ad.getResult();
         
             String[] value = {
-                rs.getString("id"),
-                rs.getString("nome"),
-                rs.getString("cognome"),
-                rs.getString("matricola")
+                Integer.toString(rs.getInt("Matricola")),
+                rs.getString("Nome"),
+                rs.getString("Cognome"),
+                rs.getDate("Data nascita").toString(),
+                rs.getString("Comune nascita"),
+                rs.getString("Provincia nascita"),
+                rs.getString("Nazionalita"),
+                rs.getString("Codice Fiscale"),
+                rs.getString("Provincia residenza"),
+                rs.getString("Comune residenza"),
+                Integer.toString(rs.getInt("C.A.P.")),
+                rs.getString("Indirizzo"),
+                rs.getString("N_Civico"),
+                Long.toString(rs.getLong("Recapito Telefonico")),
+                rs.getString("Email"),
+                rs.getString("Username"),
+                rs.getString("Password")
             };
+            
             ad.insert("Studenti", value);
-            ad.delete("Studente_tampon", "matricola = "+matricola);
+            ad.delete("Studente_tampone", "Matricola = "+matricola);
             response.sendRedirect("/Tirocinando/Accettazione");
         } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Servlet_accettazione.class.getName()).log(Level.SEVERE, null, ex);
