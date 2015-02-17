@@ -220,8 +220,9 @@ public class Servlet_registrazione extends HttpServlet {
          * Crea un token a scadenza per confermare la registrazione
          */
         Token_container container = new Token_container();
-        container.store_new_token();
-        Token token = container.get_Token();
+        //container.store_new_token();
+        //Token token = container.get_Token();
+        Token token = new Token();
         /**
          * Invia una mail di prova!
          */
@@ -230,25 +231,33 @@ public class Servlet_registrazione extends HttpServlet {
             mail.SendMessage(
                     UserData.get("Email Istituzionale"), 
                     "Registazione", 
-                    "<h1>Grazie per esserti iscritto al sito di Tirocinando!</h1>"
-                    + "Per completare l'iscrizione visita il sito"
-                    + "<a href=\"www.provvisorio.it/Tirocinando/Conferma?token"+token.get().toString()+"\">Completa Resgistazione</a>"
-                    + " Oppure copia il seguente link nel tuo browser www.provvisorio.it/Tirocinando/Conferma?token"+token.get().toString());
+                    "<html><h1>Grazie per esserti iscritto al sito di Tirocinando!</h1>"
+                    + "Per completare l'iscrizione visitando il sito"
+                    + "<a href=\"www.provvisorio.it/Tirocinando/Conferma?token="+token.get().toString()+"\">Completa Resgistazione</a>"
+                    + " Oppure copia il seguente link nel tuo browser www.provvisorio.it/Tirocinando/Conferma?token"+token.get().toString()
+                    + "</html>");
         } catch (MessagingException ex) {
             Logger.getLogger(Servlet_registrazione.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println("/Tirocinando/Conferma?token="+token.get().toString());
         
         Adapter adapt = new Adapter();
+        
+        //Momentaneo
+        adapt.insert("Tutor", values, "`Nome`,`Cognome`,`Email Istituzionale`,`Username`,`Password`");
+        
+        /*
         adapt.insert("Tutor_tampone", values, "`Nome`,`Cognome`,`Email Istituzionale`,`Username`,`Password`");
         adapt.select("Tutor_tampone", "idTutor", "Username = "+UserData.get("Username")+" && Password = "+UserData.get("Password"));
         ResultSet tampone = adapt.getResult();
         int seconds = (int)(System.currentTimeMillis() / 1000);
         String[] token_tamp = {
-            Integer.toString(tampone.getInt("idTutor")),
             token.get().toString(),
-            Integer.toString(seconds)
+            Integer.toString(seconds),
+            Integer.toString(tampone.getInt("idTutor"))
         };
         adapt.insert("Tutor_token_assign", values);
+        */
     }
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

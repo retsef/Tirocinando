@@ -10,11 +10,11 @@ public class Token {
     
     private UUID token;
     
-    public Token() { }
+    public Token() { this.generate_token(); }
     
     public Token(UUID tok) { this.token = tok; }
     
-    public void generate_token() { this.token = UUID.randomUUID(); }
+    private void generate_token() { this.token = UUID.randomUUID(); }
     
     public UUID get() { return this.token; }
     

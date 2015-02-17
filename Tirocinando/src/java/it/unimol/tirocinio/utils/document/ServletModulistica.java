@@ -65,6 +65,9 @@ public class ServletModulistica extends HttpServlet {
         String absoluteDiskPath_src_1 = getServletContext().getRealPath(relativeWebPath_src_1);
         String absoluteDiskPath_dest_1 = getServletContext().getRealPath(relativeWebPath_dest_1);
 
+        System.out.println(relativeWebPath_src_1);
+        System.out.println(absoluteDiskPath_src_1);
+        
         try {
             CompilazionePDF.manipulatePdf( 
                     absoluteDiskPath_src_1,

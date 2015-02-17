@@ -22,6 +22,7 @@ public class Token_container {
     
     /**
      * Imagazzina un token e la data in cui viene memorizzato per l'eventuale scadenza
+     * DA FIXARE!!!
      * @param tok 
      */
     public void store_token(Token tok) {
@@ -29,7 +30,7 @@ public class Token_container {
         int seconds = (int)(System.currentTimeMillis() / 1000l);
         String[] value = {str, seconds+""};
         try {
-            conn.insert(Token_Config.getTable_name(), value);
+            conn.insert(Token_Config.getTable_token(), value);
         } catch (SQLException | Exception_db ex) {
             Logger.getLogger(Token_container.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -37,7 +38,6 @@ public class Token_container {
     
     public void store_new_token() {
         token = new Token();
-        token.generate_token();
         this.store_token(token);
     }
     
@@ -47,13 +47,13 @@ public class Token_container {
     
     public void clear_expired() {
         try {
-            this.conn.select(Token_Config.getTable_name());
+            this.conn.select(Token_Config.getTable_token());
             if(this.conn.getNumResult()>=1){
                 ResultSet rs = this.conn.getResult();
                 int creation_date = rs.getInt("creation_date");
                 int seconds = (int)(System.currentTimeMillis() / 1000);
                 if( creation_date + Token_Config.getExpire() < seconds) {
-                    this.conn.delete(Token_Config.getTable_name(), "token = "+rs.getString("token"));
+                    this.conn.delete(Token_Config.getTable_token(), "token = "+rs.getString("token"));
                 }
             }
         } catch (SQLException | Exception_db ex) {
