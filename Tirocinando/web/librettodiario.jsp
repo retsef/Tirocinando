@@ -16,10 +16,10 @@
                     if(request.getParameter("add").equals("entry")) { %>
                     <!-- Lo studente vuole registrare la propria giornata -->
                     <jsp:include page="part/librettodiario/compilazione_librettodiario.jsp"/>
-                <%  } else { %>
+                <%  } } else { %>
                     <!-- Lo studente vuole visionare il proprio librettodiario -->
                     <jsp:include page="part/librettodiario/studente.jsp"/>
-                <% } } %>
+                <% } %>
         <%  } else if(request.getParameter("section").equals("azienda")) {
                 %>
                 <!-- L'Azienda vuole visionare il libretto diario dello studente -->

@@ -54,7 +54,13 @@ public class LibrettoDiario extends HttpServlet {
                 case STUDENTE:
                     Libretto_Studente studente = new Libretto_Studente(request);
                     studente.setParameter();
-                    response.sendRedirect("/Tirocinando/librettodiario.jsp?section=studente");
+                    
+                    if(request.getParameter("add")!=null){
+                        if(request.getParameter("add").equals("entry"))
+                            response.sendRedirect("/Tirocinando/librettodiario.jsp?section=studente&add=entry");
+                    } else {
+                        response.sendRedirect("/Tirocinando/librettodiario.jsp?section=studente");
+                    }
                     break;
                 case AZIENDA:
                     response.sendRedirect("/Tirocinando/librettodiario.jsp?section=azienda");

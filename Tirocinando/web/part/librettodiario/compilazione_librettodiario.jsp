@@ -110,7 +110,7 @@
                         <span class="input-group-addon">
                             Ore Svolte
                         </span>
-                        <select name="Ore">
+                        <select name="Ore" class="form-control">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -131,7 +131,7 @@
                         <span class="input-group-addon">
                             Ore Entrata
                         </span>
-                        <select name="Ore_entrata">
+                        <select name="Ore_entrata" class="form-control">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -152,7 +152,7 @@
                         <span class="input-group-addon">
                             Ore Uscita
                         </span>
-                        <select name="Ore_uscita">
+                        <select name="Ore_uscita" class="form-control">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
